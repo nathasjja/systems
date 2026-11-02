@@ -252,6 +252,50 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 @media (max-width:480px){.pc-bar{grid-template-columns:84px minmax(0,1fr) 84px;gap:8px}.pc-n{display:none}.pc-total{grid-template-columns:minmax(0,1fr) 84px}.pc-total span:last-child{display:none}}
 @media (prefers-reduced-motion:no-preference){.pc-chart.in .pc-track i{animation:grow .9s ease-out both}@keyframes grow{from{transform:scaleX(0)}to{transform:none}}}
 
+
+/* WhatsApp */
+.btn-wa{display:inline-flex;align-items:center;gap:8px}
+.wa-big{display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#0B2E1A;text-decoration:none;font-weight:700;font-size:16px;padding:14px 18px;border-radius:999px}
+.wa-big:hover{filter:brightness(1.05)}
+.mbar{display:none}
+.m-more{display:none}
+
+/* ---------- phone layout: swipe sideways, expand on demand ---------- */
+@media (max-width:720px){
+  body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+  .top nav{display:none}
+  section{padding-block:44px}
+  .sec-head{margin-bottom:22px}
+  .sec-intro{margin:-8px 0 22px}
+  .hero{padding-block:28px 40px}
+  .hero-grid{gap:32px}
+  /* card rows become swipeable rails */
+  .svc,.proc,.concepts,.doors{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none;
+    -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+  .svc::-webkit-scrollbar,.proc::-webkit-scrollbar,.concepts::-webkit-scrollbar,.doors::-webkit-scrollbar{display:none}
+  .svc>div,.proc>div,.concepts>*,.doors>*{scroll-snap-align:start}
+  .cc.feature{grid-column:auto;grid-template-columns:1fr}
+  .fit{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+  .fit::-webkit-scrollbar{display:none}
+  .fit span{flex:none}
+  .swipe-hint{display:block}
+  .case-top{gap:14px;padding:14px 0;margin-bottom:24px}
+  .figs{gap:14px;margin:24px 0}
+  /* long case studies fold to a summary */
+  .case-sec.folded>:not(.sec-head):not(.case-top):not(.figs):not(.pc-hero):not(.hood-bar):not(.hood):not(.sec-intro):not(.m-more){display:none}
+  .case-sec.folded .pc-note{display:none}
+  .case-sec.folded .lanes{display:none}
+  .case-sec.folded .hood{grid-template-columns:1fr}
+  .m-more{display:flex;justify-content:center;width:100%;margin-top:18px;font:600 15px var(--display);background:transparent;color:var(--text);border:1px solid var(--edge);border-radius:999px;padding:12px 16px;cursor:pointer}
+  /* bottom bar */
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;align-items:center;gap:4px;background:var(--surface);border-top:1px solid var(--edge);
+    padding:8px max(12px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+  .mbar a{flex:1;text-align:center;font:500 11px var(--ledger);letter-spacing:.1em;text-transform:uppercase;color:var(--sub);text-decoration:none;padding:10px 0}
+  .mbar a:hover,.mbar a:focus-visible{color:var(--text)}
+  .mbar .mbar-wa{flex:none;width:46px;height:46px;padding:0;border-radius:50%;background:#25D366;color:#0B2E1A;display:grid;place-items:center}
+}
+.swipe-hint{display:none;font:500 11px var(--ledger);letter-spacing:.12em;text-transform:uppercase;color:var(--sub);margin:-10px 0 10px}
+
 /* KRIYĀ case */
 .status-chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--ledger);font-size:12px;letter-spacing:.12em;color:var(--flag);border:1px solid var(--flag);border-radius:999px;padding:4px 12px}
 .doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
@@ -410,7 +454,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
           <span class="voice">action; the work itself, shaped around the people who do it.</span>
         </div>
         <div class="cta">
-          <a class="btn primary" href="#contact">Book a gap survey</a>
+          <a class="btn primary btn-wa" href="https://wa.me/6281339021014?text=Hi%20Nathasjja%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20system%20for%20my%20team." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Chat on WhatsApp</a>
           <a class="btn" href="#builds">Explore what we've built</a>
         </div>
       </div>
@@ -428,6 +472,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
       <span class="label">01 / What I build</span>
     </div>
     <p class="sec-intro">For teams that have outgrown WhatsApp threads and shared spreadsheets, and don't want another subscription everyone has to learn.</p>
+    <span class="swipe-hint">Swipe →</span>
     <div class="svc">
       <div><span class="k">TRACK</span><h3>Task and project trackers</h3><p>Who owns what, by when. Status worked out from dates, numbered the way your team already talks about the work.</p></div>
       <div><span class="k">MOBILE</span><h3>Apps for the team's phones</h3><p>Runs from your Google Sheet. Add tasks, post updates, attach site photos. No app store, no per-user fees.</p></div>
@@ -475,7 +520,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
     </div>
   </section>
 
-  <section id="axiom">
+  <section id="axiom" class="case-sec">
     <div class="sec-head">
       <h2>Axiom Task Manager: from a weekly meeting log to an app the site team uses</h2>
       <span class="label">03 / Case study</span>
@@ -542,7 +587,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
     <div class="stack"><span>Google Sheets</span><span>Apps Script</span><span>Gemini API</span><span>Google Drive</span><span>Mobile web app</span></div>
   </section>
 
-  <section id="kriya">
+  <section id="kriya" class="case-sec">
     <div class="sec-head">
       <h2>KRIYĀ Studio App: one sheet, two front doors</h2>
       <span class="label">04 / Case study</span>
@@ -600,7 +645,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
     </div>
   </section>
 
-  <section id="pettycash">
+  <section id="pettycash" class="case-sec">
     <div class="sec-head">
       <h2>Petty Cash Backfill: ten weeks of WhatsApp receipts, reconciled</h2>
       <span class="label">05 / Case study</span>
@@ -665,7 +710,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
     <p class="pc-note">Time saved is measured, not estimated: it is set against a teammate's average DeskTime activity in Google Sheets for tracking these expenses, uploading receipts and updating the petty cash sheet by hand.</p>
   </section>
 
-  <section id="hood">
+  <section id="hood" class="case-sec">
     <div class="sec-head">
       <h2>Under the hood: trace a request through the system</h2>
       <span class="label">06 / Infrastructure</span>
@@ -711,6 +756,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
       <span class="label">07 / Concepts</span>
     </div>
     <p class="sec-intro">How the Axiom and KRIYĀ setups adapt to other teams in Bali. Concept designs with sample data, not client work.</p>
+    <span class="swipe-hint">Swipe →</span>
     <div class="concepts">
       <article class="cc feature">
         <div class="viz" aria-hidden="true">
@@ -759,11 +805,12 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
       <h2>I seal the gaps your team has learned to walk around.</h2>
       <span class="label">08 / Method</span>
     </div>
+    <span class="swipe-hint">Swipe →</span>
     <div class="proc">
       <div><span class="k">01 / SURVEY</span><h3>Read the system</h3><p>How work actually moves today: the chats, the spreadsheets, the weekly meeting. When in Rome... build as the Romans do, but better.</p></div>
       <div><span class="k">02 / THREAD</span><h3>Connect it</h3><p>Built on your Google account, your folders, your numbering. Updates travel without anyone chasing.</p></div>
       <div><span class="k">03 / BUILD</span><h3>Shape the tool</h3><p>A clickable mockup first, then the real thing on the team's phones. Their feedback shapes each version.</p></div>
-      <div><span class="k last">04 / LONTAR</span><h3>Write it down</h3><p>A how-to guide in your team's languages, and an owner on your side who knows how to run it.</p></div>
+      <div><span class="k last">04 / LAUNCH</span><h3>Write it down</h3><p>A how-to guide in your team's languages, and an owner on your side who knows how to run it.</p></div>
     </div>
   </section>
 
@@ -780,6 +827,8 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
           <div class="voice">reads systems, closes gaps</div>
         </div>
         <div style="display:grid;gap:10px">
+          <a class="wa-big" href="https://wa.me/6281339021014?text=Hi%20Nathasjja%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20system%20for%20my%20team." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg><span>Message me on WhatsApp</span></a>
+          <div class="crow"><span class="cv" id="c-wa">+62 813 3902 1014</span><button type="button" data-copy="c-wa">COPY</button></div>
           <div class="crow"><span class="cv" id="c-email">nathasjja@hotmail.com</span><button type="button" data-copy="c-email">COPY</button></div>
           <div class="crow"><span class="cv" id="c-web">https://nathasjja.github.io/systems/</span><button type="button" data-copy="c-web">COPY</button></div>
           <div class="crow"><span class="cv" id="c-li">https://www.linkedin.com/in/nathasjja/</span><button type="button" data-copy="c-li">COPY</button></div>
@@ -797,6 +846,10 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
     <span class="label">Bali · GMT+8 · 2026</span>
   </footer>
 </div>
+<nav class="mbar" aria-label="Quick links">
+  <a href="#builds">Work</a><a href="#axiom">Cases</a><a href="#concepts">Concepts</a><a href="#contact">Contact</a>
+  <a class="mbar-wa" href="https://wa.me/6281339021014?text=Hi%20Nathasjja%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20system%20for%20my%20team." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+</nav>
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-t">
   <div class="lb-in">
@@ -867,6 +920,18 @@ function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=get
 })();
 
 
+
+
+/* ---------- Phone: fold long case studies ---------- */
+(function(){
+  document.querySelectorAll('.case-sec').forEach(function(sec){
+    var b=document.createElement('button');b.type='button';b.className='m-more';
+    var label=sec.id==='hood'?'system map and table':'full case study';
+    function set(f){sec.classList.toggle('folded',f);b.setAttribute('aria-expanded',f?'false':'true');b.textContent=f?'Read the '+label+' ↓':'Show less ↑'}
+    b.addEventListener('click',function(){var f=!sec.classList.contains('folded');set(f);if(f)sec.scrollIntoView({block:'start'})});
+    sec.appendChild(b);set(true);
+  });
+})();
 
 /* ---------- Hero carousel ---------- */
 (function(){
