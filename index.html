@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="KRIYĀ Systems by Nathasjja Takanashi: custom task trackers, booking apps and automations for businesses in Bali.">
+<meta name="description" content="KRIYĀ Systems by Nathasjja Takanashi: custom task trackers, booking apps, learning platforms and automations for businesses in Bali.">
 <title>Nathasjja Takanashi Systems</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -296,6 +296,36 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 }
 .swipe-hint{display:none;font:500 11px var(--ledger);letter-spacing:.12em;text-transform:uppercase;color:var(--sub);margin:-10px 0 10px}
 
+/* Ludwig case */
+.lw-card{display:grid;gap:4px;justify-items:center;background:var(--deep);border-radius:4px;padding:18px}
+.lw-word{font:700 1.8rem var(--display);letter-spacing:-.01em}
+.lw-mean{font-family:var(--ledger);font-size:13px;color:var(--sub)}
+.lw-boxes{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.lw-box{border:1px solid var(--edge);border-radius:4px;padding:8px 4px;display:grid;gap:3px;justify-items:center;font-family:var(--ledger);font-size:11px;color:var(--sub);transition:border-color .25s,background .25s}
+.lw-box b{font-size:15px;color:var(--text);font-weight:500}
+.lw-box.on{border-color:var(--flag);background:color-mix(in srgb,var(--flag) 14%,transparent);color:var(--text)}
+.lw-box.known.on{border-color:var(--signal);background:color-mix(in srgb,var(--signal) 14%,transparent)}
+.lw-legend{display:flex;justify-content:space-between;gap:6px;font-family:var(--ledger);font-size:10.5px;color:var(--sub);flex-wrap:wrap}
+.lw-btns{display:flex;gap:8px;flex-wrap:wrap}
+.lw-btns button{flex:1;font:600 14px var(--display);padding:10px 12px;border-radius:999px;border:1px solid var(--edge);background:transparent;color:var(--text);cursor:pointer}
+.lw-btns button[data-g="0"]:hover{border-color:var(--flag)}
+.lw-btns button[data-g="1"]:hover,.lw-btns button[data-g="2"]:hover{border-color:var(--signal)}
+.lw-btns .lw-reset{flex:0 0 auto;width:42px;padding:10px 0}
+.lw-perm{margin-top:40px;background:var(--surface);border-radius:4px;padding:24px;display:grid;gap:18px}
+.lw-perm-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 32px;flex-wrap:wrap}
+.lw-perm-head h3{font-weight:700;font-size:1.4rem;margin:8px 0 6px}
+.lw-perm-head p{color:var(--sub);max-width:44em}
+.lw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.lw-cell{border:1px solid var(--edge);border-radius:4px;padding:14px;display:grid;gap:8px;align-content:start;background:var(--ground);transition:opacity .25s,border-color .25s}
+.lw-cell .t{font-weight:600;font-size:15px}
+.lw-cell .tb{font-family:var(--ledger);font-size:11px;color:var(--sub);word-break:break-word}
+.lw-cell .st{justify-self:start;font-family:var(--ledger);font-size:11px;letter-spacing:.1em;padding:3px 9px;border-radius:999px;border:1px solid currentColor}
+.lw-cell.rw{border-color:var(--signal)} .lw-cell.rw .st{color:var(--signal)}
+.lw-cell.r .st{color:var(--text)}
+.lw-cell.no{opacity:.55} .lw-cell.no .st{color:var(--flag)}
+.lw-perm-note{font-size:15px;color:var(--text);border-left:2px solid var(--signal);padding-left:12px}
+@media (max-width:720px){.lw-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.lw-cell{padding:10px;gap:6px}.lw-cell .t{font-size:13.5px}.lw-cell .tb{display:none}.lw-cell .st{font-size:10px;padding:2px 7px}.lw-boxes{gap:4px}.lw-box{padding:6px 2px;font-size:9.5px}.lw-perm{padding:18px}}
+
 /* KRIYĀ case */
 .status-chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--ledger);font-size:12px;letter-spacing:.12em;color:var(--flag);border:1px solid var(--flag);border-radius:999px;padding:4px 12px}
 .doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
@@ -342,7 +372,7 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 .log li code{font-family:var(--ledger);font-size:12px;color:var(--text);background:var(--deep);padding:1px 5px;border-radius:3px}
 .log .replay{justify-self:start;margin-top:10px;font:500 12px var(--ledger);letter-spacing:.1em;background:transparent;color:var(--signal);border:1px solid var(--signal);border-radius:999px;padding:6px 12px;cursor:pointer}
 .spec{margin-top:16px;overflow-x:auto;border-radius:4px;border:1px solid var(--edge)}
-.spec table{width:100%;border-collapse:collapse;font-size:14px;min-width:820px}
+.spec table{width:100%;border-collapse:collapse;font-size:14px;min-width:1000px}
 .spec th,.spec td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--edge);vertical-align:top}
 .spec th{font-family:var(--ledger);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sub)}
 .spec td:first-child{font-family:var(--ledger);font-size:12px;color:var(--sub);white-space:nowrap}
@@ -481,7 +511,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
     </div>
     <div class="fit">
       <span class="label">Works for teams in</span>
-      <span>Construction</span><span>Tattoo studios</span><span>Software companies</span><span>Villa management</span><span>Fitness studios</span><span>Cafés</span><span class="fit-any">+ any team that runs on chats and spreadsheets</span>
+      <span>Construction</span><span>Tattoo studios</span><span>Software companies</span><span>Villa management</span><span>Fitness studios</span><span>Cafés</span><span>Tutors &amp; language schools</span><span class="fit-any">+ any team that runs on chats and spreadsheets</span>
     </div>
   </section>
 
@@ -645,10 +675,75 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
     </div>
   </section>
 
+  <section id="ludwig" class="case-sec">
+    <div class="sec-head">
+      <h2>Ludwig: a language app where the teacher's lessons become the student's homework</h2>
+      <span class="label">05 / Case study</span>
+    </div>
+    <dl class="case-top">
+      <div><dt class="label">Client</dt><dd>Private Indonesian tutoring</dd></div>
+      <div><dt class="label">Role</dt><dd>Founder; designed and built it</dd></div>
+      <div><dt class="label">Stack</dt><dd>Vite · Supabase · Netlify · GitHub</dd></div>
+      <div><dt class="label">Timeline</dt><dd>November 2026</dd></div>
+    </dl>
+
+    <div class="case-body">
+      <div class="prose">
+        <span class="label" style="color:var(--flag)">● The gap</span>
+        <h3>Lessons and practice lived in different places</h3>
+        <p>A student learning Indonesian from Russian had good lessons and generic apps, and nothing connecting the two. Words taught on Tuesday never showed up in Wednesday's practice, and the teacher couldn't see what had stuck.</p>
+        <span class="label" style="color:var(--signal);margin-top:12px">● The thread</span>
+        <h3>One app, two sides of the same lesson</h3>
+        <p><strong>Students</strong> sign up, wait for approval, then practise word decks with spaced repetition and read short stories with questions. They switch between English and Russian explanations.</p>
+        <p><strong>The teacher</strong> approves students, logs the words taught in each lesson, keeps private notes, and writes decks and stories in the app instead of code. A word logged after class appears in that student's <strong>Dari guru</strong> ("from the teacher") deck straight away.</p>
+        <p>It started as a lean practice app for one learner and grew into a platform for several students in the same week, without changing hosts or adding a server.</p>
+      </div>
+      <div style="display:grid;gap:16px;align-content:start">
+        <div class="door lw-srs" aria-labelledby="lw-srs-h">
+          <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><span class="label" id="lw-srs-h">Try the review schedule</span><span class="label" id="lw-due" aria-live="polite">New card</span></div>
+          <div class="lw-card"><span class="lw-word">makan</span><span class="lw-mean">to eat · есть</span></div>
+          <div class="lw-boxes" id="lw-boxes" aria-label="Review boxes 1 to 6"></div>
+          <div class="lw-legend"><span>1–2 Learning</span><span>3–4 Known</span><span>5–6 Mastered</span></div>
+          <div class="lw-btns">
+            <button type="button" data-g="0">Again</button>
+            <button type="button" data-g="1">Got it</button>
+            <button type="button" data-g="2">Easy</button>
+            <button type="button" class="lw-reset" data-g="r" aria-label="Start over">↺</button>
+          </div>
+          <p>"Again" brings a word back in a minute. "Got it" and "Easy" move it up one or two boxes, and each box waits longer: 1, 3, 7, 16, then 35 days.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lw-perm">
+      <div class="lw-perm-head">
+        <div>
+          <span class="label" style="color:var(--signal)">● Who sees what</span>
+          <h3>Security lives in the database, not the app</h3>
+          <p>Every table has row-level rules, so even someone poking at the app's code only gets what their role allows. Pick a role:</p>
+        </div>
+        <div class="seg-tabs" role="tablist" aria-label="View as">
+          <button type="button" role="tab" data-role="pending" aria-selected="false">PENDING</button>
+          <button type="button" role="tab" data-role="student" aria-selected="true">STUDENT</button>
+          <button type="button" role="tab" data-role="teacher" aria-selected="false">TEACHER</button>
+        </div>
+      </div>
+      <div class="lw-grid" id="lw-grid" aria-live="polite"></div>
+      <p class="lw-perm-note" id="lw-perm-note"></p>
+    </div>
+
+    <div class="figs">
+      <div class="fig"><b>10/10</b><span>tables with row-level security</span></div>
+      <div class="fig"><b>112</b><span>words in 8 starter decks</span></div>
+      <div class="fig"><b>EN·RU</b><span>explanations, Indonesian practice</span></div>
+      <div class="fig"><b>0</b><span>servers to maintain</span></div>
+    </div>
+  </section>
+
   <section id="pettycash" class="case-sec">
     <div class="sec-head">
       <h2>Petty Cash Backfill: ten weeks of WhatsApp receipts, reconciled</h2>
-      <span class="label">05 / Case study</span>
+      <span class="label">06 / Case study</span>
     </div>
     <dl class="case-top">
       <div><dt class="label">Client</dt><dd>ALL X, Bali operations</dd></div>
@@ -713,14 +808,15 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="hood" class="case-sec">
     <div class="sec-head">
       <h2>Under the hood: trace a request through the system</h2>
-      <span class="label">06 / Infrastructure</span>
+      <span class="label">07 / Infrastructure</span>
     </div>
-    <p class="sec-intro">All three run on tools the business already has. Pick an action and watch where it goes, step by step.</p>
+    <p class="sec-intro">None of these builds needs a server of its own to maintain. Pick an action and watch where it goes, step by step.</p>
     <div class="hood-bar">
       <div class="seg-tabs" role="tablist" aria-label="Project">
         <button type="button" role="tab" id="tab-axiom" aria-selected="true" data-proj="axiom">AXIOM</button>
         <button type="button" role="tab" id="tab-kriya" aria-selected="false" data-proj="kriya">KRIYĀ</button>
         <button type="button" role="tab" id="tab-petty" aria-selected="false" data-proj="petty">PETTY CASH</button>
+        <button type="button" role="tab" id="tab-ludwig" aria-selected="false" data-proj="ludwig">LUDWIG</button>
       </div>
       <div class="traces" id="traces" aria-label="Actions to trace"></div>
     </div>
@@ -734,17 +830,17 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
     </div>
     <div class="spec">
       <table>
-        <thead><tr><th>Layer</th><th>Axiom Task Manager</th><th>KRIYĀ Studio App</th><th>Petty Cash Backfill</th></tr></thead>
+        <thead><tr><th>Layer</th><th>Axiom Task Manager</th><th>KRIYĀ Studio App</th><th>Petty Cash Backfill</th><th>Ludwig</th></tr></thead>
         <tbody>
-          <tr class="same"><td>Database</td><td>Google Sheet: Tasks, Updates, Stages, Projects, Files, Inbox</td><td>Google Sheet: Bookings_Master, CRM, Income Dashboard, Requests</td><td>Google Sheet ledger: month tabs + person tabs</td></tr>
-          <tr class="same"><td>Server</td><td>Google Apps Script, runs as the company account</td><td>Google Apps Script, one script for both doors</td><td>No server: AI drives the WhatsApp desktop app</td></tr>
-          <tr><td>Front end</td><td>Mobile web app, add to home screen</td><td>Studio app + public request page</td><td>The WhatsApp group the team already uses</td></tr>
-          <tr><td>Access</td><td>Team code, then pick your name</td><td>6-digit studio code; request page open</td><td>Runs on the operations laptop</td></tr>
-          <tr><td>Files</td><td>Google Drive, folder per stage and side</td><td>Google Drive, folder per client</td><td>Drive RECEIPTS folders by month, linked as chips</td></tr>
-          <tr><td>AI</td><td>Gemini: EN⇄RU translation, chat-to-task, with retry and a backup model</td><td>None needed</td><td>Reads receipts; rebuilds the address-to-villa map</td></tr>
-          <tr><td>Automation</td><td>5-minute check catches edits from any device</td><td>CRM sync on every save; 30+ day rebook queue</td><td>One backfill run, re-checked against the chat index</td></tr>
-          <tr><td>Safety</td><td>Protocol read-only; human edits never overwritten</td><td>Locked saves, so two people can't book the same slot at once</td><td>Unclear items go to a person; personal rides flagged</td></tr>
-          <tr class="same"><td>Running cost</td><td>No per-user fees</td><td>No per-user fees</td><td>No new software</td></tr>
+          <tr class="same"><td>Database</td><td>Google Sheet: Tasks, Updates, Stages, Projects, Files, Inbox</td><td>Google Sheet: Bookings_Master, CRM, Income Dashboard, Requests</td><td>Google Sheet ledger: month tabs + person tabs</td><td>Supabase Postgres: 10 tables, all with row-level security</td></tr>
+          <tr class="same"><td>Server</td><td>Google Apps Script, runs as the company account</td><td>Google Apps Script, one script for both doors</td><td>No server: AI drives the WhatsApp desktop app</td><td>No custom server: rules in the database, one edge function</td></tr>
+          <tr><td>Front end</td><td>Mobile web app, add to home screen</td><td>Studio app + public request page</td><td>The WhatsApp group the team already uses</td><td>Vite web app on Netlify: student app + teacher page</td></tr>
+          <tr><td>Access</td><td>Team code, then pick your name</td><td>6-digit studio code; request page open</td><td>Runs on the operations laptop</td><td>Email sign-up; the teacher approves each student</td></tr>
+          <tr><td>Files</td><td>Google Drive, folder per stage and side</td><td>Google Drive, folder per client</td><td>Drive RECEIPTS folders by month, linked as chips</td><td>Decks and stories backed up to GitHub as files</td></tr>
+          <tr><td>AI</td><td>Gemini: EN⇄RU translation, chat-to-task, with retry and a backup model</td><td>None needed</td><td>Reads receipts; rebuilds the address-to-villa map</td><td>None needed</td></tr>
+          <tr><td>Automation</td><td>5-minute check catches edits from any device</td><td>CRM sync on every save; 30+ day rebook queue</td><td>One backfill run, re-checked against the chat index</td><td>Sign-up creates a profile; spaced-repetition schedule; one-click backup</td></tr>
+          <tr><td>Safety</td><td>Protocol read-only; human edits never overwritten</td><td>Locked saves, so two people can't book the same slot at once</td><td>Unclear items go to a person; personal rides flagged</td><td>Pending sees nothing; students see only their own data; notes are teacher-only</td></tr>
+          <tr class="same"><td>Running cost</td><td>No per-user fees</td><td>No per-user fees</td><td>No new software</td><td>Free tiers</td></tr>
         </tbody>
       </table>
     </div>
@@ -753,7 +849,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="concepts">
     <div class="sec-head">
       <h2>The same thread, other businesses</h2>
-      <span class="label">07 / Concepts</span>
+      <span class="label">08 / Concepts</span>
     </div>
     <p class="sec-intro">How the Axiom and KRIYĀ setups adapt to other teams in Bali. Concept designs with sample data, not client work.</p>
     <span class="swipe-hint">Swipe →</span>
@@ -803,7 +899,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="method">
     <div class="sec-head">
       <h2>I seal the gaps your team has learned to walk around.</h2>
-      <span class="label">08 / Method</span>
+      <span class="label">09 / Method</span>
     </div>
     <span class="swipe-hint">Swipe →</span>
     <div class="proc">
@@ -817,7 +913,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="contact">
     <div class="contact">
       <div>
-        <span class="label">09 / Contact</span>
+        <span class="label">10 / Contact</span>
         <h2 style="margin-top:12px">Here's the gap. Here's what it costs you each week.</h2>
         <p>Tell me how your team works today and what keeps slipping. I'll tell you what I'd build and roughly what it would take.</p>
       </div>
@@ -971,6 +1067,45 @@ function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=get
   if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run();io.disconnect()}})},{threshold:.35});io.observe(big)}else run();
 })();
 
+
+/* ---------- Ludwig: review schedule + who sees what ---------- */
+(function(){
+  var boxesEl=document.getElementById('lw-boxes'); if(!boxesEl) return;
+  var waits=['1 min','1 day','3 days','7 days','16 days','35 days'],box=0,started=false;
+  var due=document.getElementById('lw-due');
+  waits.forEach(function(w,i){var d=document.createElement('div');d.className='lw-box'+(i>=2?' known':'');d.innerHTML='<b>'+(i+1)+'</b>'+w;boxesEl.appendChild(d)});
+  function draw(){boxesEl.querySelectorAll('.lw-box').forEach(function(b,i){b.classList.toggle('on',started&&i===box)});
+    if(!started){due.textContent='New card';return}
+    var stage=box>=4?'Mastered':box>=2?'Known':'Learning';due.textContent='Box '+(box+1)+' · '+stage+' · back in '+waits[box]}
+  document.querySelectorAll('.lw-btns button').forEach(function(b){b.addEventListener('click',function(){
+    var g=b.getAttribute('data-g');
+    if(g==='r'){started=false;box=0}else{g=+g; box=g===0?0:(started?Math.min(5,box+g):g); started=true}
+    draw()})});
+  draw();
+
+  var T=[
+    ['Decks, words & stories','decks · words · stories',{pending:'no',student:'r',teacher:'rw'}],
+    ['Unpublished drafts','decks · stories (hidden)',{pending:'no',student:'no',teacher:'rw'}],
+    ['My own progress','card_progress · daily_activity · story_results',{pending:'no',student:'rw',teacher:'rw'}],
+    ['Words taught to me','student_words',{pending:'no',student:'r',teacher:'rw'}],
+    ['Other students’ progress','card_progress (others)',{pending:'no',student:'no',teacher:'r'}],
+    ['Teacher’s private notes','student_notes',{pending:'no',student:'no',teacher:'rw'}],
+    ['Student accounts','profiles · approve / block',{pending:'no',student:'no',teacher:'rw'}]
+  ];
+  var LBL={no:'HIDDEN',r:'READ',rw:'READ + WRITE'};
+  var NOTE={pending:'Signed up but not approved yet: every table stays closed until the teacher says yes.',
+    student:'An approved student practises with published content and sees only their own progress and the words taught to them.',
+    teacher:'The teacher sees every student’s progress, writes content and notes, and approves or blocks accounts.'};
+  var grid=document.getElementById('lw-grid'),note=document.getElementById('lw-perm-note');
+  function show(role){
+    document.querySelectorAll('.lw-perm [data-role]').forEach(function(b){b.setAttribute('aria-selected',b.getAttribute('data-role')===role?'true':'false')});
+    grid.innerHTML=T.map(function(r){var v=r[2][role];return '<div class="lw-cell '+v+'"><span class="t">'+r[0]+'</span><span class="tb">'+r[1]+'</span><span class="st">'+LBL[v]+'</span></div>'}).join('');
+    note.textContent=NOTE[role];
+  }
+  document.querySelectorAll('.lw-perm [data-role]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-role'))})});
+  show('student');
+})();
+
 /* ---------- Under the hood: trace a request ---------- */
 (function(){
   var LANES=['Device','Script','Data','Services'];
@@ -1058,6 +1193,53 @@ function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=get
           ['check','The question goes to a person: log these or not?'],
           ['check','Two rides the app marked Profile: PERSONAL are flagged, not logged.'],
           ['ledger','Only confirmed spend reaches the ledger.']]]
+      ]
+    },
+    ludwig:{
+      nodes:[
+        ['stu',0,'Student app','phone or laptop'],
+        ['tea',0,'Teacher page','approve · log · write'],
+        ['app',1,'Vite web app','static files on Netlify'],
+        ['rls',1,'Row-level rules','checked on every query'],
+        ['fn',1,'Backup function','Supabase edge function'],
+        ['prof',2,'profiles','role · status'],
+        ['content',2,'decks · words · stories','published or hidden'],
+        ['prog',2,'card_progress','one row per word, per student'],
+        ['taught',2,'student_words · notes','teacher writes'],
+        ['auth',3,'Supabase Auth','email sign-in'],
+        ['gh',3,'GitHub repo','code + content backups'],
+        ['net',3,'Netlify','builds and hosts']
+      ],
+      traces:[
+        ['A student signs up',[
+          ['stu','A new student enters their name, email and password.'],
+          ['auth','Supabase Auth creates the account.'],
+          ['prof','A database trigger adds their profile as <b>pending</b>.'],
+          ['rls','The rules show a pending student nothing but "Waiting for approval".'],
+          ['tea','The teacher sees them under Students and taps Approve.'],
+          ['prof','Status flips to <b>active</b>; the decks open up on their next visit.']]],
+        ['Log a word after class',[
+          ['tea','The teacher types <b>makan</b> on the student’s page; the meaning fills in.'],
+          ['rls','<code>is_admin()</code> confirms only the teacher can write here.'],
+          ['taught','A row lands in <code>student_words</code> with today’s date.'],
+          ['stu','It appears in the student’s <b>Dari guru</b> deck straight away.']]],
+        ['Review a card',[
+          ['stu','The student answers <b>Got it</b> on a flashcard.'],
+          ['app','The app works out the next box and review date.'],
+          ['rls','The rules only accept a row for the signed-in student.'],
+          ['prog','<code>card_progress</code> saves it, so progress follows them across devices.'],
+          ['tea','The teacher can read it on that student’s page.']]],
+        ['Back up content',[
+          ['tea','The teacher taps <b>Backup</b>.'],
+          ['fn','The edge function runs as the teacher and checks <code>is_admin()</code>.'],
+          ['content','It reads decks, words and stories. Student data is never included.'],
+          ['gh','It commits them as files to <code>content/</code> in the repo.'],
+          ['net','Netlify is told to skip rebuilding the site for backup commits.']]],
+        ['Ship an update',[
+          ['gh','New code is committed to the repo.'],
+          ['net','Netlify builds the Vite app automatically.'],
+          ['app','Fresh static files go live in about a minute.'],
+          ['stu','Students get the new version on their next visit; data stays in Supabase.']]]
       ]
     },
     kriya:{
