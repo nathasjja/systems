@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="KRIYĀ Systems by Nathasjja Takanashi: custom task trackers, booking apps, learning platforms and automations for businesses in Bali.">
+<meta name="description" content="KRIYĀ Systems by Nathasjja Takanashi: apps and automations built on the Google Sheets and WhatsApp your team already uses. Bali.">
 <title>Nathasjja Takanashi Systems</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -346,6 +346,27 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 .kq-verdict.owner{color:var(--flag)} .kq-verdict.ok{color:var(--signal)}
 .kq>p:last-child{font-size:13px;color:var(--sub)}
 
+/* copy sections */
+.ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ba-col{background:var(--surface);border-radius:4px;padding:28px;display:grid;gap:22px;align-content:start}
+.ba-item{display:grid;gap:6px;border-top:1px solid var(--edge);padding-top:16px}
+.ba-item h3{font-weight:700;font-size:1.25rem}
+.ba-item p{color:var(--sub);font-size:15.5px}
+.rules{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}
+.rules li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;padding:14px 0;border-top:1px solid var(--edge);font-size:17px;font-weight:600;align-items:baseline}
+.rules .rn{font-family:var(--ledger);font-size:12px;font-weight:400;color:var(--signal)}
+.story{max-width:44em;display:grid;gap:18px;font-size:18px;line-height:1.65;color:var(--sub)}
+.story-end{color:var(--text);font-weight:600;font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.3;border-left:2px solid var(--signal);padding-left:16px;margin-top:8px}
+.faq{display:grid;border-top:1px solid var(--edge)}
+.faq details{border-bottom:1px solid var(--edge)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-weight:700;font-size:1.15rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--ledger);font-weight:400;color:var(--signal);font-size:20px;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq summary:focus-visible{outline:2px solid var(--signal);outline-offset:4px}
+.faq details p{color:var(--sub);max-width:44em;padding:0 0 22px;margin:0}
+@media (max-width:720px){.ba,.rules{grid-template-columns:1fr}.story{font-size:16.5px}}
+
 /* KRIYĀ case */
 .status-chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--ledger);font-size:12px;letter-spacing:.12em;color:var(--flag);border:1px solid var(--flag);border-radius:999px;padding:4px 12px}
 .doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
@@ -488,6 +509,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
       <a href="#hood">Under the hood</a>
       <a href="#concepts">Concepts</a>
       <a href="#method">Method</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -496,9 +518,9 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
     <div class="thread" aria-hidden="true"></div>
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="kicker">OPERATIONS · WEB APPS · AUTOMATION</span>
-        <h1>Your team moves better with the right tools</h1>
-        <p class="lede">Maybe you have a reliable old company SOP that's kept things going. What if I told you it only takes a small investment in the right infrastructure to 10X your performance?</p>
+        <span class="kicker">NO NEW SOFTWARE REQUIRED</span>
+        <h1>Run like a tech company. Keep your spreadsheet.</h1>
+        <p class="lede">Your business already runs on a Google Sheet, a WhatsApp group and one person who remembers everything. I don't replace any of them. I build the apps and automations that sit on top, so the work stops living in someone's head.</p>
         <div class="def">
           <span class="pron">kri·yā  /ˈkri.jaː/  n.</span>
           <span class="voice">action; the work itself, shaped around the people who do it.</span>
@@ -518,16 +540,16 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
 
   <section id="build">
     <div class="sec-head">
-      <h2>Systems for the space between.</h2>
-      <span class="label">01 / What I build</span>
+      <h2>Tools your team will actually open</h2>
+      <span class="label">01 / The goods</span>
     </div>
-    <p class="sec-intro">For teams that have outgrown WhatsApp threads and shared spreadsheets, and don't want another subscription everyone has to learn.</p>
+    <p class="sec-intro">Task trackers that answer "who's on it?" before anyone asks. Booking apps that fill a tattoo chair faster than a Canggu sunset fills a beach bar. Quote pages that close the deal before the client finishes their kopi. Dashboards a director reads in one scroll. And automations for whatever your team is still copying and pasting by hand.</p>
     <span class="swipe-hint">Swipe →</span>
     <div class="svc">
-      <div><span class="k">TRACK</span><h3>Task and project trackers</h3><p>Who owns what, by when. Status worked out from dates, numbered the way your team already talks about the work.</p></div>
-      <div><span class="k">MOBILE</span><h3>Apps for the team's phones</h3><p>Runs from your Google Sheet. Add tasks, post updates, attach site photos. No app store, no per-user fees.</p></div>
-      <div><span class="k">EN ⇄ RU ⇄ ID + MORE</span><h3>Multilingual tools</h3><p>Every task and update translated automatically, so mixed teams work from one record. English, Russian and Indonesian built in; other major languages on request. Human edits are never overwritten.</p></div>
-      <div><span class="k">INBOX</span><h3>Chat-to-task</h3><p>Paste a group chat or meeting notes. Get draft tasks with owners and deadlines, duplicates flagged before saving.</p></div>
+      <div><span class="k">TRACK</span><h3>Task and project trackers</h3><p>Who owns what, by when, worked out from the dates. Numbered the way your team already talks, so nobody learns a new language to find task 2.14.1.</p></div>
+      <div><span class="k">MOBILE</span><h3>Apps for the team's phones</h3><p>Runs straight off your Google Sheet. Tasks, updates and site photos from anywhere. No app store, no per-seat fees nibbling at your margins.</p></div>
+      <div><span class="k">EN ⇄ RU ⇄ ID + MORE</span><h3>Multilingual tools</h3><p>Every task and update translated automatically, so a Russian site lead and an Indonesian crew read the same record. English, Russian and Indonesian built in; other major languages on request. Human edits are never overwritten.</p></div>
+      <div><span class="k">INBOX</span><h3>Chat-to-task</h3><p>Paste the group chat. Get draft tasks with owners and deadlines, duplicates flagged before they save. The group chat finally pulls its weight.</p></div>
     </div>
     <div class="fit">
       <span class="label">Works for teams in</span>
@@ -535,10 +557,31 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
     </div>
   </section>
 
+  <section id="before">
+    <div class="sec-head">
+      <h2>Your systems are fine. Until Friday.</h2>
+      <span class="label">02 / Before and after</span>
+    </div>
+    <div class="ba">
+      <div class="ba-col">
+        <span class="label" style="color:var(--flag)">● Before</span>
+        <div class="ba-item"><h3>The WhatsApp dig</h3><p>Receipts, quotes and decisions buried 300 messages deep. Every Friday someone scrolls back to August with a coffee and a prayer.</p></div>
+        <div class="ba-item"><h3>The human hard drive</h3><p>One person knows where everything is. They're brilliant. They also go on holiday, and the business goes with them.</p></div>
+        <div class="ba-item"><h3>The copy-paste olympics</h3><p>The same client typed into four tabs. Commission worked out on a phone calculator. Gold medals all round, zero hours back.</p></div>
+      </div>
+      <div class="ba-col">
+        <span class="label" style="color:var(--signal)">● After</span>
+        <div class="ba-item"><h3>One record, everywhere</h3><p>The sheet you already have becomes the database. The app, the dashboard and the client page all read from it, so nobody types anything twice.</p></div>
+        <div class="ba-item"><h3>Work that chases itself</h3><p>Status, reminders, translations and follow-ups update on their own. Managers stop asking "any update?" and start reading one.</p></div>
+        <div class="ba-item"><h3>Numbers you can check</h3><p>Rp1.043.000 found in a group chat. 62 tasks pulled out of a meeting log. Every figure on this page came from a real build.</p></div>
+      </div>
+    </div>
+  </section>
+
   <section id="builds">
     <div class="sec-head">
-      <h2>Open a build and look around</h2>
-      <span class="label">02 / Builds</span>
+      <h2>Proof, not promises</h2>
+      <span class="label">03 / Builds</span>
     </div>
     <div class="builds">
       <div class="bchoose" role="tablist" aria-label="Choose a build">
@@ -595,7 +638,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="axiom" class="case-sec">
     <div class="sec-head">
       <h2>Axiom Task Manager: from a weekly meeting log to an app the site team uses</h2>
-      <span class="label">03 / Case study</span>
+      <span class="label">04 / Case study</span>
     </div>
     <dl class="case-top">
       <div><dt class="label">Client</dt><dd>PT Axiom Construction Co, Bali</dd></div>
@@ -662,7 +705,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="kriya" class="case-sec">
     <div class="sec-head">
       <h2>KRIYĀ Studio App: the whole studio runs on the sheet it already had</h2>
-      <span class="label">04 / Case study</span>
+      <span class="label">05 / Case study</span>
     </div>
     <dl class="case-top">
       <div><dt class="label">Client</dt><dd>KRIYĀ tattoo studio, Bali</dd></div>
@@ -734,7 +777,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="ludwig" class="case-sec">
     <div class="sec-head">
       <h2>Ludwig: a language app where the teacher's lessons become the student's homework</h2>
-      <span class="label">05 / Case study</span>
+      <span class="label">06 / Case study</span>
     </div>
     <dl class="case-top">
       <div><dt class="label">Client</dt><dd>Private Indonesian tutoring</dd></div>
@@ -810,7 +853,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="pettycash" class="case-sec">
     <div class="sec-head">
       <h2>Petty Cash Backfill: ten weeks of WhatsApp receipts, reconciled</h2>
-      <span class="label">06 / Case study</span>
+      <span class="label">07 / Case study</span>
     </div>
     <dl class="case-top">
       <div><dt class="label">Client</dt><dd>ALL X, Bali operations</dd></div>
@@ -875,7 +918,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="hood" class="case-sec">
     <div class="sec-head">
       <h2>Under the hood: trace a request through the system</h2>
-      <span class="label">07 / Infrastructure</span>
+      <span class="label">08 / Infrastructure</span>
     </div>
     <p class="sec-intro">None of these builds needs a server of its own to maintain. Pick an action and watch where it goes, step by step.</p>
     <div class="hood-bar">
@@ -916,7 +959,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="concepts">
     <div class="sec-head">
       <h2>The same thread, other businesses</h2>
-      <span class="label">08 / Concepts</span>
+      <span class="label">09 / Concepts</span>
     </div>
     <p class="sec-intro">How the Axiom and KRIYĀ setups adapt to other teams in Bali. Concept designs with sample data, not client work.</p>
     <span class="swipe-hint">Swipe →</span>
@@ -965,22 +1008,60 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
 
   <section id="method">
     <div class="sec-head">
-      <h2>I seal the gaps your team has learned to walk around.</h2>
-      <span class="label">09 / Method</span>
+      <h2>I seal the gaps your team has learned to walk around</h2>
+      <span class="label">10 / Method</span>
     </div>
+    <p class="sec-intro">Four steps, no twelve-month roadmap, and your team tapping a real version long before the last one.</p>
     <span class="swipe-hint">Swipe →</span>
     <div class="proc">
-      <div><span class="k">01 / SURVEY</span><h3>Read the system</h3><p>How work actually moves today: the chats, the spreadsheets, the weekly meeting. When in Rome... build as the Romans do, but better.</p></div>
-      <div><span class="k">02 / THREAD</span><h3>Connect it</h3><p>Built on your Google account, your folders, your numbering. Updates travel without anyone chasing.</p></div>
-      <div><span class="k">03 / BUILD</span><h3>Shape the tool</h3><p>A clickable mockup first, then the real thing on the team's phones. Their feedback shapes each version.</p></div>
-      <div><span class="k last">04 / LAUNCH</span><h3>Write it down</h3><p>A how-to guide in your team's languages, and an owner on your side who knows how to run it.</p></div>
+      <div><span class="k">01 / SURVEY</span><h3>The stakeout</h3><p>I sit in your chats, your sheets and your Monday meeting until I know where the work really goes. When in Rome... build as the Romans do, but better.</p></div>
+      <div><span class="k">02 / THREAD</span><h3>The wiring</h3><p>Your Google account, your folders, your numbering. I connect what you already have so updates travel without anyone chasing them.</p></div>
+      <div><span class="k">03 / BUILD</span><h3>The fitting</h3><p>A clickable mockup first, then the real thing on your team's phones. They poke holes in it; I sew them shut.</p></div>
+      <div><span class="k last">04 / LAUNCH</span><h3>The handover</h3><p>A how-to guide in your team's languages and one owner on your side who can run it without me. That's the whole point.</p></div>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div class="sec-head">
+      <h2>House rules</h2>
+      <span class="label">11 / House rules</span>
+    </div>
+    <p class="sec-intro">Every warung has a hand-written sign by the till. No credit. No outside food. Pay before you eat. These are mine, and every build follows them.</p>
+    <ol class="rules"><li><span class="rn">001</span><span>Build on what already works.</span></li><li><span class="rn">002</span><span>Every number on the page must be checkable.</span></li><li><span class="rn">003</span><span>If the team won't open it, it doesn't exist.</span></li><li><span class="rn">004</span><span>Speak the team's languages, all of them.</span></li><li><span class="rn">005</span><span>Ask the person doing the work, not only the person paying for it.</span></li><li><span class="rn">006</span><span>No new subscription without a very good reason.</span></li><li><span class="rn">007</span><span>Fix the boring part first. It's usually the expensive part.</span></li><li><span class="rn">008</span><span>Write it down before you forget why.</span></li><li><span class="rn">009</span><span>Leave the owner able to run it without me.</span></li><li><span class="rn">010</span><span>Never automate a mess. Tidy it, then automate it.</span></li></ol>
+  </section>
+
+  <section id="subak">
+    <div class="sec-head">
+      <h2>The oldest system on the island</h2>
+      <span class="label">12 / A short story</span>
+    </div>
+    <div class="story">
+      <p>For about a thousand years, Bali's rice farmers have shared water through the subak: a network of canals, cooperatives and water temples that decides who floods their fields, and when.</p>
+      <p>In the 1970s, the Green Revolution arrived with a better idea. Plant as often as you can. Forget the temple calendar. Within a year or two, the pests moved in and the water ran short.</p>
+      <p>Years later, an anthropologist named Stephen Lansing ran the numbers. When neighbouring fields flood and go fallow together, the pests starve. The temple schedule wasn't superstition. It was the system, and it outperformed the replacement. The old way came back, and in 2012 UNESCO made it a World Heritage landscape.</p>
+      <p class="story-end">The lesson I build by: the smartest system in the room is usually the one your people already run. It just needs better tools.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="sec-head">
+      <h2>You've got questions. Fair enough.</h2>
+      <span class="label">13 / FAQ</span>
+    </div>
+    <div class="faq">
+      <details><summary>How much does it cost?</summary><p>It depends on the gap. The test is simple: it should cost less than the hours it gives back, or I'll tell you not to build it. You get a price after the first conversation.</p></details>
+      <details><summary>Do we have to switch software?</summary><p>No. If your team runs on Google Sheets and WhatsApp, that's what I build on. The spreadsheet stays; it just stops doing all the work alone.</p></details>
+      <details><summary>How fast is fast?</summary><p>Ludwig went from a first question to a working teaching platform in a day. Bigger systems, like Axiom's migration from a weekly meeting log, take a few weeks of real use and feedback.</p></details>
+      <details><summary>My team speaks three languages. Problem?</summary><p>Not for the app. English, Russian and Indonesian are built in, other major languages on request, and translations never overwrite what a person wrote.</p></details>
+      <details><summary>Who owns it when you're done?</summary><p>You. It lives in your Google account or your own Supabase project, not mine, with a guide your team can follow.</p></details>
+      <details><summary>When isn't this a fit?</summary><p>When you want a forty-page strategy deck and nothing that runs on Monday.</p></details>
     </div>
   </section>
 
   <section id="contact">
     <div class="contact">
       <div>
-        <span class="label">10 / Contact</span>
+        <span class="label">14 / Where do I sign?</span>
         <h2 style="margin-top:12px">Here's the gap. Here's what it costs you each week.</h2>
         <p>Tell me how your team works today and what keeps slipping. I'll tell you what I'd build and roughly what it would take.</p>
       </div>
