@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="KRIYĀ Systems by Nathasjja Takanashi: apps and automations built on the Google Sheets and WhatsApp your team already uses. Bali.">
 <title>Nathasjja Takanashi Systems</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +30,7 @@
 *{box-sizing:border-box}
 html,body{margin:0}
 [hidden]{display:none!important}
-:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{padding-top:env(safe-area-inset-top,0px)}
 img{max-width:100%}
 body{background:var(--ground);color:var(--text);font-family:var(--display);font-size:17px;line-height:1.55;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -59,19 +58,21 @@ a{color:var(--signal)}
 .top nav a:hover{color:var(--text)}
 
 /* hero */
-.hero{position:relative;padding-block:56px 72px}
+.hero{position:relative;padding-block:88px 120px}
 .thread{position:absolute;left:calc(-1 * max(16px,env(safe-area-inset-left,0px)));right:calc(-1 * max(16px,env(safe-area-inset-right,0px)));top:50%;height:1px;background:var(--signal);opacity:.55}
 .hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr);gap:56px;align-items:center}
 .hero-copy{background:var(--ground);padding-block:8px;display:grid;gap:20px}
-.kicker{font-family:var(--ledger);font-size:12px;letter-spacing:.14em;color:var(--signal)}
-.hero h1{font-weight:800;font-size:clamp(2.3rem,5.4vw,4.1rem);line-height:1.02;letter-spacing:-.02em}
+.kicker{justify-self:start;font-family:var(--ledger);font-size:11px;letter-spacing:.12em;background:var(--signal);color:var(--signal-ink);padding:5px 9px;border-radius:3px}
+.hero h1{font-weight:600;font-size:clamp(2.6rem,6vw,4.9rem);line-height:.98;letter-spacing:-.035em}
 .lede{font-size:1.1rem;color:var(--sub);max-width:34em}
 .def{display:grid;gap:4px;border-left:1px solid var(--edge);padding-left:16px}
 .def .pron{font-family:var(--ledger);font-size:13px;color:var(--sub)}
 .def .voice{font-size:clamp(1.3rem,2.4vw,1.6rem);line-height:1.25}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
-.btn{font:700 15px var(--display);padding:13px 20px;border-radius:999px;text-decoration:none;border:1px solid var(--text);color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:18px;font:500 12px var(--ledger);letter-spacing:.12em;text-transform:uppercase;padding:15px 18px;border-radius:2px;text-decoration:none;border:1px solid var(--text);color:var(--text);transition:background .2s,color .2s}
+.btn:hover{background:var(--text);color:var(--ground)}
 .btn.primary{background:var(--signal);border-color:var(--signal);color:var(--signal-ink)}
+.btn.primary:hover{background:var(--text);border-color:var(--text);color:var(--ground)}
 
 /* phone (Axiom's own branding, shown as client work) */
 .phone{position:relative;width:min(290px,100%);margin:0 auto;background:#000;border-radius:38px;padding:10px;border:1px solid var(--edge)}
@@ -93,27 +94,32 @@ a{color:var(--signal)}
 .cap{text-align:center;margin-top:14px}
 
 /* sections */
-section{padding-block:72px;border-top:1px solid var(--edge)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px 32px;flex-wrap:wrap;margin-bottom:36px}
-.sec-head h2{font-weight:700;font-size:clamp(1.8rem,3.4vw,2.75rem);line-height:1.05;max-width:22em}
-.sec-intro{color:var(--sub);max-width:40em;margin:-18px 0 36px}
+section{padding-block:28px 120px;border-top:1px solid var(--edge)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:0 24px;margin-bottom:56px}
+.sec-head .sec-n{grid-row:1;grid-column:1;font-size:11px;letter-spacing:.1em;white-space:nowrap}
+.sec-head .sec-name{grid-row:1;grid-column:2;font-size:11px}
+.sec-head h2{grid-row:2;grid-column:1 / -1;margin-top:clamp(56px,9vw,120px);font-weight:500;font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.04;letter-spacing:-.03em;max-width:17em}
+.sec-intro{color:var(--text);font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.5;max-width:34em;margin:-16px 0 56px}
 
 /* services */
-.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.svc div{background:var(--surface);border-radius:4px;padding:24px;display:grid;gap:10px;align-content:start}
-.svc .k{font-family:var(--ledger);font-size:12px;letter-spacing:.14em;color:var(--signal)}
-.svc h3{font-weight:700;font-size:1.35rem;line-height:1.1}
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.svc div{border-top:1px solid var(--edge);padding:20px 0 0;display:grid;gap:12px;align-content:start}
+.svc .k{font-family:var(--ledger);font-size:11px;letter-spacing:.12em;color:var(--signal)}
+.svc h3{font-weight:500;font-size:1.4rem;line-height:1.1;letter-spacing:-.015em}
 .svc p{color:var(--sub);font-size:15px}
-.fit{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.fit span:not(.label){font-family:var(--ledger);font-size:13px;padding:7px 13px;border:1px solid var(--signal);border-radius:999px;color:var(--signal)}
-.fit .fit-any{border-style:dashed;border-color:var(--text);color:var(--text)}
+.fit{margin-top:96px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:16px 24px;align-items:start;border-top:1px solid var(--edge);padding-top:28px}
+.fit .label{font-size:11px}
+.fit-list{list-style:none;margin:0;padding:0;columns:2;column-gap:24px;font-weight:500;font-size:clamp(1.6rem,3.4vw,2.6rem);line-height:1.18;letter-spacing:-.025em}
+.fit-list li{break-inside:avoid}
+.fit-list li:nth-child(even){color:var(--sub)}
+.fit-list .fit-any{color:var(--signal)!important;font-size:.5em;letter-spacing:0;line-height:1.4;padding-top:.6em}
 
 /* case study */
 .case-top{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding:20px 0;border-block:1px solid var(--text);margin-bottom:44px}
 .case-top dd{margin:6px 0 0;font-size:16px;font-weight:600}
 .case-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 56px}
 .prose{display:grid;gap:16px;align-content:start}
-.prose h3{font-weight:700;font-size:1.5rem}
+.prose h3{font-weight:500;font-size:1.6rem;letter-spacing:-.02em}
 .prose p{color:var(--sub)}
 .prose p strong{color:var(--text);font-weight:600}
 .figs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:48px 0;border-top:1px solid var(--edge);padding-top:20px}
@@ -139,7 +145,7 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 .steps{list-style:none;padding:0;margin:0;display:grid}
 .steps li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;padding:16px 0;border-top:1px solid var(--edge)}
 .steps .v{font-family:var(--ledger);font-size:13px;letter-spacing:.1em;color:var(--signal);padding-top:3px}
-.steps h4{font-weight:700;font-size:1.05rem;margin-bottom:3px}
+.steps h4{font-weight:600;font-size:1.05rem;margin-bottom:3px}
 .steps p{color:var(--sub);font-size:15px}
 
 .quote{margin:48px 0 0;padding:32px;background:var(--text);color:var(--ground);border-radius:4px;display:grid;gap:12px}
@@ -236,7 +242,7 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 .pc-chart{background:var(--deep);border-radius:4px;padding:20px 22px;display:grid;gap:10px;align-content:start}
 .pc-head{display:flex;justify-content:space-between;gap:12px}
 .pc-bars{display:grid;gap:4px}
-.pc-bar{all:unset;cursor:pointer;display:grid;grid-template-columns:108px minmax(0,1fr) 92px 26px;gap:12px;align-items:center;padding:8px 6px;border-radius:4px;font-size:14px}
+.pc-bar{all:unset;cursor:pointer;display:grid;grid-template-columns:124px minmax(0,1fr) 92px 26px;gap:12px;align-items:center;padding:8px 6px;border-radius:4px;font-size:14px}
 .pc-bar:hover,.pc-bar[aria-pressed="true"]{background:var(--surface)}
 .pc-bar:focus-visible{outline:2px solid var(--signal)}
 .pc-l{color:var(--sub);font-family:var(--ledger);font-size:12px;white-space:nowrap}
@@ -250,13 +256,13 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 .pc-read{font-family:var(--ledger);font-size:12px;color:var(--signal);min-height:1.5em}
 .pc-note{font-size:14px;color:var(--sub);max-width:60em;margin-top:-28px}
 @media (max-width:960px){.pc-hero{grid-template-columns:1fr}}
-@media (max-width:480px){.pc-bar{grid-template-columns:84px minmax(0,1fr) 84px;gap:8px}.pc-n{display:none}.pc-total{grid-template-columns:minmax(0,1fr) 84px}.pc-total span:last-child{display:none}}
+@media (max-width:480px){.pc-l{white-space:normal}.pc-bar{grid-template-columns:72px minmax(0,1fr) 84px;gap:8px}.pc-n{display:none}.pc-total{grid-template-columns:minmax(0,1fr) 84px}.pc-total span:last-child{display:none}}
 @media (prefers-reduced-motion:no-preference){.pc-chart.in .pc-track i{animation:grow .9s ease-out both}@keyframes grow{from{transform:scaleX(0)}to{transform:none}}}
 
 
 /* WhatsApp */
 .btn-wa{display:inline-flex;align-items:center;gap:8px}
-.wa-big{display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#0B2E1A;text-decoration:none;font-weight:700;font-size:16px;padding:14px 18px;border-radius:999px}
+.wa-big{display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#0B2E1A;text-decoration:none;font:500 12px var(--ledger);letter-spacing:.12em;text-transform:uppercase;padding:16px 18px;border-radius:2px}
 .wa-big:hover{filter:brightness(1.05)}
 .mbar{display:none}
 .m-more{display:none}
@@ -265,20 +271,23 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 @media (max-width:720px){
   body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
   .top nav{display:none}
-  section{padding-block:44px}
-  .sec-head{margin-bottom:22px}
-  .sec-intro{margin:-8px 0 22px}
-  .hero{padding-block:28px 40px}
+  section{padding-block:20px 72px}
+  .sec-head{margin-bottom:28px}
+  .sec-head h2{margin-top:44px}
+  .sec-head{grid-template-columns:auto minmax(0,1fr)}
+  .sec-head .sec-n{white-space:nowrap}
+  .sec-intro{margin:-6px 0 28px}
+  .hero{padding-block:40px 56px}
+  .fit{grid-template-columns:1fr;margin-top:56px}
+  .fit-list{columns:1;font-size:1.7rem}
+  .ba{gap:40px}
   .hero-grid{gap:32px}
   /* card rows become swipeable rails */
-  .svc,.proc,.concepts,.doors{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none;
+  .svc,.proc,.concepts,.doors{display:grid;grid-template-columns:none!important;grid-auto-flow:column;grid-auto-columns:84%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none;
     -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
   .svc::-webkit-scrollbar,.proc::-webkit-scrollbar,.concepts::-webkit-scrollbar,.doors::-webkit-scrollbar{display:none}
   .svc>div,.proc>div,.concepts>*,.doors>*{scroll-snap-align:start}
   .cc.feature{grid-column:auto;grid-template-columns:1fr}
-  .fit{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
-  .fit::-webkit-scrollbar{display:none}
-  .fit span{flex:none}
   .swipe-hint{display:block}
   .case-top{gap:14px;padding:14px 0;margin-bottom:24px}
   .figs{gap:14px;margin:24px 0}
@@ -299,7 +308,7 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 
 /* Ludwig case */
 .lw-card{display:grid;gap:4px;justify-items:center;background:var(--deep);border-radius:4px;padding:18px}
-.lw-word{font:700 1.8rem var(--display);letter-spacing:-.01em}
+.lw-word{font:600 1.8rem var(--display);letter-spacing:-.01em}
 .lw-mean{font-family:var(--ledger);font-size:13px;color:var(--sub)}
 .lw-boxes{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
 .lw-box{border:1px solid var(--edge);border-radius:4px;padding:8px 4px;display:grid;gap:3px;justify-items:center;font-family:var(--ledger);font-size:11px;color:var(--sub);transition:border-color .25s,background .25s}
@@ -314,7 +323,7 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 .lw-btns .lw-reset{flex:0 0 auto;width:42px;padding:10px 0}
 .lw-perm{margin-top:40px;background:var(--surface);border-radius:4px;padding:24px;display:grid;gap:18px}
 .lw-perm-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 32px;flex-wrap:wrap}
-.lw-perm-head h3{font-weight:700;font-size:1.4rem;margin:8px 0 6px}
+.lw-perm-head h3{font-weight:600;font-size:1.4rem;margin:8px 0 6px}
 .lw-perm-head p{color:var(--sub);max-width:44em}
 .lw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
 .lw-cell{border:1px solid var(--edge);border-radius:4px;padding:14px;display:grid;gap:8px;align-content:start;background:var(--ground);transition:opacity .25s,border-color .25s}
@@ -347,19 +356,19 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 .kq>p:last-child{font-size:13px;color:var(--sub)}
 
 /* copy sections */
-.ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.ba-col{background:var(--surface);border-radius:4px;padding:28px;display:grid;gap:22px;align-content:start}
+.ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px}
+.ba-col{display:grid;gap:28px;align-content:start}
 .ba-item{display:grid;gap:6px;border-top:1px solid var(--edge);padding-top:16px}
-.ba-item h3{font-weight:700;font-size:1.25rem}
+.ba-item h3{font-weight:500;font-size:1.4rem;letter-spacing:-.015em}
 .ba-item p{color:var(--sub);font-size:15.5px}
 .rules{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}
-.rules li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;padding:14px 0;border-top:1px solid var(--edge);font-size:17px;font-weight:600;align-items:baseline}
+.rules li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;padding:18px 0;border-top:1px solid var(--edge);font-size:1.2rem;font-weight:500;letter-spacing:-.01em;align-items:baseline}
 .rules .rn{font-family:var(--ledger);font-size:12px;font-weight:400;color:var(--signal)}
 .story{max-width:44em;display:grid;gap:18px;font-size:18px;line-height:1.65;color:var(--sub)}
-.story-end{color:var(--text);font-weight:600;font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.3;border-left:2px solid var(--signal);padding-left:16px;margin-top:8px}
+.story-end{color:var(--text);font-weight:500;font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.3;border-left:2px solid var(--signal);padding-left:16px;margin-top:8px}
 .faq{display:grid;border-top:1px solid var(--edge)}
 .faq details{border-bottom:1px solid var(--edge)}
-.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-weight:700;font-size:1.15rem}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:24px 0;font-weight:500;font-size:1.3rem;letter-spacing:-.015em}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"+";font-family:var(--ledger);font-weight:400;color:var(--signal);font-size:20px;line-height:1}
 .faq details[open] summary::after{content:"−"}
@@ -371,7 +380,7 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 .status-chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--ledger);font-size:12px;letter-spacing:.12em;color:var(--flag);border:1px solid var(--flag);border-radius:999px;padding:4px 12px}
 .doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .door{background:var(--surface);border-radius:4px;padding:22px;display:grid;gap:12px;align-content:start}
-.door h4{font-weight:700;font-size:1.2rem}
+.door h4{font-weight:600;font-size:1.2rem}
 .door p{color:var(--sub);font-size:15px}
 .flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-family:var(--ledger);font-size:11px;letter-spacing:.06em}
 .flow span{border:1px solid var(--edge);border-radius:999px;padding:4px 9px;color:var(--sub)}
@@ -432,7 +441,7 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 .cc{background:var(--surface);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
 .cc .viz{padding:18px;background:var(--deep);display:grid;gap:7px;align-content:start;min-height:196px;font-size:13px}
 .cc .txt{padding:22px;display:grid;gap:8px}
-.cc h3{font-weight:700;font-size:1.25rem}
+.cc h3{font-weight:600;font-size:1.25rem}
 .cc p{color:var(--sub);font-size:15px}
 .mini{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;border-bottom:1px solid var(--edge);padding:7px 2px;font-variant-numeric:tabular-nums}
 .mini .k{font-family:var(--ledger);font-size:11px;color:var(--sub)}
@@ -443,11 +452,11 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 .bar i.low{background:var(--flag)}
 
 /* process */
-.proc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.proc div{background:var(--surface);border-radius:4px;padding:24px;display:grid;gap:10px;align-content:start}
-.proc .k{font-family:var(--ledger);font-size:12px;letter-spacing:.14em;color:var(--signal)}
+.proc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.proc div{border-top:1px solid var(--edge);padding:20px 0 0;display:grid;gap:12px;align-content:start}
+.proc .k{font-family:var(--ledger);font-size:11px;letter-spacing:.12em;color:var(--signal)}
 .proc .k.last{color:var(--flag)}
-.proc h3{font-weight:700;font-size:1.4rem}
+.proc h3{font-weight:500;font-size:1.5rem;letter-spacing:-.015em}
 .proc p{color:var(--sub);font-size:15px}
 
 /* say / don't say */
@@ -455,10 +464,10 @@ section{padding-block:72px;border-top:1px solid var(--edge)}
 
 /* contact */
 .contact{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
-.contact h2{font-weight:800;font-size:clamp(2rem,4vw,3rem);line-height:1.02;letter-spacing:-.02em}
+.contact h2{font-weight:500;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1;letter-spacing:-.035em}
 .contact p{margin-top:14px;color:var(--sub);max-width:32em}
 .card{background:var(--text);color:var(--ground);border-radius:6px;padding:24px;display:grid;gap:16px}
-.card .nm{font-weight:700;font-size:20px}
+.card .nm{font-weight:600;font-size:20px}
 .card .voice{font-size:19px;opacity:.75}
 .crow{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;font-family:var(--ledger);font-size:13px;border-top:1px solid color-mix(in srgb,var(--ground) 25%,transparent);padding-top:10px}
 .crow .cv{user-select:all;word-break:break-all}
@@ -484,7 +493,6 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
 @media (max-width:560px){
   body{font-size:16px}
   .svc,.proc{grid-template-columns:1fr}
-  section{padding-block:56px}
   .steps li{grid-template-columns:1fr;gap:4px}
 }
 @media (prefers-reduced-motion:no-preference){
@@ -520,14 +528,14 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
       <div class="hero-copy">
         <span class="kicker">NO NEW SOFTWARE REQUIRED</span>
         <h1>Run like a tech company. Keep your spreadsheet.</h1>
-        <p class="lede">Your business already runs on a Google Sheet, a WhatsApp group and one person who remembers everything. I don't replace any of them. I build the apps and automations that sit on top, so the work stops living in someone's head.</p>
+        <p class="lede">Your business probably runs on a Google Sheet, a WhatsApp group and one person who remembers everything. I build apps and automations on top of the sheet and the chat, so the work gets written down somewhere besides that one person's head.</p>
         <div class="def">
           <span class="pron">kri·yā  /ˈkri.jaː/  n.</span>
           <span class="voice">action; the work itself, shaped around the people who do it.</span>
         </div>
         <div class="cta">
           <a class="btn primary btn-wa" href="https://wa.me/6281339021014?text=Hi%20Nathasjja%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20system%20for%20my%20team." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Chat on WhatsApp</a>
-          <a class="btn" href="#builds">Explore what we've built</a>
+          <a class="btn" href="#builds">Explore what we've built <span aria-hidden="true">↘</span></a>
         </div>
       </div>
       <figure style="margin:0" class="hs" aria-roledescription="carousel" aria-label="Screens from the builds: Ludwig, Axiom and KRIYĀ">
@@ -541,47 +549,47 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="build">
     <div class="sec-head">
       <h2>Tools your team will actually open</h2>
-      <span class="label">01 / The goods</span>
+      <span class="label sec-n">[ 01 / 14 ]</span><span class="label sec-name">Services</span>
     </div>
     <p class="sec-intro">Task trackers that answer "who's on it?" before anyone asks. Booking apps that fill a tattoo chair faster than a Canggu sunset fills a beach bar. Quote pages that close the deal before the client finishes their kopi. Dashboards a director reads in one scroll. And automations for whatever your team is still copying and pasting by hand.</p>
     <span class="swipe-hint">Swipe →</span>
     <div class="svc">
       <div><span class="k">TRACK</span><h3>Task and project trackers</h3><p>Who owns what, by when, worked out from the dates. Numbered the way your team already talks, so nobody learns a new language to find task 2.14.1.</p></div>
-      <div><span class="k">MOBILE</span><h3>Apps for the team's phones</h3><p>Runs straight off your Google Sheet. Tasks, updates and site photos from anywhere. No app store, no per-seat fees nibbling at your margins.</p></div>
-      <div><span class="k">EN ⇄ RU ⇄ ID + MORE</span><h3>Multilingual tools</h3><p>Every task and update translated automatically, so a Russian site lead and an Indonesian crew read the same record. English, Russian and Indonesian built in; other major languages on request. Human edits are never overwritten.</p></div>
-      <div><span class="k">INBOX</span><h3>Chat-to-task</h3><p>Paste the group chat. Get draft tasks with owners and deadlines, duplicates flagged before they save. The group chat finally pulls its weight.</p></div>
+      <div><span class="k">MOBILE</span><h3>Apps for the team's phones</h3><p>Runs straight off your Google Sheet, so tasks, updates and site photos can come in from anywhere. There's no app store download and no per-seat fee.</p></div>
+      <div><span class="k">EN ⇄ RU ⇄ ID + MORE</span><h3>Multilingual tools</h3><p>Tasks and updates are translated automatically, so a Russian site lead and an Indonesian crew read the same record. English, Russian and Indonesian are built in, other major languages are available on request, and a translation never overwrites what a person typed.</p></div>
+      <div><span class="k">INBOX</span><h3>Chat-to-task</h3><p>Paste the group chat in and get draft tasks with owners and deadlines. Duplicates are flagged before anything saves.</p></div>
     </div>
     <div class="fit">
       <span class="label">Works for teams in</span>
-      <span>Construction</span><span>Tattoo studios</span><span>Software companies</span><span>Villa management</span><span>Fitness studios</span><span>Cafés</span><span>Tutors &amp; language schools</span><span class="fit-any">+ any team that runs on chats and spreadsheets</span>
+      <ul class="fit-list"><li>Construction</li><li>Tattoo studios</li><li>Software companies</li><li>Villa management</li><li>Fitness studios</li><li>Cafés</li><li>Tutors and language schools</li><li class="fit-any">and any team that runs on chats and spreadsheets</li></ul>
     </div>
   </section>
 
   <section id="before">
     <div class="sec-head">
-      <h2>Your systems are fine. Until Friday.</h2>
-      <span class="label">02 / Before and after</span>
+      <h2>Your systems work fine until someone needs last month's receipts</h2>
+      <span class="label sec-n">[ 02 / 14 ]</span><span class="label sec-name">Before and after</span>
     </div>
     <div class="ba">
       <div class="ba-col">
         <span class="label" style="color:var(--flag)">● Before</span>
-        <div class="ba-item"><h3>The WhatsApp dig</h3><p>Receipts, quotes and decisions buried 300 messages deep. Every Friday someone scrolls back to August with a coffee and a prayer.</p></div>
-        <div class="ba-item"><h3>The human hard drive</h3><p>One person knows where everything is. They're brilliant. They also go on holiday, and the business goes with them.</p></div>
-        <div class="ba-item"><h3>The copy-paste olympics</h3><p>The same client typed into four tabs. Commission worked out on a phone calculator. Gold medals all round, zero hours back.</p></div>
+        <div class="ba-item"><h3>The WhatsApp dig</h3><p>Receipts, quotes and decisions sit weeks back in the group chat, and every Friday someone scrolls up to August with a coffee to find them.</p></div>
+        <div class="ba-item"><h3>The human hard drive</h3><p>One person knows where everything is, which works well until they go on holiday.</p></div>
+        <div class="ba-item"><h3>The copy-paste olympics</h3><p>The same client gets typed in twice, and commission is worked out on a phone calculator, booking after booking.</p></div>
       </div>
       <div class="ba-col">
         <span class="label" style="color:var(--signal)">● After</span>
         <div class="ba-item"><h3>One record, everywhere</h3><p>The sheet you already have becomes the database. The app, the dashboard and the client page all read from it, so nobody types anything twice.</p></div>
-        <div class="ba-item"><h3>Work that chases itself</h3><p>Status, reminders, translations and follow-ups update on their own. Managers stop asking "any update?" and start reading one.</p></div>
-        <div class="ba-item"><h3>Numbers you can check</h3><p>Rp1.043.000 found in a group chat. 62 tasks pulled out of a meeting log. Every figure on this page came from a real build.</p></div>
+        <div class="ba-item"><h3>Work that chases itself</h3><p>Status, reminders, translations and follow-ups update on their own, so a manager can read the latest without asking for it.</p></div>
+        <div class="ba-item"><h3>Numbers you can check</h3><p>Rp1.043.000 found in a group chat and 62 tasks pulled out of a meeting log. Every figure in the case studies comes from the real build.</p></div>
       </div>
     </div>
   </section>
 
   <section id="builds">
     <div class="sec-head">
-      <h2>Proof, not promises</h2>
-      <span class="label">03 / Builds</span>
+      <h2>The builds, screen by screen</h2>
+      <span class="label sec-n">[ 03 / 14 ]</span><span class="label sec-name">Builds</span>
     </div>
     <div class="builds">
       <div class="bchoose" role="tablist" aria-label="Choose a build">
@@ -638,13 +646,13 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="axiom" class="case-sec">
     <div class="sec-head">
       <h2>Axiom Task Manager: from a weekly meeting log to an app the site team uses</h2>
-      <span class="label">04 / Case study</span>
+      <span class="label sec-n">[ 04 / 14 ]</span><span class="label sec-name">Case study</span>
     </div>
     <dl class="case-top">
       <div><dt class="label">Client</dt><dd>PT Axiom Construction Co, Bali</dd></div>
       <div><dt class="label">Role</dt><dd>Director; designed and delivered it</dd></div>
       <div><dt class="label">Team</dt><dd>English and Russian speakers</dd></div>
-      <div><dt class="label">Timeline</dt><dd>Oct – Nov 2026</dd></div>
+      <div><dt class="label">Timeline</dt><dd>Oct to Nov 2026</dd></div>
     </dl>
 
     <div class="case-body">
@@ -652,7 +660,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
         <span class="label" style="color:var(--flag)">● The gap</span>
         <h3>Action items buried in a meeting log</h3>
         <p>Axiom is a team of experienced engineers doing interiors and renovations across four live projects: <strong>Villas Seseh, 8SENCE, Angel Cakes Uluwatu and Anantara Dragon</strong>. There was no task system. Actions lived inside the weekly protocol, one tab per project, in long status-log cells with no deadlines anyone could track.</p>
-        <p>The team works in English and Russian. And the protocol couldn't be touched: people were still using it every week.</p>
+        <p>The team works in English and Russian, and the protocol had to stay as it was because people still used it every week.</p>
         <span class="label" style="color:var(--signal);margin-top:12px">● The thread</span>
         <h3>One record, linked to every stage</h3>
         <p>A task manager in Google Sheets with Apps Script, then a custom mobile web app on top. The protocol stays the meeting and finance record. The new system holds every action item, linked to its project stage.</p>
@@ -705,13 +713,13 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="kriya" class="case-sec">
     <div class="sec-head">
       <h2>KRIYĀ Studio App: the whole studio runs on the sheet it already had</h2>
-      <span class="label">05 / Case study</span>
+      <span class="label sec-n">[ 05 / 14 ]</span><span class="label sec-name">Case study</span>
     </div>
     <dl class="case-top">
       <div><dt class="label">Client</dt><dd>KRIYĀ tattoo studio, Bali</dd></div>
       <div><dt class="label">Role</dt><dd>Owner; designed and built it</dd></div>
       <div><dt class="label">Built on</dt><dd>The studio's existing Main Sheet</dd></div>
-      <div><dt class="label">Timeline</dt><dd>August – October 2026</dd></div>
+      <div><dt class="label">Timeline</dt><dd>August to October 2026</dd></div>
     </dl>
 
     <div class="case-body">
@@ -750,7 +758,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
             <button type="button" data-t="0" aria-pressed="true">Arm · leg · back</button>
             <button type="button" data-t="1" aria-pressed="false">Tricky spot <i>+25%</i></button>
           </div>
-          <div class="kq-est"><span class="label">Estimate</span><b id="kq-price">Rp2.500.000 – 3.500.000</b><span id="kq-chair">2.5 h – 3.5 h in the chair</span></div>
+          <div class="kq-est"><span class="label">Estimate</span><b id="kq-price">Rp2.500.000 to 3.500.000</b><span id="kq-chair">2.5 to 3.5 h in the chair</span></div>
           <div class="kq-offer">
             <label class="kq-row" for="kq-off"><span>Client offers</span><b id="kq-offv">Rp2.000.000</b></label>
             <input type="range" id="kq-off" min="500000" max="5000000" step="100000" value="2000000">
@@ -777,7 +785,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="ludwig" class="case-sec">
     <div class="sec-head">
       <h2>Ludwig: a language app where the teacher's lessons become the student's homework</h2>
-      <span class="label">06 / Case study</span>
+      <span class="label sec-n">[ 06 / 14 ]</span><span class="label sec-name">Case study</span>
     </div>
     <dl class="case-top">
       <div><dt class="label">Client</dt><dd>Private Indonesian tutoring</dd></div>
@@ -795,7 +803,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
         <h3>One app, two sides of the same lesson</h3>
         <p><strong>Students</strong> sign up, wait for approval, then practise word decks with spaced repetition and read short stories with questions. They switch between English and Russian explanations.</p>
         <p><strong>The teacher</strong> approves students, logs the words taught in each lesson, keeps private notes, and writes decks and stories in the app instead of code. A word logged after class appears in that student's <strong>Dari guru</strong> ("from the teacher") deck straight away.</p>
-        <p>Practice is built to be come back to: a <strong>Today</strong> screen with a daily goal and a word of the day, two games (<strong>Match Rush</strong>, six pairs against the clock, and <strong>Cat Hunt</strong>, a pixel game starring three real cats), stories where any word can be tapped to translate and save, and a <strong>Memory</strong> view that turns Ebbinghaus's forgetting curve into a personal recall estimate.</p>
+        <p>Students get reasons to come back: a <strong>Today</strong> screen with a daily goal and a word of the day, two games (<strong>Match Rush</strong>, six pairs against the clock, and <strong>Cat Hunt</strong>, a pixel game starring three real cats), stories where any word can be tapped to translate and save, and a <strong>Memory</strong> view that turns Ebbinghaus's forgetting curve into a personal recall estimate.</p>
         <p>It started as a lean practice app for one learner and grew into a platform for several students in the same week, without changing hosts or adding a server.</p>
       </div>
       <div style="display:grid;gap:16px;align-content:start">
@@ -803,7 +811,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
           <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><span class="label" id="lw-srs-h">Try the review schedule</span><span class="label" id="lw-due" aria-live="polite">New card</span></div>
           <div class="lw-card"><span class="lw-word">makan</span><span class="lw-mean">to eat · есть</span></div>
           <div class="lw-boxes" id="lw-boxes" aria-label="Review boxes 1 to 6"></div>
-          <div class="lw-legend"><span>1–2 Learning</span><span>3–4 Known</span><span>5–6 Mastered</span></div>
+          <div class="lw-legend"><span>1-2 Learning</span><span>3-4 Known</span><span>5-6 Mastered</span></div>
           <div class="lw-btns">
             <button type="button" data-g="0">Again</button>
             <button type="button" data-g="1">Got it</button>
@@ -829,7 +837,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
       <div class="lw-perm-head">
         <div>
           <span class="label" style="color:var(--signal)">● Who sees what</span>
-          <h3>Security lives in the database, not the app</h3>
+          <h3>The security rules live in the database</h3>
           <p>Every table has row-level rules, so even someone poking at the app's code only gets what their role allows. Pick a role:</p>
         </div>
         <div class="seg-tabs" role="tablist" aria-label="View as">
@@ -853,7 +861,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="pettycash" class="case-sec">
     <div class="sec-head">
       <h2>Petty Cash Backfill: ten weeks of WhatsApp receipts, reconciled</h2>
-      <span class="label">07 / Case study</span>
+      <span class="label sec-n">[ 07 / 14 ]</span><span class="label sec-name">Case study</span>
     </div>
     <dl class="case-top">
       <div><dt class="label">Client</dt><dd>ALL X, Bali operations</dd></div>
@@ -871,7 +879,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
       <div class="pc-chart">
         <div class="pc-head"><span class="label">Untracked spend by period</span><span class="label">Rp · receipts</span></div>
         <div class="pc-read" id="pc-read" aria-live="polite">Tap a period for detail</div>
-        <div class="pc-bars"><button type="button" class="pc-bar" data-n="7" data-v="169000" data-l="31 Aug – 4 Sep" aria-label="31 Aug – 4 Sep: 7 receipts, Rp169.000"><span class="pc-l">31 Aug – 4 Sep</span><span class="pc-track"><i style="width:52.6%"></i></span><span class="pc-v">Rp169.000</span><span class="pc-n">7</span></button><button type="button" class="pc-bar" data-n="8" data-v="200500" data-l="8 – 11 Sep" aria-label="8 – 11 Sep: 8 receipts, Rp200.500"><span class="pc-l">8 – 11 Sep</span><span class="pc-track"><i style="width:62.4%"></i></span><span class="pc-v">Rp200.500</span><span class="pc-n">8</span></button><button type="button" class="pc-bar" data-n="6" data-v="156500" data-l="16 – 18 Sep" aria-label="16 – 18 Sep: 6 receipts, Rp156.500"><span class="pc-l">16 – 18 Sep</span><span class="pc-track"><i style="width:48.7%"></i></span><span class="pc-v">Rp156.500</span><span class="pc-n">6</span></button><button type="button" class="pc-bar" data-n="7" data-v="195500" data-l="22 – 29 Sep" aria-label="22 – 29 Sep: 7 receipts, Rp195.500"><span class="pc-l">22 – 29 Sep</span><span class="pc-track"><i style="width:60.8%"></i></span><span class="pc-v">Rp195.500</span><span class="pc-n">7</span></button><button type="button" class="pc-bar" data-n="11" data-v="321500" data-l="1 – 9 Oct" aria-label="1 – 9 Oct: 11 receipts, Rp321.500"><span class="pc-l">1 – 9 Oct</span><span class="pc-track"><i style="width:100.0%"></i></span><span class="pc-v">Rp321.500</span><span class="pc-n">11</span></button></div>
+        <div class="pc-bars"><button type="button" class="pc-bar" data-n="7" data-v="169000" data-l="31 Aug to 4 Sep" aria-label="31 Aug to 4 Sep: 7 receipts, Rp169.000"><span class="pc-l">31 Aug to 4 Sep</span><span class="pc-track"><i style="width:52.6%"></i></span><span class="pc-v">Rp169.000</span><span class="pc-n">7</span></button><button type="button" class="pc-bar" data-n="8" data-v="200500" data-l="8 to 11 Sep" aria-label="8 to 11 Sep: 8 receipts, Rp200.500"><span class="pc-l">8 to 11 Sep</span><span class="pc-track"><i style="width:62.4%"></i></span><span class="pc-v">Rp200.500</span><span class="pc-n">8</span></button><button type="button" class="pc-bar" data-n="6" data-v="156500" data-l="16 to 18 Sep" aria-label="16 to 18 Sep: 6 receipts, Rp156.500"><span class="pc-l">16 to 18 Sep</span><span class="pc-track"><i style="width:48.7%"></i></span><span class="pc-v">Rp156.500</span><span class="pc-n">6</span></button><button type="button" class="pc-bar" data-n="7" data-v="195500" data-l="22 to 29 Sep" aria-label="22 to 29 Sep: 7 receipts, Rp195.500"><span class="pc-l">22 to 29 Sep</span><span class="pc-track"><i style="width:60.8%"></i></span><span class="pc-v">Rp195.500</span><span class="pc-n">7</span></button><button type="button" class="pc-bar" data-n="11" data-v="321500" data-l="1 to 9 Oct" aria-label="1 to 9 Oct: 11 receipts, Rp321.500"><span class="pc-l">1 to 9 Oct</span><span class="pc-track"><i style="width:100.0%"></i></span><span class="pc-v">Rp321.500</span><span class="pc-n">11</span></button></div>
         <div class="pc-total"><span>Total</span><span>Rp1.043.000</span><span>39</span></div>
       </div>
     </div>
@@ -882,7 +890,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
         <h3>Three systems the team already used, made into one record</h3>
         <p>Receipts arrived in a WhatsApp group. The ledger was a Google Sheet with a tab per month and a tab per person. Files belonged in month-dated Drive folders. Nothing connected them, so receipts sat in the chat until someone found time to scroll back.</p>
         <p>The automation drove the WhatsApp desktop app directly, exported each receipt, and prepared a dated ledger row for it, with the file linked into the Receipt column as a chip.</p>
-        <h3 style="margin-top:12px">It learned the house rules instead of inventing new ones</h3>
+        <h3 style="margin-top:12px">It followed the house rules already in the sheet</h3>
         <p>Categories, payment types, the <strong>DD/MM/YYYY</strong> date format and the tab layout were all read from rows the team had already written. The hardest rule was never written down: receipts print street addresses, while the team says nicknames. Matching the same address across different messages rebuilt that map, so later receipts filed themselves by address alone.</p>
       </div>
       <div style="display:grid;gap:16px;align-content:start">
@@ -901,7 +909,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
         </div>
         <div class="door">
           <span class="label">Human checkpoints</span>
-          <p>Two calls went back to a person instead of being guessed: a backlog of rides booked under an unfamiliar staff name, and two rides the ride app itself marked <strong>Profile: PERSONAL</strong>. Those were flagged, not logged.</p>
+          <p>Two calls went back to a person instead of being guessed: a backlog of rides booked under an unfamiliar staff name, and two rides the ride app itself marked <strong>Profile: PERSONAL</strong>. Both were flagged and kept out of the ledger.</p>
         </div>
       </div>
     </div>
@@ -910,15 +918,15 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
       <div class="fig"><b>39</b><span>receipts found and verified</span></div>
       <div class="fig"><b>10 wks</b><span>of chat history searched</span></div>
       <div class="fig"><b>5</b><span>errors caught on re-check</span></div>
-      <div class="fig"><b>3–4 h</b><span>of manual work replaced</span></div>
+      <div class="fig"><b>3 to 4 h</b><span>of manual work replaced</span></div>
     </div>
-    <p class="pc-note">Time saved is measured, not estimated: it is set against a teammate's average DeskTime activity in Google Sheets for tracking these expenses, uploading receipts and updating the petty cash sheet by hand.</p>
+    <p class="pc-note">The time saved is measured against a teammate's average DeskTime activity in Google Sheets for tracking these expenses, uploading receipts and updating the petty cash sheet by hand.</p>
   </section>
 
   <section id="hood" class="case-sec">
     <div class="sec-head">
       <h2>Under the hood: trace a request through the system</h2>
-      <span class="label">08 / Infrastructure</span>
+      <span class="label sec-n">[ 08 / 14 ]</span><span class="label sec-name">Infrastructure</span>
     </div>
     <p class="sec-intro">None of these builds needs a server of its own to maintain. Pick an action and watch where it goes, step by step.</p>
     <div class="hood-bar">
@@ -959,7 +967,7 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="concepts">
     <div class="sec-head">
       <h2>The same thread, other businesses</h2>
-      <span class="label">09 / Concepts</span>
+      <span class="label sec-n">[ 09 / 14 ]</span><span class="label sec-name">Concepts</span>
     </div>
     <p class="sec-intro">How the Axiom and KRIYĀ setups adapt to other teams in Bali. Concept designs with sample data, not client work.</p>
     <span class="swipe-hint">Swipe →</span>
@@ -1009,48 +1017,48 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="method">
     <div class="sec-head">
       <h2>I seal the gaps your team has learned to walk around</h2>
-      <span class="label">10 / Method</span>
+      <span class="label sec-n">[ 10 / 14 ]</span><span class="label sec-name">Method</span>
     </div>
-    <p class="sec-intro">Four steps, no twelve-month roadmap, and your team tapping a real version long before the last one.</p>
+    <p class="sec-intro">Four steps, and your team is using a real version well before the last one.</p>
     <span class="swipe-hint">Swipe →</span>
     <div class="proc">
       <div><span class="k">01 / SURVEY</span><h3>The stakeout</h3><p>I sit in your chats, your sheets and your Monday meeting until I know where the work really goes. When in Rome... build as the Romans do, but better.</p></div>
       <div><span class="k">02 / THREAD</span><h3>The wiring</h3><p>Your Google account, your folders, your numbering. I connect what you already have so updates travel without anyone chasing them.</p></div>
       <div><span class="k">03 / BUILD</span><h3>The fitting</h3><p>A clickable mockup first, then the real thing on your team's phones. They poke holes in it; I sew them shut.</p></div>
-      <div><span class="k last">04 / LAUNCH</span><h3>The handover</h3><p>A how-to guide in your team's languages and one owner on your side who can run it without me. That's the whole point.</p></div>
+      <div><span class="k last">04 / LAUNCH</span><h3>The handover</h3><p>A how-to guide in your team's languages and one owner on your side who can run it without me.</p></div>
     </div>
   </section>
 
   <section id="rules">
     <div class="sec-head">
       <h2>House rules</h2>
-      <span class="label">11 / House rules</span>
+      <span class="label sec-n">[ 11 / 14 ]</span><span class="label sec-name">House rules</span>
     </div>
-    <p class="sec-intro">Every warung has a hand-written sign by the till. No credit. No outside food. Pay before you eat. These are mine, and every build follows them.</p>
+    <p class="sec-intro">Every warung has a hand-written sign by the till: no credit, no outside food, pay before you eat. These are mine, and every build follows them.</p>
     <ol class="rules"><li><span class="rn">001</span><span>Build on what already works.</span></li><li><span class="rn">002</span><span>Every number on the page must be checkable.</span></li><li><span class="rn">003</span><span>If the team won't open it, it doesn't exist.</span></li><li><span class="rn">004</span><span>Speak the team's languages, all of them.</span></li><li><span class="rn">005</span><span>Ask the person doing the work, not only the person paying for it.</span></li><li><span class="rn">006</span><span>No new subscription without a very good reason.</span></li><li><span class="rn">007</span><span>Fix the boring part first. It's usually the expensive part.</span></li><li><span class="rn">008</span><span>Write it down before you forget why.</span></li><li><span class="rn">009</span><span>Leave the owner able to run it without me.</span></li><li><span class="rn">010</span><span>Never automate a mess. Tidy it, then automate it.</span></li></ol>
   </section>
 
   <section id="subak">
     <div class="sec-head">
       <h2>The oldest system on the island</h2>
-      <span class="label">12 / A short story</span>
+      <span class="label sec-n">[ 12 / 14 ]</span><span class="label sec-name">A short story</span>
     </div>
     <div class="story">
       <p>For about a thousand years, Bali's rice farmers have shared water through the subak: a network of canals, cooperatives and water temples that decides who floods their fields, and when.</p>
-      <p>In the 1970s, the Green Revolution arrived with a better idea. Plant as often as you can. Forget the temple calendar. Within a year or two, the pests moved in and the water ran short.</p>
-      <p>Years later, an anthropologist named Stephen Lansing ran the numbers. When neighbouring fields flood and go fallow together, the pests starve. The temple schedule wasn't superstition. It was the system, and it outperformed the replacement. The old way came back, and in 2012 UNESCO made it a World Heritage landscape.</p>
-      <p class="story-end">The lesson I build by: the smartest system in the room is usually the one your people already run. It just needs better tools.</p>
+      <p>In the 1970s the Green Revolution brought a new plan: plant as often as you can and ignore the temple calendar. Within a year or two the pests moved in and the water ran short.</p>
+      <p>Years later, an anthropologist named Stephen Lansing ran the numbers. When neighbouring fields flood and go fallow together, the pests starve. The temple schedule had been doing the pest control all along, and it worked better than its replacement. The old way came back, and in 2012 UNESCO made it a World Heritage landscape.</p>
+      <p class="story-end">I build with that in mind. The system your people already run usually knows something you can't see from outside, and my job is to give it better tools.</p>
     </div>
   </section>
 
   <section id="faq">
     <div class="sec-head">
-      <h2>You've got questions. Fair enough.</h2>
-      <span class="label">13 / FAQ</span>
+      <h2>What people ask first</h2>
+      <span class="label sec-n">[ 13 / 14 ]</span><span class="label sec-name">FAQ</span>
     </div>
     <div class="faq">
-      <details><summary>How much does it cost?</summary><p>It depends on the gap. The test is simple: it should cost less than the hours it gives back, or I'll tell you not to build it. You get a price after the first conversation.</p></details>
-      <details><summary>Do we have to switch software?</summary><p>No. If your team runs on Google Sheets and WhatsApp, that's what I build on. The spreadsheet stays; it just stops doing all the work alone.</p></details>
+      <details><summary>How much does it cost?</summary><p>It depends on the gap. If a build would cost more than the hours it gives back, I'll tell you not to do it. You get a price after the first conversation.</p></details>
+      <details><summary>Do we have to switch software?</summary><p>No. If your team runs on Google Sheets and WhatsApp, that's what I build on. The spreadsheet stays where it is.</p></details>
       <details><summary>How fast is fast?</summary><p>Ludwig went from a first question to a working teaching platform in a day. Bigger systems, like Axiom's migration from a weekly meeting log, take a few weeks of real use and feedback.</p></details>
       <details><summary>My team speaks three languages. Problem?</summary><p>Not for the app. English, Russian and Indonesian are built in, other major languages on request, and translations never overwrite what a person wrote.</p></details>
       <details><summary>Who owns it when you're done?</summary><p>You. It lives in your Google account or your own Supabase project, not mine, with a guide your team can follow.</p></details>
@@ -1061,9 +1069,9 @@ footer{padding-block:36px 48px;margin-top:72px;border-top:1px solid var(--edge);
   <section id="contact">
     <div class="contact">
       <div>
-        <span class="label">14 / Where do I sign?</span>
-        <h2 style="margin-top:12px">Here's the gap. Here's what it costs you each week.</h2>
-        <p>Tell me how your team works today and what keeps slipping. I'll tell you what I'd build and roughly what it would take.</p>
+        <span class="label">[ 14 / 14 ] &nbsp; Where do I sign?</span>
+        <h2 style="margin-top:12px">Tell me what keeps slipping</h2>
+        <p>Send me a few lines on how your team works today and where things get lost. I'll reply with what I'd build and roughly what it would take.</p>
       </div>
       <div class="card">
         <div>
@@ -1232,8 +1240,8 @@ function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=get
     low=lo*RATE;
     $('kq-cmv').textContent=cm.value+' cm'; $('kq-pc').textContent=pcs;
     $('kq-hours').textContent='about '+(Math.round(h*10)/10)+' h of work';
-    $('kq-price').textContent=fmt(lo*RATE)+' – '+fmtShort(hi*RATE);
-    $('kq-chair').textContent=lo+' h – '+hi+' h in the chair';
+    $('kq-price').textContent=fmt(lo*RATE)+' to '+fmtShort(hi*RATE);
+    $('kq-chair').textContent=lo+' to '+hi+' h in the chair';
     offer();
   }
   function offer(){
@@ -1270,14 +1278,14 @@ function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=get
     ['Unpublished drafts','decks · stories (hidden)',{pending:'no',student:'no',teacher:'rw'}],
     ['My own progress','card_progress · daily_activity · story_results',{pending:'no',student:'rw',teacher:'rw'}],
     ['Words taught to me','student_words',{pending:'no',student:'r',teacher:'rw'}],
-    ['Other students’ progress','card_progress (others)',{pending:'no',student:'no',teacher:'r'}],
-    ['Teacher’s private notes','student_notes',{pending:'no',student:'no',teacher:'rw'}],
+    ['Other students\' progress','card_progress (others)',{pending:'no',student:'no',teacher:'r'}],
+    ['Teacher\'s private notes','student_notes',{pending:'no',student:'no',teacher:'rw'}],
     ['Student accounts','profiles · approve / block',{pending:'no',student:'no',teacher:'rw'}]
   ];
   var LBL={no:'HIDDEN',r:'READ',rw:'READ + WRITE'};
   var NOTE={pending:'Signed up but not approved yet: every table stays closed until the teacher says yes.',
     student:'An approved student practises with published content and sees only their own progress and the words taught to them.',
-    teacher:'The teacher sees every student’s progress, writes content and notes, and approves or blocks accounts.'};
+    teacher:'The teacher sees every student\'s progress, writes content and notes, and approves or blocks accounts.'};
   var grid=document.getElementById('lw-grid'),note=document.getElementById('lw-perm-note');
   function show(role){
     document.querySelectorAll('.lw-perm [data-role]').forEach(function(b){b.setAttribute('aria-selected',b.getAttribute('data-role')===role?'true':'false')});
@@ -1353,20 +1361,20 @@ function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=get
       traces:[
         ['Backfill one receipt',[
           ['wa','A ride receipt sits in the group, forwarded weeks ago and never logged.'],
-          ['ai','The automation finds it through the chat’s document search on the desktop app.'],
+          ['ai','The automation finds it through the chat\'s document search on the desktop app.'],
           ['preview','The PDF is opened and saved out through Preview.'],
           ['map','Its street address is matched to the villa it belongs to.'],
           ['rules','Category, payment type and a DD/MM/YYYY date are taken from rows already in the sheet.'],
-          ['drive','The file goes into the month’s RECEIPTS folder.'],
+          ['drive','The file goes into the month\'s RECEIPTS folder.'],
           ['ledger','A dated row is prepared, with the file linked as a chip.'],
-          ['person','The same spend shows on that person’s tab.']]],
+          ['person','The same spend shows on that person\'s tab.']]],
         ['Rebuild the address map',[
           ['wa','The team uses villa nicknames in chat; receipts only print a street address.'],
           ['ai','The same address is spotted under a nickname in one message and bare in another.'],
           ['map','After enough matches across receipts, the pairing is confirmed.'],
           ['ledger','Every later receipt files itself by address alone.']]],
         ['Re-check the first pass',[
-          ['index','Every cluster boundary is compared against the chat’s document index.'],
+          ['index','Every cluster boundary is compared against the chat\'s document index.'],
           ['ai','1 skipped receipt found; 2 "missing" ones were only scrolled past.'],
           ['preview','2 routes misread from captions are corrected from the original PDFs.'],
           ['map','Totals reconcile: 39 receipts, Rp1.043.000.']]],
@@ -1401,22 +1409,22 @@ function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=get
           ['tea','The teacher sees them under Students and taps Approve.'],
           ['prof','Status flips to <b>active</b>; the decks open up on their next visit.']]],
         ['Log a word after class',[
-          ['tea','The teacher types <b>makan</b> on the student’s page; the meaning fills in.'],
+          ['tea','The teacher types <b>makan</b> on the student\'s page; the meaning fills in.'],
           ['rls','<code>is_admin()</code> confirms only the teacher can write here.'],
-          ['taught','A row lands in <code>student_words</code> with today’s date.'],
-          ['stu','It appears in the student’s <b>Dari guru</b> deck straight away.']]],
+          ['taught','A row lands in <code>student_words</code> with today\'s date.'],
+          ['stu','It appears in the student\'s <b>Dari guru</b> deck straight away.']]],
         ['Review a card',[
           ['stu','The student answers <b>Got it</b> on a flashcard.'],
           ['app','The app works out the next box and review date.'],
           ['rls','The rules only accept a row for the signed-in student.'],
           ['prog','<code>card_progress</code> saves it, so progress follows them across devices.'],
-          ['tea','The teacher can read it on that student’s page.']]],
+          ['tea','The teacher can read it on that student\'s page.']]],
         ['Save a word while reading',[
           ['stu','The student taps <b>warung</b> in a story.'],
           ['app','The meaning shows underneath with <b>Save to my words</b>.'],
           ['rls','The rules accept the row only for the signed-in student.'],
-          ['prog','It\u2019s saved to their personal word list and joins their reviews.'],
-          ['tea','The teacher can see it on that student\u2019s page.']]],
+          ['prog','It\'s saved to their personal word list and joins their reviews.'],
+          ['tea','The teacher can see it on that student\'s page.']]],
         ['Back up content',[
           ['tea','The teacher taps <b>Backup</b>.'],
           ['fn','The edge function runs as the teacher and checks <code>is_admin()</code>.'],
@@ -1452,7 +1460,7 @@ function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=get
           ['lock','The public form is rate-limited against floods.'],
           ['req','A new row lands in Requests.'],
           ['drive','Reference images go into a folder for that client.'],
-          ['studio','It appears in the team\u2019s inbox.']]],
+          ['studio','It appears in the team\'s inbox.']]],
         ['Send a quote, client accepts',[
           ['studio','The team prices it with the quote calculator.'],
           ['rules','Size, detail and placement give hours; hours give the range.'],
@@ -1468,14 +1476,14 @@ function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=get
           ['mail','The team is emailed.'],
           ['studio','Only the owner can accept it; others can counter or decline.']]],
         ['Tick off the daily checklist',[
-          ['studio','Manu ticks <b>Post today\u2019s story</b>.'],
+          ['studio','Manu ticks <b>Post today\'s story</b>.'],
           ['auth','The studio code is checked.'],
           ['log','The tick is logged with the time.'],
           ['studio','The team view updates: 4 of 6 done.']]],
         ['Book a walk-in',[
           ['studio','Pick the client, time, hours, placement and style.'],
           ['crm','The client is found in the CRM as you type.'],
-          ['lock','The save is locked, so two people can\u2019t book the same slot.'],
+          ['lock','The save is locked, so two people can\'t book the same slot.'],
           ['rules','Value and 20% commission are filled in; clashes are flagged.'],
           ['bk','The booking is written to Bookings_Master.'],
           ['crm','Lifetime spend and last visit update.']]]
