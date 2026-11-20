@@ -348,7 +348,7 @@ details.inc li::before{content:"";position:absolute;left:0;top:13px;width:7px;he
 .tp-d{background:#141414;color:#EEE9E1}
 .tp-d .tile{background:#222}
 .tp-d .req{background:#1f1f1f;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:10px}
-.tp-d .req .av{background:#2c2c2c;color:var(--acc)}
+.tp-d .req .av{background:#2c2c2c;color:var(--acc);align-self:flex-start}
 .tp-d .ch{background:rgba(255,255,255,.08);color:#ccc}
 .tp-d .ch.web{background:color-mix(in oklab,var(--acc) 25%,transparent);color:#fff}
 .st-New{background:#4a3a14;color:#F2C46B}.st-Confirmed{background:#173a29;color:#7FD3A3}.st-Declined{background:#3a1b18;color:#E99686}
@@ -925,7 +925,7 @@ P.dining={
    '<div class="tiles"><div class="tile"><b>'+cnt("New")+'</b><span>New</span></div><div class="tile"><b>'+cnt("Confirmed")+'</b><span>Confirmed</span></div><div class="tile"><b>'+covers+'</b><span>Covers tonight</span></div></div>'+
    '<div class="pills" role="group" aria-label="Filter requests">'+["All","New","Confirmed"].map(function(x){return '<button type="button" class="pill" data-k="tf-'+x+'" data-act="filter" data-v="'+x+'" aria-pressed="'+(f===x)+'">'+x+'</button>'}).join("")+'</div>'+
    '<div style="display:flex;flex-direction:column;gap:8px">'+(list.length?list.map(function(r){var i=s.reqs.indexOf(r);
-    return '<div class="req'+(s.fresh===r?" flash":"")+'"><div class="row"><span class="av" aria-hidden="true">'+initials(r.n)+'</span><div style="flex:1;min-width:0"><b style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+esc(r.n)+'</b><span style="font-size:12px;opacity:.75">'+r.g+' guests · '+(r.d===0?"Tonight":DAYS[r.d].wd+" "+DAYS[r.d].d)+' '+r.t+(r.o?' · '+r.o:'')+'</span></div><span class="tag ch'+(r.ch==="Website"?" web":"")+'">'+r.ch+'</span></div>'+
+    return '<div class="req'+(s.fresh===r?" flash":"")+'"><div class="row"><span class="av" aria-hidden="true">'+initials(r.n)+'</span><div style="flex:1;min-width:0"><div class="row between" style="gap:6px"><b style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+esc(r.n)+'</b><span class="tag ch'+(r.ch==="Website"?" web":"")+'">'+r.ch+'</span></div><span style="font-size:12px;opacity:.75">'+r.g+' guests · '+(r.d===0?"Tonight":DAYS[r.d].wd+" "+DAYS[r.d].d)+' '+r.t+(r.o?' · '+r.o:'')+'</span></div></div>'+
     (r.s==="New"?'<div class="row"><button type="button" class="sbtn acc" style="flex:1" data-k="cf'+i+'" data-act="confirm" data-v="'+i+'" aria-label="Confirm '+esc(r.n)+'">Confirm</button><button type="button" class="sbtn ln" data-k="dc'+i+'" data-act="decline" data-v="'+i+'" aria-label="Decline '+esc(r.n)+'">Decline</button></div>':'<div class="row between"><span class="tag st-'+r.s+'">'+r.s+'</span><button type="button" class="sbtn ln" data-k="un'+i+'" data-act="undo" data-v="'+i+'" aria-label="Undo for '+esc(r.n)+'">Undo</button></div>')+'</div>'}).join(""):'<p style="opacity:.6;font-size:13px;padding:8px 0">Nothing here.</p>')+'</div>'+
    '<p style="font-size:12px;opacity:.6">Confirming sends the guest a WhatsApp message with their booking.</p>'}
  },
