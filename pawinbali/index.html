@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>PawinBali, KRIYĀ Systems</title>
+<meta content="PawinBali: A WhatsApp group for every booking, replaced by one private page per client." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&amp;family=Cormorant+Garamond:ital,wght@1,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+/* Hallmark · shape: workbench · genre: editorial · theme: brand · redesign: full · job: hire
+ * paper: #15130F (Basalt), light #E6DCC3 (Lontar) · accent: #4FB8A0 (Patina) · display: Syne · body: Syne · hero: Index · nav: edge-aligned, wordmark, five links and a WhatsApp action · footer: mast, the contact close over the slab mark and links · signature: the build ledger, each row swapping in its real app screen
+ * axes: basalt/syne/patina · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R3 V4 · weakest: R, the page carries five working tools; kept every one (they are the proof) and cut the labels, dots and boxes around them instead */
+/* Hallmark · waive 37 · Cormorant set only on quoted speech: the definition, the client quote and PawinBali's one-line principle · the KRIYĀ Halo kit names Cormorant as the brand voice face */
+/* Hallmark · waive 47b · one frame in the hero holding real Axiom, KRIYĀ and Ludwig captures · the three apps are the work being sold */
+/* Hallmark · dropped hs-track, hs-dots, hs-cap · the auto-rotating carousel became the build ledger, which switches the same real screens on hover and focus */
+/* Hallmark · reworded "Apps for the team's phones", "Your systems work fine until someone needs last month's receipts" to the same words with typographic apostrophes · F1 asks for true apostrophes */
+/* Hallmark · dropped the "01 / 14" section counters, the green kicker tag, the swipe hints and the gap/thread dot labels · 54, 63 and 66 name them; their words live on as margin heads and headings */
+/* Hallmark · hero-review: fix · 5 findings · 4 resolved, 1 answered (the Cormorant voice and the Plex Mono figures stay below the fold, where quotes and figures live; the hero holds a headline, a line and the actions) */
+/* Hallmark · dropped the Patina thread across the hero · hero review read it as a stray rule; the ledger's top rule carries the Patina line instead */
+/* Hallmark · reworded "Run like a tech company. Keep your spreadsheet." to "Run like a tech company, spreadsheet included" · 58 holds a hero head to seven words */
+/* Hallmark · reworded "Axiom Task Manager: from a weekly meeting log to an app the site team uses", "KRIYĀ Studio App: the whole studio runs on the sheet it already had", "Ludwig: a language app where the teacher's lessons become the student's homework", "Petty Cash Backfill: ten weeks of WhatsApp receipts, reconciled", "Under the hood: trace a request through the system" to the name as the heading and the rest as its lead line · colon titles split, every word kept */
+/* Hallmark · reworded "Action items buried in a meeting log", "One record, linked to every stage", "A working sheet that made people retype everything", "One link, three pages, the same sheet underneath", "Lessons and practice lived in different places", "One app, two sides of the same lesson", "Three systems the team already used, made into one record", "It followed the house rules already in the sheet" to lead lines under the margin heads The gap and What I built · the margin note now heads each row, the words are unchanged */
+/* Hallmark · reworded "Your business probably runs on a Google Sheet, a WhatsApp group and one person who remembers everything." to the lead line of Before and after, every word kept · 58 holds the hero to one sentence of twelve words */
+/* Hallmark · finish-review: subagent · 6 findings · 5 resolved 1 answered (the two section heads are the owner's words) · gap: light mode shows the Lontar accent #1B6455, the brand's own light Patina */
+/* Hallmark · reworded "The WhatsApp dig", "Tell me what keeps slipping", "Run like a tech company, spreadsheet included" to "The group-chat dig", "Tell me what you need", "Run like a tech company, even if you're not" · the owner asked for these in her artifact comments */
+/* Hallmark · answered F25 · on a phone each case study folds to its summary and figures, and one tap on Read the full case study opens every word */
+/* Hallmark · dismissed 49 · the build chooser and the petty cash bars are multi-line cards by design, never a single label */
+
+:root{
+  /* KRIYĀ Halo kit, Basalt (dark first) */
+  --color-paper:#15130F; --color-paper-2:#2A2722; --color-paper-3:#0E0D0A;
+  --color-ink:#E6DCC3; --color-muted:#B3AA97; --color-rule:#3A362F;
+  --color-accent:#4FB8A0; --color-accent-ink:#15130F; --color-focus:#4FB8A0;
+  --color-flag:#E2A63B; --color-flag-ink:#15130F; --color-mark:#E6DCC3;
+  /* the builds browser keeps a charcoal ground in both themes */
+  --ch:#1F1F21; --ch-ink:#F3F2EE; --ch-sub:#9A9AA0; --ch-line:#3A3A3E; --ch-lift:#2A2A2D;
+  --acc-axiom:#FFF20F; --acc-kriya:#DCFF3E; --acc-ludwig:#E2924A; --acc-pawin:#E9A23B;
+  --scrim:rgba(14,13,10,.94);
+  --font-display:"Syne","Avenir Next",system-ui,sans-serif;
+  --font-body:"Syne","Avenir Next",system-ui,sans-serif;
+  --font-voice:"Cormorant Garamond",Georgia,serif;
+  --font-figure:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+
+  --space-3xs:2px; --space-2xs:4px; --space-xs:8px; --space-sm:12px; --space-md:16px; --space-lg:24px; --space-xl:40px; --space-2xl:64px; --space-3xl:96px; --space-4xl:144px;
+  --text-xs:.8125rem; --text-sm:.875rem; --text-md:1.0625rem; --text-lg:1.25rem;
+  --text-display:clamp(2.6rem,3.6vw + 1rem,5rem); --text-display-s:clamp(2.25rem,4vw + .5rem,3.75rem);
+  --text-section:clamp(2rem,2.5vw + 1rem,3.5rem); --text-title:clamp(1.25rem,.75vw + .875rem,1.625rem); --text-lead:clamp(1.125rem,.35vw + 1rem,1.375rem);
+  --ease-out:cubic-bezier(.16,1,.3,1); --dur-micro:120ms; --dur-short:220ms; --dur-long:420ms;
+  --container:1440px; --gutter:64px; --gap-columns:32px;
+  --section-gap-s:120px; --section-gap:144px; --section-gap-l:176px;
+  --z-sticky:200; --z-sticky-nav:300; --z-modal:400;
+  --radius-card:4px; --radius-frame:24px; --radius-control:6px;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  --color-paper:#E6DCC3; --color-paper-2:#DDD1B4; --color-paper-3:#EDE4CE;
+  --color-ink:#15130F; --color-muted:#4F4839; --color-rule:#B9AE95;
+  --color-accent:#1B6455; --color-accent-ink:#E6DCC3; --color-focus:#1B6455;
+  --color-flag:#7A4E0E; --color-flag-ink:#E6DCC3; --color-mark:#15130F; --scrim:rgba(21,19,15,.94); color-scheme:light}}
+:root[data-theme="light"]{
+  --color-paper:#E6DCC3; --color-paper-2:#DDD1B4; --color-paper-3:#EDE4CE;
+  --color-ink:#15130F; --color-muted:#4F4839; --color-rule:#B9AE95;
+  --color-accent:#1B6455; --color-accent-ink:#E6DCC3; --color-focus:#1B6455;
+  --color-flag:#7A4E0E; --color-flag-ink:#E6DCC3; --color-mark:#15130F; --scrim:rgba(21,19,15,.94); color-scheme:light}
+
+/* base */
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:clip}
+html{scroll-padding-top:var(--space-3xl);scrollbar-color:var(--color-rule) var(--color-paper)}
+body{margin:0;caret-color:var(--color-accent);background:var(--color-paper);color:var(--color-ink);font-family:var(--font-body);font-size:var(--text-md);line-height:1.55;-webkit-font-smoothing:antialiased;
+  padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+::selection{background:color-mix(in oklab,var(--color-accent) 30%,transparent)}
+:focus-visible{outline:2px solid var(--color-focus);outline-offset:3px}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.18em}
+h1,h2,h3,h4{margin:0;font-family:var(--font-display);font-weight:600;font-synthesis:none;letter-spacing:-.025em;line-height:1.05;overflow-wrap:break-word;min-width:0;text-wrap:balance}
+h1{font-size:var(--text-display);max-width:16ch;letter-spacing:-.035em;line-height:.98}
+h2{font-size:var(--text-section);max-width:22ch}
+h3{font-size:var(--text-title);line-height:1.15;max-width:40ch}
+h4{font-size:var(--text-lg);line-height:1.2;letter-spacing:-.015em}
+p{margin:0;text-wrap:pretty}
+img{max-width:100%;height:auto;display:block}
+svg{display:block}
+[hidden]{display:none!important}
+button,input{font:inherit}
+.container{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
+.lead{font-size:var(--text-lead);line-height:1.45;max-width:46ch;color:var(--color-muted)}
+.meta{font-size:var(--text-sm);color:var(--color-muted)}
+.num,.fig b,.pc-big,.kq-est b,.numbering .row,.spec table,.legend b{font-variant-numeric:tabular-nums}
+.voice{font-family:var(--font-voice);font-style:italic;font-weight:500;letter-spacing:0}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip:focus-visible{position:fixed;top:var(--space-sm);left:var(--space-sm);width:auto;height:auto;clip-path:none;z-index:var(--z-modal);background:var(--color-paper);color:var(--color-ink);padding:var(--space-sm) var(--space-md);border-radius:var(--radius-control);outline:2px solid var(--color-focus);outline-offset:2px}
+
+/* controls: one primary style, one secondary */
+.btn{display:inline-flex;align-items:center;gap:var(--space-xs);min-height:48px;padding:0 var(--space-lg);border-radius:var(--radius-control);border:1px solid var(--color-ink);
+  font:600 var(--text-md)/1 var(--font-body);color:var(--color-ink);text-decoration:none;white-space:nowrap;cursor:pointer;background:transparent;
+  transition:background-color var(--dur-short) var(--ease-out),color var(--dur-short) var(--ease-out),border-color var(--dur-short) var(--ease-out),transform var(--dur-micro) var(--ease-out)}
+.btn:hover{background:var(--color-ink);color:var(--color-paper)}
+.btn:active{transform:scale(.98)}
+.btn:focus-visible{outline:2px solid var(--color-focus);outline-offset:3px}
+.btn.primary{background:var(--color-accent);border-color:var(--color-accent);color:var(--color-accent-ink)}
+.btn.primary:hover{background:var(--color-ink);border-color:var(--color-ink);color:var(--color-paper)}
+.btn svg{flex-shrink:0}
+button:disabled{opacity:.45;cursor:not-allowed}
+
+/* wordmark + slab mark */
+.wm{display:inline-flex;align-items:flex-end;font-family:var(--font-display);font-weight:800;line-height:.82;letter-spacing:-.01em;padding-top:.2em}
+.wm .a{position:relative;display:inline-block}
+.wm .a::before{content:"";position:absolute;left:.14em;right:.14em;top:-.17em;height:.07em;background:var(--color-accent)}
+.slabs path{fill:var(--color-mark)} .slabs circle{fill:var(--color-accent)}
+
+/* nav: edge-aligned */
+.nav{position:sticky;top:0;z-index:var(--z-sticky-nav);background:color-mix(in oklab,var(--color-paper) 92%,transparent);border-bottom:1px solid transparent}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:var(--space-lg);min-height:72px}
+.brand{display:flex;align-items:center;gap:var(--space-sm);text-decoration:none;color:var(--color-ink)}
+.brand .wm{font-size:22px}
+.brand .sys{font-size:var(--text-sm);color:var(--color-muted)}
+.nav nav{display:flex;gap:var(--space-lg);font-size:var(--text-sm)}
+.nav nav a{color:var(--color-muted);text-decoration:none;white-space:nowrap;padding-block:var(--space-xs)}
+.nav nav a:hover{color:var(--color-ink)}
+.nav nav a:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}
+.nav .btn{min-height:44px;padding:0 var(--space-md);font-size:var(--text-sm)}
+
+/* hero: Index posture */
+.hero{min-height:calc(100dvh - 72px);display:grid;align-items:center;padding-block:var(--space-xl) var(--space-2xl);position:relative}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-3xl);align-items:center}
+.hero-text{display:grid;gap:var(--space-lg);background:var(--color-paper);padding-block:var(--space-xs)}
+.hero .lead{color:var(--color-muted)}
+.cta{display:flex;flex-wrap:wrap;gap:var(--space-sm)}
+.ledger-x{list-style:none;margin:var(--space-xs) 0 0;padding:0;border-top:1px solid var(--color-accent)}
+.ledger-x li{border-bottom:1px solid var(--color-rule)}
+.ledger-x a{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,5fr) minmax(0,2.4fr);gap:var(--space-md);align-items:baseline;padding:var(--space-xs) 0;min-height:48px;text-decoration:none;color:var(--color-muted);
+  transition:color var(--dur-short) var(--ease-out)}
+.ledger-x .x-name{font-family:var(--font-display);font-weight:600;font-size:var(--text-lg);letter-spacing:-.015em;color:var(--color-ink)}
+.ledger-x .x-what{font-size:var(--text-sm)}
+.ledger-x .x-when{font-size:var(--text-sm);white-space:nowrap;text-align:right}
+.ledger-x a:hover,.ledger-x a[aria-current="true"]{color:var(--color-ink)}
+.ledger-x a[aria-current="true"] .x-name{color:var(--color-accent)}
+.ledger-x a:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}
+.stage{justify-self:center;width:min(300px,100%)}
+.frame{aspect-ratio:520/1122;border-radius:var(--radius-frame);overflow:hidden;border:1px solid var(--color-rule);background:var(--ch);position:relative}
+.frame img{width:100%;height:100%;object-fit:cover;transition:opacity var(--dur-short) var(--ease-out)}
+.frame .fig-card{position:absolute;inset:0;display:grid;align-content:center;gap:var(--space-sm);padding:var(--space-lg);background:var(--color-paper-3);color:var(--color-ink)}
+.frame .fig-card b{font-family:var(--font-figure);font-weight:500;font-size:2.4rem;line-height:1;letter-spacing:-.04em;color:var(--color-ink)}
+.frame .fig-card span{color:var(--color-muted);font-size:var(--text-sm)}
+.stage figcaption{margin-top:var(--space-sm);font-size:var(--text-sm);color:var(--color-muted);text-align:center}
+
+/* sections */
+section{padding-block:var(--section-gap)}
+.rule-top{border-top:1px solid var(--color-rule)}
+.head{display:grid;gap:var(--space-md);margin-bottom:var(--space-2xl);max-width:62rem}
+.head .lead{max-width:56ch}
+.head-split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--space-md) var(--gap-columns);align-items:end;margin-bottom:var(--space-2xl)}
+.head-split .lead{max-width:52ch}
+
+/* before and after: Table */
+#before{padding-block:var(--section-gap-s) var(--section-gap)}
+.ba{width:100%;border-collapse:collapse}
+.ba th{text-align:left;font:600 var(--text-sm) var(--font-body);padding:0 0 var(--space-sm);border-bottom:1px solid var(--color-ink)}
+.ba th:first-child{color:var(--color-muted)} .ba th:last-child{color:var(--color-accent)}
+.ba td{vertical-align:top;width:50%;padding:var(--space-lg) var(--gap-columns) var(--space-lg) 0;border-bottom:1px solid var(--color-rule)}
+.ba td h3{margin-bottom:var(--space-xs)}
+.ba td p{color:var(--color-muted);max-width:48ch}
+
+/* what I build: Rows */
+#build{background:var(--color-paper-2)}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--color-rule)}
+.rows li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--space-md) var(--gap-columns);padding:var(--space-xl) 0;border-bottom:1px solid var(--color-rule)}
+.rows h3{font-size:var(--text-section);font-size:clamp(1.6rem,1.6vw + 1rem,2.4rem);font-weight:600}
+.rows p{color:var(--color-muted);max-width:56ch;align-self:center}
+
+/* builds browser: charcoal band in both themes */
+#builds{background:var(--ch);color:var(--ch-ink)}
+#builds h2{color:var(--ch-ink)}
+#builds .lead{color:var(--ch-sub)}
+.builds{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-lg);min-width:0}
+.bpanel,.kside{min-width:0}
+.bchoose{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap-columns);border-top:1px solid var(--ch-line)}
+.bchoose button{all:unset;cursor:pointer;display:grid;gap:var(--space-2xs);padding:var(--space-md) 0;position:relative;border-top:2px solid transparent;margin-top:-1px;transition:border-color var(--dur-short) var(--ease-out)}
+.bchoose button:hover{border-top-color:var(--ch-sub)}
+.bchoose button:focus-visible{outline:2px solid var(--acc);outline-offset:4px}
+.bchoose button[aria-selected="true"]{border-top-color:var(--acc)}
+.bc-word{font:600 clamp(1.4rem,2.4vw,2rem)/1 var(--font-display);letter-spacing:-.02em;color:var(--ch-ink)}
+.bc-sub{font-size:var(--text-sm);color:var(--ch-sub)}
+.bc-n{font-size:var(--text-sm);color:var(--ch-sub)}
+.bchoose button[aria-selected="true"] .bc-n{color:var(--acc)}
+.bbar{display:flex;justify-content:space-between;align-items:center;gap:var(--space-sm);flex-wrap:wrap}
+.seg-tabs{display:inline-flex;border:1px solid var(--color-rule);border-radius:var(--radius-control);padding:var(--space-2xs);gap:var(--space-2xs);flex-wrap:wrap}
+.seg-tabs button{font:500 var(--text-sm) var(--font-body);background:transparent;color:var(--color-muted);border:0;border-radius:4px;min-height:44px;padding:0 var(--space-md);cursor:pointer;transition:background-color var(--dur-short) var(--ease-out),color var(--dur-short) var(--ease-out)}
+.seg-tabs button:hover{color:var(--color-ink)}
+.seg-tabs button:active{transform:scale(.98)}
+.seg-tabs button[aria-selected="true"],.seg-tabs button[aria-pressed="true"]{background:color-mix(in oklab,var(--color-ink) 14%,transparent);color:var(--color-ink)}
+.builds .seg-tabs{border-color:var(--ch-line)}
+.builds .seg-tabs button{color:var(--ch-sub)}
+.builds .seg-tabs button:hover{color:var(--ch-ink)}
+.builds .seg-tabs button[aria-pressed="true"]{background:var(--ch-lift);color:var(--ch-ink)}
+.rail-nav{display:flex;gap:var(--space-xs)}
+.rail-nav button{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--ch-line);background:transparent;color:var(--ch-ink);cursor:pointer;transition:border-color var(--dur-short) var(--ease-out)}
+.rail-nav button:hover{border-color:var(--ch-ink)}
+.rail-nav button:active{transform:scale(.96)}
+.builds.is-grid .rail-nav{visibility:hidden}
+.bp-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--space-md) var(--gap-columns);flex-wrap:wrap;padding:var(--space-md) 0 var(--space-lg)}
+.bp-word{font:600 clamp(2.2rem,4.4vw,3.4rem)/1 var(--font-display);letter-spacing:-.03em}
+.bp-sub{margin-top:var(--space-sm);font-size:var(--text-sm);color:var(--ch-sub)}
+.bp-right{display:grid;gap:var(--space-xs);justify-items:end;text-align:right}
+.bp-stack{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--text-sm);color:var(--ch-ink)}
+.bp-stack i{display:inline-block;width:28px;height:2px;background:var(--acc)}
+.bp-desc{font-size:var(--text-sm);color:var(--ch-sub)}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(200px,calc((100% - 3 * var(--gap-columns)) / 4));gap:var(--gap-columns);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:var(--space-md);scrollbar-width:thin;scrollbar-color:var(--ch-line) transparent}
+.builds.is-grid .rail{grid-auto-flow:row;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-columns:auto;overflow:visible;row-gap:var(--space-xl)}
+.shot{margin:0;scroll-snap-align:start;display:grid;gap:var(--space-sm);align-content:start;min-width:0}
+.shot-btn{all:unset;cursor:zoom-in;display:block;border-radius:22px;overflow:hidden;border:1px solid var(--ch-line);transition:border-color var(--dur-short) var(--ease-out)}
+.shot-btn img{display:block;width:100%;height:auto}
+.shot-btn:hover{border-color:var(--acc)}
+.shot-btn:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.shot figcaption{display:grid;gap:var(--space-2xs)}
+.shot-t{font-size:var(--text-md);font-weight:600}
+.shot-d{font-size:var(--text-sm);color:var(--ch-sub);line-height:1.4}
+.bp-foot{display:flex;justify-content:space-between;align-items:center;gap:var(--space-sm);flex-wrap:wrap;margin-top:var(--space-sm);padding-top:var(--space-md);border-top:1px solid var(--ch-line)}
+.bp-hint{font-size:var(--text-sm);color:var(--ch-sub)}
+.bp-case{color:var(--acc);font-weight:600}
+.builds .kside-tabs{margin-top:var(--space-lg)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:var(--z-modal);background:var(--scrim);display:grid;place-items:center;padding:var(--space-md)}
+.lb-in{display:grid;grid-template-columns:auto minmax(0,auto) auto;align-items:center;gap:var(--space-sm) var(--space-md);max-width:100%}
+.lb img{grid-column:2;max-height:min(80dvh,900px);max-width:min(420px,100%);width:auto;height:auto;border-radius:24px;border:1px solid var(--ch-line);justify-self:center}
+.lb-arrow,.lb-x{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;border:1px solid var(--ch-line);background:var(--ch);color:var(--ch-ink);cursor:pointer}
+.lb-arrow:hover,.lb-x:hover{border-color:var(--ch-ink)}
+.lb-x{position:fixed;top:calc(var(--space-md) + env(safe-area-inset-top,0px));right:var(--space-md)}
+.lb-cap{grid-column:1 / -1;display:grid;gap:var(--space-2xs);justify-items:center;text-align:center;color:var(--ch-ink)}
+.lb-n,.lb-d{font-size:var(--text-sm);color:var(--ch-sub)}
+.lb-t{font-weight:600}
+
+/* case studies */
+#cases{padding-block:var(--section-gap-l) var(--section-gap)}
+.cases{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:var(--gap-columns)}
+.case-index{position:sticky;top:96px;align-self:start;display:grid;gap:var(--space-2xs);font-size:var(--text-sm)}
+.case-index a{color:var(--color-muted);text-decoration:none;padding:var(--space-xs) 0;border-top:1px solid var(--color-rule)}
+.case-index a:hover{color:var(--color-ink)}
+.case-index a:focus-visible{outline:2px solid var(--color-focus)}
+.case-list{display:grid;gap:var(--section-gap-s)}
+.case-sec{display:grid;gap:var(--space-xl);padding-top:var(--space-xl);border-top:1px solid var(--color-ink)}
+.case-h{display:grid;gap:var(--space-sm)}
+.case-h h3{font-size:var(--text-display-s);max-width:18ch;letter-spacing:-.03em}
+.case-top{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-md) var(--gap-columns);margin:0}
+.case-top dt{font-size:var(--text-sm);color:var(--color-muted)}
+.case-top dd{margin:var(--space-2xs) 0 0;font-weight:600}
+.cs-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,7fr);gap:var(--space-sm) var(--gap-columns);padding-top:var(--space-lg);border-top:1px solid var(--color-rule)}
+.cs-row>h4{font-size:var(--text-sm);font-weight:600;letter-spacing:0;padding-top:.35em}
+.cs-row.gap>h4{color:var(--color-muted)} .cs-row.built>h4{color:var(--color-accent)}
+.cs-main{display:grid;gap:var(--space-md)}
+.cs-lead{font-family:var(--font-display);font-weight:600;font-size:var(--text-title);line-height:1.2;letter-spacing:-.015em;max-width:34ch}
+.cs-main p:not(.cs-lead){color:var(--color-muted);max-width:66ch}
+.cs-main p strong{color:var(--color-ink);font-weight:600}
+.tools{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--gap-columns);align-items:start}
+.tool{background:var(--color-paper-2);border-radius:var(--radius-card);padding:var(--space-xl);display:grid;gap:var(--space-md);align-content:start}
+.tool h4{font-size:var(--text-lg)}
+.tool p{color:var(--color-muted);font-size:var(--text-sm)}
+.figs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0;padding:0;list-style:none}
+.fig{padding:var(--space-md) var(--space-lg);border-left:1px solid var(--color-rule)}
+.fig:first-child{padding-left:0;border-left:0}
+.fig b{display:block;white-space:nowrap;font-family:var(--font-figure);font-weight:500;font-size:clamp(1.8rem,2.6vw,2.6rem);line-height:1;letter-spacing:-.03em}
+.fig span{display:block;margin-top:var(--space-xs);font-size:var(--text-sm);color:var(--color-muted)}
+
+/* axiom bits */
+.numbering .row{font-variant-numeric:tabular-nums;display:flex;align-items:center;font-family:var(--font-figure);font-size:clamp(1.6rem,4vw,2.6rem);font-weight:500;white-space:nowrap}
+.seg{padding:.02em .25em;border-radius:3px}
+.s1{border:1px solid var(--color-ink)} .s2{background:var(--color-accent);color:var(--color-accent-ink)} .s3{background:var(--color-ink);color:var(--color-paper)}
+.dsep{padding:0 .08em;color:var(--color-muted)}
+.legend{display:grid;gap:var(--space-xs);font-size:var(--text-sm);color:var(--color-muted)}
+.legend b{color:var(--color-ink);font-weight:600}
+.path{font-size:var(--text-sm);color:var(--color-muted);border-top:1px solid var(--color-rule);padding-top:var(--space-sm)}
+.path code{font-family:var(--font-figure);color:var(--color-ink);font-size:var(--text-xs)}
+.ledger{display:grid;font-size:var(--text-sm)}
+.ledger div{display:flex;justify-content:space-between;gap:var(--space-md);padding:var(--space-sm) 0;border-bottom:1px solid var(--color-rule)}
+.ledger div:first-child{border-top:1px solid var(--color-rule)}
+.ledger div span:last-child{color:var(--color-accent);text-align:right}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap-columns);counter-reset:v}
+.steps li{counter-increment:v;display:grid;gap:var(--space-xs);align-content:start;padding-top:var(--space-md);border-top:1px solid var(--color-rule)}
+.steps li::before{content:"V" counter(v);font-family:var(--font-figure);font-size:var(--text-sm);color:var(--color-accent)}
+.steps h4{margin:0;font:600 var(--text-md) var(--font-display);letter-spacing:-.01em}
+.steps p{color:var(--color-muted);font-size:var(--text-sm)}
+.quote{margin:0;padding:var(--space-2xl);background:var(--color-ink);color:var(--color-paper);border-radius:var(--radius-card);display:grid;gap:var(--space-md)}
+.quote .voice{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.12}
+.quote .en{max-width:60ch;opacity:.8}
+.quote footer{font-size:var(--text-sm);opacity:.75}
+.stack{display:flex;flex-wrap:wrap;gap:var(--space-xs) var(--space-lg);font-size:var(--text-sm);color:var(--color-muted);list-style:none;margin:0;padding:0}
+
+/* kriya bits */
+.fixes{width:100%;border-collapse:collapse;font-size:var(--text-sm)}
+.fixes th{text-align:left;font-weight:600;padding:0 var(--space-md) var(--space-xs) 0;border-bottom:1px solid var(--color-ink)}
+.fixes th:first-child{color:var(--color-muted)} .fixes th:last-child{color:var(--color-accent)}
+.fixes td{padding:var(--space-sm) var(--space-md) var(--space-sm) 0;border-bottom:1px solid var(--color-rule);vertical-align:top;width:50%}
+.fixes td:first-child{color:var(--color-muted);text-decoration:line-through;text-decoration-color:var(--color-flag)}
+.kq-row{display:flex;justify-content:space-between;align-items:center;gap:var(--space-sm);font-size:var(--text-sm);color:var(--color-muted)}
+.kq-row b{font-family:var(--font-figure);font-weight:500;color:var(--color-ink)}
+.tool input[type=range]{width:100%;accent-color:var(--color-accent);min-height:28px}
+.kq-step{display:inline-flex;align-items:center;gap:var(--space-sm)}
+.kq-step button{width:44px;height:44px;border-radius:50%;border:1px solid var(--color-rule);background:transparent;color:var(--color-ink);cursor:pointer;transition:border-color var(--dur-short) var(--ease-out)}
+.kq-step button:hover{border-color:var(--color-ink)}
+.kq-step button:active{transform:scale(.96)}
+.kq-chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,168px),1fr));gap:var(--space-xs)}
+.kq-chips button{text-align:left;font:600 var(--text-sm) var(--font-body);min-height:44px;padding:0 var(--space-sm);border-radius:var(--radius-control);border:1px solid var(--color-rule);background:transparent;color:var(--color-ink);cursor:pointer;white-space:nowrap;display:flex;justify-content:space-between;align-items:center;gap:var(--space-xs);transition:border-color var(--dur-short) var(--ease-out),background-color var(--dur-short) var(--ease-out)}
+.kq-chips button:hover{border-color:var(--color-ink)}
+.kq-chips button:active{transform:scale(.98)}
+.kq-chips button i{font:400 var(--text-sm) var(--font-body);font-style:normal;color:var(--color-muted)}
+.kq-chips button[aria-pressed="true"]{border-color:var(--color-accent);background:color-mix(in srgb,var(--color-accent) 14%,transparent)}
+.kq-est{background:var(--color-paper-3);border-radius:var(--radius-control);padding:var(--space-md);display:grid;gap:var(--space-2xs)}
+.kq-est b{font-family:var(--font-figure);font-weight:500;font-size:clamp(1.25rem,2.2vw,1.6rem);color:var(--color-accent);letter-spacing:-.02em}
+.kq-est span{font-size:var(--text-sm);color:var(--color-muted)}
+.kq-offer{display:grid;gap:var(--space-xs);border-top:1px solid var(--color-rule);padding-top:var(--space-sm)}
+.tool .kq-verdict{font-size:var(--text-sm)}
+.tool .kq-verdict.owner{color:var(--color-flag)} .tool .kq-verdict.ok{color:var(--color-accent)}
+.flow{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-xs);font-size:var(--text-sm);counter-reset:f}
+.flow li{counter-increment:f;border:1px solid var(--color-rule);border-radius:var(--radius-control);padding:var(--space-2xs) var(--space-sm);color:var(--color-muted)}
+.flow li::before{content:counter(f) "  ";font-family:var(--font-figure);font-size:var(--text-xs)}
+.flow li.on{border-color:var(--color-accent);color:var(--color-ink)}
+
+/* ludwig bits */
+.lw-card{display:grid;gap:var(--space-2xs);justify-items:center;background:var(--color-paper-3);border-radius:var(--radius-control);padding:var(--space-md)}
+.lw-word{font:700 1.8rem var(--font-display);letter-spacing:-.01em}
+.lw-mean{font-size:var(--text-sm);color:var(--color-muted)}
+.lw-boxes{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--space-xs)}
+.lw-box{border:1px solid var(--color-rule);border-radius:4px;padding:var(--space-xs) var(--space-2xs);display:grid;gap:var(--space-3xs);justify-items:center;font-size:var(--text-xs);color:var(--color-muted);transition:border-color var(--dur-short) var(--ease-out),background-color var(--dur-short) var(--ease-out)}
+.lw-box b{font-family:var(--font-figure);font-size:var(--text-md);color:var(--color-ink);font-weight:500}
+.lw-box.on{border-color:var(--color-flag);background:color-mix(in srgb,var(--color-flag) 14%,transparent);color:var(--color-ink)}
+.lw-box.known.on{border-color:var(--color-accent);background:color-mix(in srgb,var(--color-accent) 14%,transparent)}
+.lw-legend{display:flex;justify-content:space-between;gap:var(--space-xs);font-size:var(--text-xs);color:var(--color-muted);flex-wrap:wrap}
+.lw-btns{display:flex;gap:var(--space-xs);flex-wrap:wrap}
+.lw-btns button{flex:1;font:600 var(--text-sm) var(--font-body);min-height:44px;padding:0 var(--space-sm);border-radius:var(--radius-control);border:1px solid var(--color-rule);background:transparent;color:var(--color-ink);cursor:pointer;transition:border-color var(--dur-short) var(--ease-out)}
+.lw-btns button:active{transform:scale(.98)}
+.lw-btns button[data-g="0"]:hover{border-color:var(--color-flag)}
+.lw-btns button[data-g="1"]:hover,.lw-btns button[data-g="2"]:hover{border-color:var(--color-accent)}
+.lw-btns .lw-reset{flex:0 0 auto;width:44px;padding:0}
+.lw-perm{display:grid;gap:var(--space-lg)}
+.lw-perm-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--space-md) var(--gap-columns);flex-wrap:wrap}
+.lw-perm-head p{color:var(--color-muted);max-width:52ch;margin-top:var(--space-xs)}
+.lw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:var(--space-sm)}
+.lw-cell{border:1px solid var(--color-rule);border-radius:var(--radius-card);padding:var(--space-md);display:grid;gap:var(--space-xs);align-content:start;transition:opacity var(--dur-short) var(--ease-out),border-color var(--dur-short) var(--ease-out)}
+.lw-cell .t{font-weight:600}
+.lw-cell .tb{font-family:var(--font-figure);font-size:var(--text-xs);color:var(--color-muted);word-break:break-word}
+.lw-cell .st{font-size:var(--text-sm);font-weight:600}
+.lw-cell.rw{border-color:var(--color-accent)} .lw-cell.rw .st{color:var(--color-accent)}
+.lw-cell.no{opacity:.55} .lw-cell.no .st{color:var(--color-flag)}
+.lw-perm-note{border-left:2px solid var(--color-accent);padding-left:var(--space-sm)}
+
+/* pawinbali bits */
+.roles{width:100%;border-collapse:collapse;font-size:var(--text-sm)}
+.roles th{text-align:left;font-weight:600;padding:0 var(--space-md) var(--space-xs) 0;border-bottom:1px solid var(--color-ink)}
+.roles td{padding:var(--space-sm) var(--space-md) var(--space-sm) 0;border-bottom:1px solid var(--color-rule);vertical-align:top;color:var(--color-muted)}
+.roles td:first-child{color:var(--color-ink);font-weight:600;white-space:nowrap}
+.pw-close{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-xl) var(--gap-columns);align-items:start}
+.pw-arch{display:grid;gap:var(--space-md)}
+.pw-arch p:not(.pw-line){color:var(--color-muted);max-width:60ch}
+.pw-line{font-size:clamp(1.6rem,2.6vw,2.3rem);line-height:1.15;color:var(--color-ink)}
+
+/* petty cash bits */
+.pc-hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--gap-columns);align-items:stretch}
+.pc-found{display:grid;gap:var(--space-md);align-content:center}
+.pc-big{font-family:var(--font-figure);font-weight:500;font-size:clamp(2.4rem,5vw,4rem);line-height:1;letter-spacing:-.04em;color:var(--color-ink)}
+.pc-found p{color:var(--color-muted)} .pc-found strong{color:var(--color-ink);font-weight:600}
+.pc-chart{background:var(--color-paper-3);border-radius:var(--radius-card);padding:var(--space-lg);display:grid;gap:var(--space-sm);align-content:start}
+.pc-head{display:flex;justify-content:space-between;gap:var(--space-sm);font-size:var(--text-sm);color:var(--color-muted)}
+.pc-head h4{font-size:var(--text-md);color:var(--color-ink)}
+.pc-bars{display:grid;gap:var(--space-2xs)}
+.pc-bar{all:unset;cursor:pointer;display:grid;grid-template-columns:128px minmax(0,1fr) 96px 28px;gap:var(--space-sm);align-items:center;min-height:44px;padding:0 var(--space-xs);border-radius:4px;font-size:var(--text-sm);transition:background-color var(--dur-short) var(--ease-out)}
+.pc-bar:hover,.pc-bar[aria-pressed="true"]{background:var(--color-paper-2)}
+.pc-bar:focus-visible{outline:2px solid var(--color-focus)}
+.pc-l{color:var(--color-muted);white-space:nowrap}
+.pc-track{height:10px;background:var(--color-rule);border-radius:2px;overflow:hidden}
+.pc-track i{display:block;height:100%;background:var(--color-flag);transform-origin:left}
+.pc-bar[aria-pressed="true"] .pc-track i{background:var(--color-accent)}
+.pc-v,.pc-n{font-family:var(--font-figure);font-size:var(--text-sm);text-align:right}
+.pc-n{color:var(--color-muted)}
+.pc-total{display:grid;grid-template-columns:minmax(0,1fr) 96px 28px;gap:var(--space-sm);padding:var(--space-sm) var(--space-xs) 0;border-top:1px solid var(--color-ink);font-weight:600;font-size:var(--text-sm)}
+.pc-total span:not(:first-child){text-align:right;font-family:var(--font-figure);font-weight:500}
+.pc-read{font-size:var(--text-sm);color:var(--color-ink);min-height:1.5em}
+.figs.pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-md) 0}
+.figs.pair .fig:nth-child(3){padding-left:0;border-left:0}
+.pc-note{font-size:var(--text-sm);color:var(--color-muted);max-width:70ch}
+@media (prefers-reduced-motion:no-preference){.pc-chart.in .pc-track i{animation:grow .9s var(--ease-out) both}@keyframes grow{from{transform:scaleX(0)}to{transform:none}}}
+
+/* under the hood */
+.hood-bar{display:flex;justify-content:space-between;gap:var(--space-md);flex-wrap:wrap;align-items:center}
+.traces{display:flex;gap:var(--space-xs);flex-wrap:wrap}
+.traces button{font:600 var(--text-sm) var(--font-body);background:transparent;color:var(--color-ink);border:1px solid var(--color-rule);border-radius:var(--radius-control);min-height:44px;padding:0 var(--space-md);cursor:pointer;transition:border-color var(--dur-short) var(--ease-out),background-color var(--dur-short) var(--ease-out)}
+.traces button:hover{border-color:var(--color-accent)}
+.traces button:active{transform:scale(.98)}
+.traces button[aria-pressed="true"]{border-color:var(--color-accent);box-shadow:inset 0 0 0 1px var(--color-accent)}
+.hood{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-md)}
+.lanes{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-sm);background:var(--color-paper-3);border-radius:var(--radius-card);padding:var(--space-lg)}
+.lane{display:grid;gap:var(--space-xs);align-content:start}
+.lane .lh{font-size:var(--text-sm);color:var(--color-muted)}
+.node{position:relative;background:var(--color-paper-2);border:1px solid var(--color-rule);border-radius:4px;padding:var(--space-xs) var(--space-sm);font-size:var(--text-sm);line-height:1.25;transition:border-color var(--dur-short) var(--ease-out),opacity var(--dur-short) var(--ease-out)}
+.node small{display:block;font-size:var(--text-xs);color:var(--color-muted);margin-top:var(--space-2xs);word-break:break-word}
+.lanes.tracing .node{opacity:.5}
+.lanes.tracing .node.seen{opacity:1;border-color:color-mix(in srgb,var(--color-accent) 55%,var(--color-rule))}
+.lanes.tracing .node.now{opacity:1;border-color:var(--color-accent);outline:2px solid color-mix(in srgb,var(--color-accent) 35%,transparent)}
+.node .dot{position:absolute;top:-8px;right:-8px;width:20px;height:20px;border-radius:50%;background:var(--color-accent);color:var(--color-accent-ink);font:500 11px/20px var(--font-figure);text-align:center}
+.log{background:var(--color-paper-2);border-radius:var(--radius-card);padding:var(--space-lg);display:grid;gap:var(--space-xs);align-content:start}
+.log h4{font-size:var(--text-md)}
+.log ol{list-style:none;margin:0;padding:0;font-size:var(--text-sm)}
+.log li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:var(--space-xs);padding:var(--space-xs) 0;border-bottom:1px solid var(--color-rule)}
+.log li b{font-family:var(--font-figure);font-weight:500;color:var(--color-accent)}
+.log li code{font-family:var(--font-figure);font-size:var(--text-xs);background:var(--color-paper-3);padding:var(--space-3xs) var(--space-2xs);border-radius:3px}
+.log .replay{justify-self:start;margin-top:var(--space-xs);font:600 var(--text-sm) var(--font-body);background:transparent;color:var(--color-accent);border:1px solid var(--color-accent);border-radius:var(--radius-control);min-height:44px;padding:0 var(--space-md);cursor:pointer;transition:background-color var(--dur-short) var(--ease-out),color var(--dur-short) var(--ease-out)}
+.log .replay:hover{background:var(--color-accent);color:var(--color-accent-ink)}
+.spec{overflow-x:auto;border-top:1px solid var(--color-ink)}
+.spec table{font-variant-numeric:tabular-nums;width:100%;border-collapse:collapse;font-size:var(--text-sm);min-width:960px}
+.spec th,.spec td{text-align:left;padding:var(--space-sm) var(--space-md) var(--space-sm) 0;border-bottom:1px solid var(--color-rule);vertical-align:top}
+.spec th{font-weight:600}
+.spec td:first-child{color:var(--color-muted);white-space:nowrap}
+.spec tr.same td:not(:first-child){color:var(--color-accent)}
+
+/* concepts: Bento */
+.concepts{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:var(--gap-columns)}
+.cc{background:var(--color-paper-2);border-radius:var(--radius-card);overflow:hidden;display:flex;flex-direction:column}
+.cc.feature{grid-row:span 2}
+.cc .viz{padding:var(--space-lg);background:var(--color-paper-3);display:grid;gap:var(--space-xs);align-content:start;font-size:var(--text-sm)}
+.cc .txt{padding:var(--space-xl);display:grid;gap:var(--space-sm);align-content:start}
+.cc .txt p,.cc li{color:var(--color-muted)}
+.cc ul{margin:0;padding-left:1.1em;display:grid;gap:var(--space-2xs);font-size:var(--text-sm)}
+.mini,.cap-row{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:var(--space-sm);align-items:center;border-bottom:1px solid var(--color-rule);padding:var(--space-xs) 0}
+.mini .k,.cap-row .k{font-family:var(--font-figure);font-size:var(--text-xs);color:var(--color-muted)}
+.st{font-size:var(--text-xs);white-space:nowrap}
+.st.ok{color:var(--color-accent)} .st.gap{color:var(--color-flag)}
+.seats{display:flex;gap:var(--space-2xs);margin-top:var(--space-2xs)}
+.seats i{width:9px;height:9px;border-radius:2px;background:var(--color-accent)}
+.seats i.free{background:transparent;border:1px solid var(--color-rule)}
+.bar{height:6px;border-radius:3px;background:var(--color-rule);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--color-muted)} .bar i.low{background:var(--color-flag)}
+.fit{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:var(--space-md) var(--gap-columns);margin-top:var(--space-3xl);padding-top:var(--space-lg);border-top:1px solid var(--color-rule)}
+.fit h3{font-size:var(--text-md)}
+.fit-list{list-style:none;margin:0;padding:0;columns:2;column-gap:var(--gap-columns);font-family:var(--font-display);font-weight:600;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.18;letter-spacing:-.025em}
+.fit-list li{break-inside:avoid}
+.fit-list li:nth-child(even){color:var(--color-muted)}
+.fit-list .fit-any{color:var(--color-accent)!important;font-size:.5em;letter-spacing:0;line-height:1.4;padding-top:.6em}
+
+/* how I work */
+#method{background:var(--color-paper-2)}
+.proc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap-columns);counter-reset:p}
+.proc li{counter-increment:p;display:grid;gap:var(--space-sm);align-content:start;padding-top:var(--space-md);border-top:1px solid var(--color-ink)}
+.proc li::before{content:counter(p);font-family:var(--font-figure);font-size:var(--text-display-s);line-height:1;color:var(--color-ink)}
+.proc p{color:var(--color-muted)}
+.proc .stage-name{font-size:var(--text-sm);color:var(--color-muted)}
+.sub{margin-top:var(--section-gap-s);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:var(--space-lg) var(--gap-columns)}
+.sub h3{font-size:clamp(1.8rem,2vw + 1rem,2.6rem)}
+.sub .lead{margin-top:var(--space-md)}
+.rules{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gap-columns);counter-reset:r}
+.rules li{counter-increment:r;display:grid;grid-template-columns:48px minmax(0,1fr);gap:var(--space-sm);padding:var(--space-md) 0;border-top:1px solid var(--color-rule);font-size:var(--text-lg);font-weight:600;letter-spacing:-.01em;align-items:baseline}
+.rules li::before{content:counter(r,decimal-leading-zero);font-family:var(--font-figure);font-weight:400;font-size:var(--text-sm);color:var(--color-accent)}
+.story{display:grid;gap:var(--space-md);font-size:var(--text-lg);line-height:1.6;color:var(--color-muted);max-width:62ch}
+.story-end{color:var(--color-ink);font-family:var(--font-display);font-weight:600;font-size:clamp(1.4rem,1.4vw + 1rem,2rem);line-height:1.25;letter-spacing:-.02em;border-left:2px solid var(--color-accent);padding-left:var(--space-md);margin-top:var(--space-sm)}
+
+/* faq: head beside rows */
+.faq-wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:var(--space-lg) var(--gap-columns)}
+.faq{border-top:1px solid var(--color-rule)}
+.faq details{border-bottom:1px solid var(--color-rule)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:var(--space-md);min-height:72px;padding:var(--space-md) 0;font-family:var(--font-display);font-weight:600;font-size:var(--text-title);letter-spacing:-.015em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--font-figure);font-weight:400;color:var(--color-accent);font-size:1.4rem;line-height:1;transition:transform var(--dur-short) var(--ease-out)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{color:var(--color-accent)}
+.faq summary:focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}
+.faq details p{color:var(--color-muted);max-width:60ch;padding:0 0 var(--space-lg)}
+
+/* footer: the contact close over a mast */
+.site-foot{background:var(--color-paper-3);padding-block:var(--section-gap) var(--space-2xl)}
+.close{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-2xl) var(--gap-columns);align-items:start}
+.close h2{font-size:var(--text-display-s);max-width:14ch}
+.close .lead{margin-top:var(--space-md)}
+.close .cta{margin-top:var(--space-xl)}
+.contact-list{display:grid;margin:0}
+.contact-list>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--space-sm);align-items:center;padding:var(--space-sm) 0;border-bottom:1px solid var(--color-rule)}
+.contact-list>div:first-child{border-top:1px solid var(--color-rule)}
+.contact-list dt{font-size:var(--text-sm);color:var(--color-muted);grid-column:1 / -1}
+.contact-list dd{margin:0;font-family:var(--font-figure);font-size:var(--text-sm);word-break:break-all}
+.contact-list .cv{user-select:all}
+.contact-list button{font:600 var(--text-sm) var(--font-body);background:transparent;color:var(--color-ink);border:1px solid var(--color-rule);border-radius:var(--radius-control);min-height:44px;padding:0 var(--space-md);cursor:pointer;transition:border-color var(--dur-short) var(--ease-out)}
+.contact-list button:hover{border-color:var(--color-ink)}
+.contact-list button:active{transform:scale(.97)}
+.who-card{display:grid;gap:var(--space-2xs);margin-bottom:var(--space-lg)}
+.who-card .nm{font-family:var(--font-display);font-weight:600;font-size:var(--text-title)}
+.who-card .voice{font-size:1.3rem;color:var(--color-muted)}
+.mast{margin-top:var(--section-gap-s);padding-top:var(--space-xl);border-top:1px solid var(--color-rule);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-xl) var(--gap-columns);align-items:end}
+.mast .wm{font-size:clamp(3.5rem,9vw,8rem)}
+.mast .slabs{width:clamp(96px,10vw,140px);height:auto;margin-bottom:var(--space-md)}
+.def{display:grid;gap:var(--space-2xs);margin-top:var(--space-lg)}
+.def .pron{font-family:var(--font-figure);font-size:var(--text-sm);color:var(--color-muted)}
+.def .voice{font-size:clamp(1.25rem,1.6vw,1.5rem);line-height:1.25}
+.foot-links{display:flex;flex-wrap:wrap;gap:var(--space-xs) var(--space-lg);font-size:var(--text-sm)}
+.foot-links a{color:var(--color-muted);text-decoration:none;white-space:nowrap}
+.foot-links a:hover{color:var(--color-ink)}
+.colophon{margin-top:var(--space-xl);font-size:var(--text-sm);color:var(--color-muted)}
+
+/* reach: one switcher for every contact channel */
+.reach{display:grid;gap:var(--space-lg);padding:var(--space-xl);background:var(--color-paper-2);border-radius:var(--radius-card)}
+.reach-tabs{display:flex;flex-wrap:wrap;gap:var(--space-2xs);border-bottom:1px solid var(--color-rule)}
+.reach-tabs button{font:600 var(--text-sm) var(--font-body);background:transparent;color:var(--color-muted);border:0;border-bottom:2px solid transparent;margin-bottom:-1px;min-height:44px;padding:0 var(--space-sm);cursor:pointer;transition:color var(--dur-short) var(--ease-out),border-color var(--dur-short) var(--ease-out)}
+.reach-tabs button:hover{color:var(--color-ink)}
+.reach-tabs button:active{transform:scale(.98)}
+.reach-tabs button[aria-selected="true"]{color:var(--color-ink);border-bottom-color:var(--color-accent)}
+.reach-p{display:grid;gap:var(--space-lg)}
+.reach-p .cv{font-family:var(--font-figure);font-size:clamp(1.15rem,1.6vw,1.6rem);letter-spacing:-.02em;word-break:break-all;user-select:all}
+.reach-a{display:flex;flex-wrap:wrap;gap:var(--space-sm)}
+.reach-a .btn{min-height:44px;font-size:var(--text-sm)}
+
+/* phone bar */
+.mbar{display:none}
+.m-more{display:none}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+@media (max-width:60rem){
+  :root{--gutter:24px;--section-gap-s:80px;--section-gap:96px;--section-gap-l:120px}
+  .nav nav{display:none}
+  .hero{min-height:0}
+  .hero-grid,.cases,.close,.mast,.faq-wrap,.sub,.head-split,.pc-hero,.hood,.concepts,.pw-close{grid-template-columns:minmax(0,1fr)}
+  .hero-grid{gap:var(--space-xl)}
+  .case-index{display:none}
+  .tools{grid-template-columns:minmax(0,1fr)}
+  .steps,.proc{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .case-top,.figs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fig:nth-child(3){padding-left:0;border-left:0}
+  .cc.feature{grid-row:auto}
+  .lanes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rows li{grid-template-columns:minmax(0,1fr)}
+  .bchoose{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:40rem){
+  :root{--gutter:16px;--section-gap-s:56px;--section-gap:72px;--section-gap-l:96px;--gap-columns:16px}
+  body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+  .ledger-x a{grid-template-columns:minmax(0,1fr) auto}
+  .ledger-x .x-what{grid-column:1 / -1;grid-row:2}
+  .hero-text{display:contents}
+  .hero-grid{gap:var(--space-lg)}
+  .hero h1{order:1} .hero .lead{order:2} .hero .cta{order:3} .stage{order:4;width:min(220px,64%)} .ledger-x{order:5}
+  .nav .btn{display:none}
+  .ba,.ba tbody,.ba tr,.ba td{display:block;width:100%}
+  .ba thead{display:none}
+  .ba td{padding-right:0}
+  .ba td::before{content:attr(data-k);display:block;font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-2xs)}
+  .ba td:first-child::before{color:var(--color-muted)} .ba td:last-child::before{color:var(--color-accent)}
+  .cs-row{grid-template-columns:minmax(0,1fr)}
+  .roles,.roles tbody,.roles tr,.roles td{display:block;width:100%}
+  .roles thead{display:none}
+  .roles tr{padding:var(--space-sm) 0;border-bottom:1px solid var(--color-rule)}
+  .roles td{border:0;padding:var(--space-3xs) 0}
+  .steps,.proc,.rules{grid-template-columns:minmax(0,1fr)}
+  .fit{grid-template-columns:minmax(0,1fr)}
+  .fit-list{columns:1;font-size:1.7rem}
+  .rail{grid-auto-columns:68%}
+  .builds.is-grid .rail{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bp-right{justify-items:start;text-align:left}
+  .lw-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lw-cell .tb{display:none}
+  .pc-bar{grid-template-columns:76px minmax(0,1fr) 84px;gap:var(--space-xs)}
+  .pc-l{white-space:normal}
+  .pc-n{display:none}
+  .pc-total{grid-template-columns:minmax(0,1fr) 84px}
+  .pc-total span:last-child{display:none}
+  .lb-in{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .lb img{grid-column:1 / -1;grid-row:1;max-height:70dvh}
+  .lb-arrow{grid-row:2;justify-self:center}
+  .lb-cap{grid-row:3}
+  .tool,.quote{padding:var(--space-lg)}
+  .case-sec.folded>:not(.case-h):not(.case-top):not(.figs):not(.pc-hero):not(.hood-bar):not(.hood):not(.m-more){display:none}
+  .case-sec.folded .lanes{display:none}
+  .m-more{white-space:nowrap;display:flex;justify-content:center;align-items:center;width:100%;min-height:48px;font:600 var(--text-md) var(--font-body);background:transparent;color:var(--color-ink);border:1px solid var(--color-rule);border-radius:var(--radius-control);cursor:pointer}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:var(--z-sticky);align-items:center;gap:var(--space-2xs);background:var(--color-paper-2);border-top:1px solid var(--color-rule);
+    padding:var(--space-sm) max(var(--space-sm),env(safe-area-inset-right,0px)) calc(var(--space-sm) + env(safe-area-inset-bottom,0px)) max(var(--space-sm),env(safe-area-inset-left,0px))}
+  .mbar a{flex:1;white-space:nowrap;text-align:center;font-size:var(--text-sm);color:var(--color-muted);text-decoration:none;padding:var(--space-sm) 0}
+  .mbar a:hover,.mbar a:focus-visible{color:var(--color-ink)}
+  .mbar .mbar-wa{flex:none;width:48px;height:48px;padding:0;border-radius:var(--radius-control);background:var(--color-accent);color:var(--color-accent-ink);display:grid;place-items:center}
+}
+
+/* project page */
+.pj-intro{padding-block:calc(var(--section-gap) * .7) 0}
+.pj-back{display:inline-flex;align-items:center;gap:8px;color:var(--color-muted);text-decoration:none;font-size:var(--text-sm)}
+.pj-back:hover{color:var(--color-ink)}
+.pj-kick{display:block;margin-top:var(--space-xl);font-family:var(--font-mono,"IBM Plex Mono",monospace);font-size:var(--text-sm);color:var(--color-flag)}
+.pj-intro h1{margin:var(--space-sm) 0 0;font-size:clamp(44px,6.4vw,84px);line-height:.98;letter-spacing:-.04em;text-wrap:balance}
+.pj-intro .lead{margin-top:var(--space-md);max-width:52ch}
+.pj-page .cases{display:block}
+.pj-page #cases{padding-top:var(--space-2xl)}
+.pj-next{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-md);padding-block:0 var(--section-gap)}
+.pj-next a{display:flex;flex-direction:column;gap:6px;padding:var(--space-lg);border:1px solid var(--color-rule);border-radius:var(--radius-control,12px);text-decoration:none;color:var(--color-ink)}
+.pj-next a:hover{border-color:var(--color-ink)}
+.pj-next span{font-size:var(--text-sm);color:var(--color-muted)}
+.pj-next b{font-size:clamp(20px,2vw,26px);font-weight:600;letter-spacing:-.02em}
+.pj-next a:last-child{text-align:right}
+@media (max-width:640px){.pj-next{grid-template-columns:minmax(0,1fr)}.pj-next a:last-child{text-align:left}}
+</style>
+</head>
+<body class="pj-page">
+<a class="visually-hidden skip" href="#case">Skip to the case study</a>
+<header class="nav">
+<div class="container nav-in">
+<a aria-label="KRIYĀ Systems, home" class="brand" href="../">
+<svg aria-hidden="true" class="slabs" height="18" viewbox="0 0 120 40" width="54"><path d="M12 8 H48 V32 H12 A12 12 0 0 1 12 8 Z"></path><path d="M64 8 H108 A12 12 0 0 1 108 32 H64 Z"></path><circle cx="56" cy="20" r="3.4"></circle></svg>
+<span class="wm"><span>KRIY</span><span class="a">A</span></span>
+<span class="sys">Systems</span>
+</a>
+<nav aria-label="Sections"><a href="../#work">Work</a><a href="../#gaps">Gaps</a><a href="../#faq">FAQ</a><a href="#contact">Contact</a></nav>
+<a class="btn" href="https://wa.me/6281339021014?text=Hi%20Nathasjja%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20system%20for%20my%20team." rel="noopener" target="_blank"><svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z" fill="currentColor"></path></svg>WhatsApp</a>
+</div>
+</header>
+<main><section class="pj-intro"><div class="container"><a class="pj-back" href="../#work"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="16"><path d="M15 5l-7 7 7 7"></path></svg>All work</a><span class="pj-kick">Pet care, Nov 2026</span><h1>PawinBali</h1><p class="lead">A WhatsApp group for every booking, replaced by one private page per client.</p></div></section>
+
+
+
+
+<section id="cases">
+<div class="container">
+
+<div class="cases">
+
+<div class="case-list">
+
+
+
+<article class="case-sec" id="case">
+
+<dl class="case-top">
+<div><dt>Client</dt><dd>PawinBali pet care, Bali and Surabaya</dd></div>
+<div><dt>Role</dt><dd>Developer; designed and built it</dd></div>
+<div><dt>Stack</dt><dd>Supabase, Apps Script, Drive, Netlify</dd></div>
+<div><dt>Timeline</dt><dd>November 2026</dd></div>
+</dl>
+<div class="cs-row gap"><h4>The gap</h4><div class="cs-main">
+<p class="cs-lead">Bookings that lived in DMs and group chats</p>
+<p>Clients booked through Instagram DMs. Totals were worked out by hand, dates were typed into a calendar, and every booking got a WhatsApp group of its own, where the photos, the payment and the questions all piled up.</p>
+</div></div>
+<div class="cs-row built"><h4>What I built</h4><div class="cs-main">
+<p class="cs-lead">One link per client, one view per role</p>
+<p><strong>Clients</strong> get the booking link from an automatic reply to their DM. They choose Bali or Surabaya, one of four services, the nights and a sitter, and watch the total add up. Full days are struck out and busy sitters greyed. They pay by bank transfer to that city’s own account, attach the screenshot, and get a private pet page that stays the same for every stay: the latest photo, every earlier one, a ring counting down to the next, and stars for the sitter after pick-up.</p>
+<p><strong>Admins</strong> log in with a phone number and a six-digit code. One Today page covers both cities: stays in progress, updates due, updates late and payments to check. A photo ten minutes overdue turns the row orange, and one tap reminds the sitter. Every transfer sits beside the amount expected before anyone presses <strong>Confirm and book</strong>, which puts the stay on that city’s Google Calendar.</p>
+<p><strong>Sitters</strong> see only their own day. They can’t post an update without a photo, and their reviews travel with them.</p>
+</div></div>
+<table aria-label="Who sees what" class="roles">
+<thead><tr><th scope="col">Part</th><th scope="col">Who</th><th scope="col">How they get in</th><th scope="col">What they do there</th></tr></thead>
+<tbody>
+<tr><td>Booking page</td><td>Clients</td><td>The link from an Instagram DM</td><td>Choose city, service, days and sitter, and see the total</td></tr>
+<tr><td>Pet page</td><td>Clients</td><td>Their own private link, the same every stay</td><td>Pay, follow photo updates, see past stays, leave a review</td></tr>
+<tr><td>Admin pages</td><td>Admins</td><td>Phone number and a six-digit code</td><td>Check payments, watch every stay, remind sitters, manage the team and prices</td></tr>
+<tr><td>Sitter pages</td><td>Sitters</td><td>Phone number and a six-digit code</td><td>See their own visits, post photo updates, read their reviews</td></tr>
+</tbody>
+</table>
+<div class="pw-close">
+<div class="pw-arch">
+<p class="voice pw-line">Nothing secret ever reaches a phone.</p>
+<p>The website only holds the public key. The secret key lives in a small Google Apps Script on PawinBali’s own account, which receives uploads, creates staff logins and runs on a timer: the calendar every 5 minutes, blocked days every 30, the bookings sheet every hour. Admins block a day by adding a “Full” or “Off: Ayu” event to the city’s calendar.</p>
+</div>
+<ul class="figs pair">
+<li class="fig"><b>0</b><span>WhatsApp groups per booking</span></li>
+<li class="fig"><b>2</b><span>cities on one system</span></li>
+<li class="fig"><b>Rp 0</b><span>monthly running cost</span></li>
+<li class="fig"><b>6 h</b><span>longest wait for a photo</span></li>
+</ul>
+</div>
+</article>
+
+<article class="case-sec" id="hood">
+<div class="case-h">
+<h3>Under the hood</h3>
+<p class="lead">None of these builds needs a server of its own to maintain. Pick an action and watch where it goes, step by step.</p>
+</div>
+<div class="hood-bar">
+<div aria-label="Project" class="seg-tabs" role="tablist">
+<button aria-selected="true" data-proj="axiom" id="tab-axiom" role="tab" type="button">Axiom</button>
+<button aria-selected="false" data-proj="kriya" id="tab-kriya" role="tab" type="button">KRIYĀ</button>
+<button aria-selected="false" data-proj="petty" id="tab-petty" role="tab" type="button">Petty cash</button>
+<button aria-selected="false" data-proj="ludwig" id="tab-ludwig" role="tab" type="button">Ludwig</button>
+<button aria-selected="false" data-proj="pawin" id="tab-pawin" role="tab" type="button">PawinBali</button>
+</div>
+<div aria-label="Actions to trace" class="traces" id="traces"></div>
+</div>
+<div class="hood">
+<div aria-label="System map" class="lanes tracing" id="lanes"></div>
+<div aria-live="polite" class="log">
+<h4 id="log-title">Trace</h4>
+<ol id="log"></ol>
+<button class="replay" id="replay" type="button">Replay</button>
+</div>
+</div>
+<div class="spec">
+<table>
+<thead><tr><th>Layer</th><th>Axiom Task Manager</th><th>KRIYĀ Studio App</th><th>Petty Cash Backfill</th><th>Ludwig</th><th>PawinBali</th></tr></thead>
+<tbody>
+<tr class="same"><td>Database</td><td>Google Sheet: Tasks, Updates, Stages, Projects, Files, Inbox</td><td>Google Sheet: Bookings_Master, CRM, Income Dashboard, plus Requests, Quotes, Checklist and Tasks</td><td>Google Sheet ledger: month tabs + person tabs</td><td>Supabase Postgres: 10 tables, all with row-level security</td><td>Supabase: bookings, clients, pets, photo updates, reviews, staff, prices, blocked days</td></tr>
+<tr class="same"><td>Server</td><td>Google Apps Script, runs as the company account</td><td>Google Apps Script: one web app serves three pages</td><td>No server: AI drives the WhatsApp desktop app</td><td>No custom server: rules in the database, one edge function</td><td>Google Apps Script on PawinBali’s own account: uploads, staff logins, timers</td></tr>
+<tr><td>Front end</td><td>Mobile web app, add to home screen</td><td>Team app, public request page, private quote pages</td><td>The WhatsApp group the team already uses</td><td>Vite web app on Netlify: student app + teacher page</td><td>One web app on Netlify: booking, payment and pet pages; admin and sitter pages</td></tr>
+<tr><td>Access</td><td>Team code, then pick your name</td><td>Studio code for the team; secret key in each quote link</td><td>Runs on the operations laptop</td><td>Email sign-up; the teacher approves each student</td><td>Clients: a private link, no account; team: phone number and a 6-digit code</td></tr>
+<tr><td>Files</td><td>Google Drive, folder per stage and side</td><td>Google Drive, folder per client</td><td>Drive RECEIPTS folders by month, linked as chips</td><td>Decks and stories backed up to GitHub as files</td><td>Google Drive: pet photos and transfer screenshots, private to admins</td></tr>
+<tr><td>AI</td><td>Gemini: EN⇄RU translation, chat-to-task, with retry and a backup model</td><td>None needed</td><td>Reads receipts; rebuilds the address-to-villa map</td><td>None needed</td><td>None needed</td></tr>
+<tr><td>Automation</td><td>5-minute check catches edits from any device</td><td>CRM sync; emails on accepted quotes and offers; daily checklists</td><td>One backfill run, re-checked against the chat index</td><td>Sign-up creates a profile; spaced-repetition schedule; one-click backup</td><td>Calendar every 5 minutes, blocked days every 30, Sheet copy every hour</td></tr>
+<tr><td>Safety</td><td>Protocol read-only; human edits never overwritten</td><td>Locked saves; rate-limited public forms; offers below the floor need the owner</td><td>Unclear items go to a person; personal rides flagged</td><td>Pending sees nothing; students see only their own data; notes are teacher-only</td><td>The secret key stays on the server; sitters see only their own bookings; only admins see payments</td></tr>
+<tr class="same"><td>Running cost</td><td>No per-user fees</td><td>No per-user fees</td><td>No new software</td><td>Free tiers</td><td>Free plans on PawinBali’s own accounts</td></tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section><section id="builds">
+<div class="container">
+<div class="head-split">
+<h2>The screens</h2>
+<p class="lead">16 real screens from the app. Open any one full size.</p>
+</div>
+<div class="builds">
+<div aria-label="Choose a build" class="bchoose" hidden="" role="tablist">
+
+
+
+<button aria-controls="bp-pawin" aria-selected="false" data-proj="pawin" id="bt-pawin" role="tab" style="--acc:var(--acc-pawin)" type="button"><span class="bc-word">PawinBali</span><span class="bc-sub">Pet care app for Bali and Surabaya, team and clients</span><span class="bc-n">16 screens</span></button></div>
+<div class="bbar">
+<div aria-label="Layout" class="seg-tabs" role="group">
+<button aria-pressed="true" data-view="rail" type="button">Browse</button>
+<button aria-pressed="false" data-view="grid" type="button">Grid</button>
+</div>
+<div class="rail-nav"><button aria-label="Previous screens" data-dir="-1" type="button"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24" width="18"><path d="M15 5l-7 7 7 7"></path></svg></button><button aria-label="Next screens" data-dir="1" type="button"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24" width="18"><path d="M9 5l7 7-7 7"></path></svg></button></div>
+</div>
+<div aria-labelledby="bt-pawin" class="bpanel" data-proj="pawin" hidden="" id="bp-pawin" role="tabpanel" style="--acc:var(--acc-pawin)">
+<div aria-label="App side" class="kside-tabs seg-tabs" role="group">
+<button aria-pressed="true" data-side="team" type="button">Team side</button>
+<button aria-pressed="false" data-side="client" type="button">Client side</button>
+</div>
+<div class="kside" data-side="team">
+<div class="bp-head">
+<div><div class="bp-word">PawinBali</div><div class="bp-sub">Pet care app, team side</div></div>
+<div class="bp-right"><div class="bp-stack"><i></i>Supabase, Apps Script, Drive, Netlify</div><div class="bp-desc">Payments checked, photos on time</div></div>
+</div>
+<div class="rail" data-rail=""><figure class="shot"><button aria-label="Open Sign in screen, PawinBali team side" class="shot-btn" data-i="0" data-key="pawin-0" data-proj="pawin" type="button"><img alt="PawinBali team side, Sign in screen: Phone number and a six-digit code" decoding="async" height="1125" loading="lazy" src="../img/424770868528.webp" width="520"/></button><figcaption><span class="shot-t">Sign in</span><span class="shot-d">Phone number and a six-digit code</span></figcaption></figure><figure class="shot"><button aria-label="Open Today screen, PawinBali team side" class="shot-btn" data-i="1" data-key="pawin-1" data-proj="pawin" type="button"><img alt="PawinBali team side, Today screen: Both cities, or one at a time" decoding="async" height="1125" loading="lazy" src="../img/8412c190bbd4.webp" width="520"/></button><figcaption><span class="shot-t">Today</span><span class="shot-d">Both cities, or one at a time</span></figcaption></figure><figure class="shot"><button aria-label="Open Late screen, PawinBali team side" class="shot-btn" data-i="2" data-key="pawin-2" data-proj="pawin" type="button"><img alt="PawinBali team side, Late screen: Overdue photos turn orange, one tap reminds" decoding="async" height="1125" loading="lazy" src="../img/c1d86ca2004e.webp" width="520"/></button><figcaption><span class="shot-t">Late</span><span class="shot-d">Overdue photos turn orange, one tap reminds</span></figcaption></figure><figure class="shot"><button aria-label="Open Payments screen, PawinBali team side" class="shot-btn" data-i="3" data-key="pawin-3" data-proj="pawin" type="button"><img alt="PawinBali team side, Payments screen: The screenshot beside the amount expected" decoding="async" height="1125" loading="lazy" src="../img/c9c97c34fa48.webp" width="520"/></button><figcaption><span class="shot-t">Payments</span><span class="shot-d">The screenshot beside the amount expected</span></figcaption></figure><figure class="shot"><button aria-label="Open Logins screen, PawinBali team side" class="shot-btn" data-i="4" data-key="pawin-4" data-proj="pawin" type="button"><img alt="PawinBali team side, Logins screen: A code shown once, sent on WhatsApp" decoding="async" height="1125" loading="lazy" src="../img/3f176abc0e7e.webp" width="520"/></button><figcaption><span class="shot-t">Logins</span><span class="shot-d">A code shown once, sent on WhatsApp</span></figcaption></figure><figure class="shot"><button aria-label="Open My day screen, PawinBali team side" class="shot-btn" data-i="5" data-key="pawin-5" data-proj="pawin" type="button"><img alt="PawinBali team side, My day screen: Sitters see only their own visits" decoding="async" height="1125" loading="lazy" src="../img/f7d22d3e3e42.webp" width="520"/></button><figcaption><span class="shot-t">My day</span><span class="shot-d">Sitters see only their own visits</span></figcaption></figure><figure class="shot"><button aria-label="Open Check-in screen, PawinBali team side" class="shot-btn" data-i="6" data-key="pawin-6" data-proj="pawin" type="button"><img alt="PawinBali team side, Check-in screen: No photo, no update" decoding="async" height="1125" loading="lazy" src="../img/b67432458209.webp" width="520"/></button><figcaption><span class="shot-t">Check-in</span><span class="shot-d">No photo, no update</span></figcaption></figure><figure class="shot"><button aria-label="Open Reviews screen, PawinBali team side" class="shot-btn" data-i="7" data-key="pawin-7" data-proj="pawin" type="button"><img alt="PawinBali team side, Reviews screen: What owners said, in the sitter’s pocket" decoding="async" height="1125" loading="lazy" src="../img/3a755d49806e.webp" width="520"/></button><figcaption><span class="shot-t">Reviews</span><span class="shot-d">What owners said, in the sitter’s pocket</span></figcaption></figure></div>
+</div>
+<div class="kside" data-side="client" hidden="">
+<div class="bp-head">
+<div><div class="bp-word">PawinBali</div><div class="bp-sub">Pet care app, client side</div></div>
+<div class="bp-right"><div class="bp-stack"><i></i>Supabase, Apps Script, Drive, Netlify</div><div class="bp-desc">Book, pay and follow every stay, in two cities</div></div>
+</div>
+<div class="rail" data-rail=""><figure class="shot"><button aria-label="Open Book screen, PawinBali client side" class="shot-btn" data-i="0" data-key="pawinc-0" data-proj="pawin" type="button"><img alt="PawinBali client side, Book screen: City, service and a live total" decoding="async" height="1125" loading="lazy" src="../img/42f0de000be3.webp" width="520"/></button><figcaption><span class="shot-t">Book</span><span class="shot-d">City, service and a live total</span></figcaption></figure><figure class="shot"><button aria-label="Open Nights screen, PawinBali client side" class="shot-btn" data-i="1" data-key="pawinc-1" data-proj="pawin" type="button"><img alt="PawinBali client side, Nights screen: Full days struck out, busy sitters greyed" decoding="async" height="1125" loading="lazy" src="../img/e1468047e53a.webp" width="520"/></button><figcaption><span class="shot-t">Nights</span><span class="shot-d">Full days struck out, busy sitters greyed</span></figcaption></figure><figure class="shot"><button aria-label="Open Pets screen, PawinBali client side" class="shot-btn" data-i="2" data-key="pawinc-2" data-proj="pawin" type="button"><img alt="PawinBali client side, Pets screen: Returning clients come back filled in" decoding="async" height="1125" loading="lazy" src="../img/fd0554ac9f3d.webp" width="520"/></button><figcaption><span class="shot-t">Pets</span><span class="shot-d">Returning clients come back filled in</span></figcaption></figure><figure class="shot"><button aria-label="Open Pay screen, PawinBali client side" class="shot-btn" data-i="3" data-key="pawinc-3" data-proj="pawin" type="button"><img alt="PawinBali client side, Pay screen: The exact amount, the city’s own account" decoding="async" height="1125" loading="lazy" src="../img/c25068e6005b.webp" width="520"/></button><figcaption><span class="shot-t">Pay</span><span class="shot-d">The exact amount, the city’s own account</span></figcaption></figure><figure class="shot"><button aria-label="Open Checking screen, PawinBali client side" class="shot-btn" data-i="4" data-key="pawinc-4" data-proj="pawin" type="button"><img alt="PawinBali client side, Checking screen: One private page for every stay" decoding="async" height="1125" loading="lazy" src="../img/6514483cdd52.webp" width="520"/></button><figcaption><span class="shot-t">Checking</span><span class="shot-d">One private page for every stay</span></figcaption></figure><figure class="shot"><button aria-label="Open Pet page screen, PawinBali client side" class="shot-btn" data-i="5" data-key="pawinc-5" data-proj="pawin" type="button"><img alt="PawinBali client side, Pet page screen: The latest photo, straight from the sitter" decoding="async" height="1125" loading="lazy" src="../img/61cb2686f20d.webp" width="520"/></button><figcaption><span class="shot-t">Pet page</span><span class="shot-d">The latest photo, straight from the sitter</span></figcaption></figure><figure class="shot"><button aria-label="Open Updates screen, PawinBali client side" class="shot-btn" data-i="6" data-key="pawinc-6" data-proj="pawin" type="button"><img alt="PawinBali client side, Updates screen: A photo at least every six hours" decoding="async" height="1125" loading="lazy" src="../img/2f3e3af65677.webp" width="520"/></button><figcaption><span class="shot-t">Updates</span><span class="shot-d">A photo at least every six hours</span></figcaption></figure><figure class="shot"><button aria-label="Open Review screen, PawinBali client side" class="shot-btn" data-i="7" data-key="pawinc-7" data-proj="pawin" type="button"><img alt="PawinBali client side, Review screen: Stars for the sitter after pick-up" decoding="async" height="1125" loading="lazy" src="../img/68c0a98348d9.webp" width="520"/></button><figcaption><span class="shot-t">Review</span><span class="shot-d">Stars for the sitter after pick-up</span></figcaption></figure></div>
+</div>
+<div class="bp-foot"><span class="bp-hint">Tap any screen to open it</span><a class="bp-case" href="#pawinbali">Read the case study</a></div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<div class="container pj-next"><a href="../ludwig/"><span>Previous</span><b>Ludwig</b></a><a href="../pettycash/"><span>Next</span><b>Petty Cash Backfill</b></a></div></main>
+<footer class="site-foot" id="contact">
+<div class="container">
+<div class="close">
+<div>
+<h2>Tell me what you need</h2>
+<p class="lead">Send me a few lines on how your team works today and where things get lost. I’ll reply with what I’d build and roughly what it would take.</p>
+<div class="cta"><a class="btn primary" href="https://wa.me/6281339021014?text=Hi%20Nathasjja%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20system%20for%20my%20team." rel="noopener" target="_blank"><svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z" fill="currentColor"></path></svg>Message me on WhatsApp</a></div>
+</div>
+<div>
+<div class="reach">
+<div aria-label="Ways to reach me" class="reach-tabs" role="tablist">
+<button aria-controls="rp-wa" aria-selected="true" id="rt-wa" role="tab" type="button">WhatsApp</button>
+<button aria-controls="rp-email" aria-selected="false" id="rt-email" role="tab" type="button">Email</button>
+<button aria-controls="rp-li" aria-selected="false" id="rt-li" role="tab" type="button">LinkedIn</button>
+<button aria-controls="rp-web" aria-selected="false" id="rt-web" role="tab" type="button">Website</button>
+</div>
+<div aria-labelledby="rt-wa" class="reach-p" id="rp-wa" role="tabpanel"><span class="cv" id="c-wa">+62 813 3902 1014</span><div class="reach-a"><a class="btn primary" href="https://wa.me/6281339021014?text=Hi%20Nathasjja%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20system%20for%20my%20team." rel="noopener" target="_blank">Open chat</a><button class="btn" data-copy="c-wa" type="button">Copy</button></div></div>
+<div aria-labelledby="rt-email" class="reach-p" hidden="" id="rp-email" role="tabpanel"><span class="cv" id="c-email">nathasjja@hotmail.com</span><div class="reach-a"><a class="btn primary" href="mailto:nathasjja@hotmail.com">Write an email</a><button class="btn" data-copy="c-email" type="button">Copy</button></div></div>
+<div aria-labelledby="rt-li" class="reach-p" hidden="" id="rp-li" role="tabpanel"><span class="cv" id="c-li">https://www.linkedin.com/in/nathasjja/</span><div class="reach-a"><a class="btn primary" href="https://www.linkedin.com/in/nathasjja/" rel="noopener" target="_blank">Open profile</a><button class="btn" data-copy="c-li" type="button">Copy</button></div></div>
+<div aria-labelledby="rt-web" class="reach-p" hidden="" id="rp-web" role="tabpanel"><span class="cv" id="c-web">https://nathasjja.github.io/systems/</span><div class="reach-a"><a class="btn primary" href="https://nathasjja.github.io/systems/" rel="noopener" target="_blank">Open site</a><button class="btn" data-copy="c-web" type="button">Copy</button></div></div>
+</div>
+<p class="colophon">Based in Bali, GMT+8. Works US and AU hours.</p>
+</div>
+</div>
+<div class="mast">
+<div>
+<svg aria-hidden="true" class="slabs" height="47" viewbox="0 0 120 40" width="140"><path d="M12 8 H48 V32 H12 A12 12 0 0 1 12 8 Z"></path><path d="M64 8 H108 A12 12 0 0 1 108 32 H64 Z"></path><circle cx="56" cy="20" r="3.4"></circle></svg>
+<span aria-label="KRIYĀ" class="wm"><span>KRIY</span><span class="a">A</span></span>
+<div class="def">
+<span class="pron">kri·yā /ˈkri.jaː/ n.</span>
+<span class="voice">action; the work itself, shaped around the people who do it.</span>
+</div>
+</div>
+<div>
+<nav aria-label="More" class="foot-links"><a href="../">Home</a><a href="../axiom/">Axiom Task Manager</a><a href="../kriya/">KRIYĀ Studio App</a><a href="../ludwig/">Ludwig</a><a href="../pawinbali/">PawinBali</a><a href="../pettycash/">Petty Cash Backfill</a><a href="../#faq">FAQ</a></nav>
+<p class="colophon">KRIYĀ Systems, Nathasjja Takanashi, 2026.</p>
+</div>
+</div>
+</div>
+</footer>
+<nav aria-label="Quick links" class="mbar"><a href="../#work">Work</a><a href="#case">Case study</a><a href="#contact">Contact</a>
+
+<a aria-label="Chat on WhatsApp" class="mbar-wa" href="https://wa.me/6281339021014?text=Hi%20Nathasjja%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20system%20for%20my%20team." rel="noopener" target="_blank"><svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z" fill="currentColor"></path></svg></a>
+</nav>
+<div aria-labelledby="lb-t" aria-modal="true" class="lb" hidden="" id="lb" role="dialog">
+<div class="lb-in">
+<button aria-label="Close" class="lb-x" id="lb-x" type="button"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="1.6" viewbox="0 0 24 24" width="18"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+<button aria-label="Previous screen" class="lb-arrow" id="lb-prev" type="button"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24" width="18"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<img alt="" id="lb-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+<button aria-label="Next screen" class="lb-arrow" id="lb-next" type="button"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24" width="18"><path d="M9 5l7 7-7 7"></path></svg></button>
+<div class="lb-cap"><span class="lb-n" id="lb-n"></span><span class="lb-t" id="lb-t"></span><span class="lb-d" id="lb-d"></span></div>
+</div>
+</div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.getAttribute('data-copy'));var txt=el.textContent.trim();
+    var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};
+    try{navigator.clipboard.writeText(txt).then(done,function(){sel(el)})}catch(e){sel(el)}
+  });
+});
+function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+
+/* ---------- Builds browser + full-screen view ---------- */
+(function(){
+  var root=document.querySelector('.builds'); if(!root) return;
+  var tabs=root.querySelectorAll('.bchoose button'), panels=root.querySelectorAll('.bpanel');
+  function show(p){
+    tabs.forEach(function(t){t.setAttribute('aria-selected',t.getAttribute('data-proj')===p?'true':'false')});
+    panels.forEach(function(x){x.hidden=x.getAttribute('data-proj')!==p});
+    var r=activeRail(); if(r) r.scrollLeft=0;
+  }
+  function activeRail(){var pn=root.querySelector('.bpanel:not([hidden])');if(!pn)return null;var r=[].filter.call(pn.querySelectorAll('[data-rail]'),function(x){return !x.closest('[hidden]')});return r[0]||null}
+  root.querySelectorAll('.kside-tabs button').forEach(function(b){b.addEventListener('click',function(){var side=b.getAttribute('data-side'),pn=b.closest('.bpanel');pn.querySelectorAll('.kside-tabs button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});pn.querySelectorAll('.kside').forEach(function(k){k.hidden=k.getAttribute('data-side')!==side});var r=activeRail();if(r)r.scrollLeft=0})});
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('data-proj'))})});
+  root.querySelectorAll('[data-view]').forEach(function(b){b.addEventListener('click',function(){
+    var grid=b.getAttribute('data-view')==='grid'; root.classList.toggle('is-grid',grid);
+    root.querySelectorAll('[data-view]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+  })});
+  root.querySelectorAll('.rail-nav button').forEach(function(b){b.addEventListener('click',function(){
+    var r=activeRail(); if(!r) return; var card=r.querySelector('.shot'); var w=card?card.getBoundingClientRect().width+24:300;
+    r.scrollBy({left:Number(b.getAttribute('data-dir'))*w*2,behavior:reduce()?'auto':'smooth'});
+  })});
+  function reduce(){try{return matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){return false}}
+
+  var lb=document.getElementById('lb'),img=document.getElementById('lb-img'),n=document.getElementById('lb-n'),t=document.getElementById('lb-t'),d=document.getElementById('lb-d');
+  var curP=null,curI=0,lastFocus=null;
+  function shots(p){return [].filter.call(document.querySelectorAll('#bp-'+p+' .shot'),function(x){return !x.closest('[hidden]')||x.closest('.bpanel')===x.closest('[hidden]')})}
+  function render(){
+    var list=shots(curP),s=list[curI]; if(!s) return;
+    var im=s.querySelector('img'); img.src=im.src; img.alt=im.alt;
+    n.textContent=({axiom:'Axiom',kriya:'KRIYĀ',ludwig:'Ludwig',pawin:'PawinBali'}[curP]||'')+', screen '+(curI+1)+' of '+list.length;
+    t.textContent=s.querySelector('.shot-t').textContent; d.textContent=s.querySelector('.shot-d').textContent;
+    lb.style.setProperty('--acc',document.getElementById('bp-'+curP).style.getPropertyValue('--acc'));
+  }
+  function open(p,i,btn){curP=p;curI=i;lastFocus=btn;render();lb.hidden=false;document.getElementById('lb-x').focus()}
+  function close(){lb.hidden=true;if(lastFocus)lastFocus.focus()}
+  function step(k){var L=shots(curP).length;curI=(curI+k+L)%L;render()}
+  document.querySelectorAll('.shot-btn').forEach(function(b){b.addEventListener('click',function(){open(b.getAttribute('data-proj'),Number(b.getAttribute('data-i')),b)})});
+  document.getElementById('lb-x').addEventListener('click',close);
+  document.getElementById('lb-prev').addEventListener('click',function(){step(-1)});
+  document.getElementById('lb-next').addEventListener('click',function(){step(1)});
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){
+    if(lb.hidden) return;
+    if(e.key==='Escape')close(); else if(e.key==='ArrowRight')step(1); else if(e.key==='ArrowLeft')step(-1);
+  });
+  var x0=null; lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)step(dx<0?1:-1);x0=null});
+})();
+
+
+
+
+/* ---------- Phone: fold long case studies ---------- */
+(function(){
+  document.querySelectorAll('.case-sec').forEach(function(sec){
+    var b=document.createElement('button');b.type='button';b.className='m-more';
+    var label=sec.id==='hood'?'Show the system map':'Read the full case study';
+    function set(f){sec.classList.toggle('folded',f);b.setAttribute('aria-expanded',f?'false':'true');b.textContent=f?label:'Show less'}
+    b.addEventListener('click',function(){var f=!sec.classList.contains('folded');set(f);if(f)sec.scrollIntoView({block:'start'})});
+    sec.appendChild(b);set(true);
+  });
+})();
+
+/* ---------- Hero: the build ledger switches the screen ---------- */
+(function(){
+  var img=document.getElementById('stage-img'),fig=document.getElementById('stage-fig'),cap=document.getElementById('stage-cap');if(!img)return;
+  var names={'axiom-1':'Axiom, the Tasks screen','kriya-4':'KRIYĀ, the Quote screen','ludwig-1':'Ludwig, the Today screen','pawinc-5':'PawinBali, the pet page',petty:'Petty Cash, the backlog it found'};
+  var links=document.querySelectorAll('.ledger-x a');
+  function show(a){
+    var k=a.getAttribute('data-shot');
+    links.forEach(function(x){if(x===a)x.setAttribute('aria-current','true');else x.removeAttribute('aria-current')});
+    if(k==='petty'){img.hidden=true;fig.hidden=false}
+    else{var src=document.querySelector('.shot-btn[data-key="'+k+'"] img');if(src){img.src=src.src;img.alt=src.alt}img.hidden=false;fig.hidden=true}
+    cap.textContent=names[k]||'';
+  }
+  links.forEach(function(a){a.addEventListener('mouseenter',function(){show(a)});a.addEventListener('focus',function(){show(a)})});
+})();
+
+/* ---------- Petty cash: bars + headline count ---------- */
+(function(){
+  var read=document.getElementById('pc-read'); if(!read) return;
+  var fmt=function(n){return 'Rp'+String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};
+  document.querySelectorAll('.pc-bar').forEach(function(b){b.addEventListener('click',function(){
+    var on=b.getAttribute('aria-pressed')==='true';
+    document.querySelectorAll('.pc-bar').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    if(on){read.textContent='Tap a period for detail';return}
+    b.setAttribute('aria-pressed','true');
+    var n=+b.dataset.n,v=+b.dataset.v;
+    read.textContent=b.dataset.l+': '+n+' receipts, '+fmt(v)+', about '+fmt(v/n)+' each, '+Math.round(v/1043000*100)+'% of the backlog';
+  })});
+  var reduce=false;try{reduce=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
+  var big=document.getElementById('pc-big'),chart=document.querySelector('.pc-chart'),done=false;
+  function run(){ if(done) return; done=true; chart.classList.add('in'); if(reduce) return;
+    var to=+big.dataset.to,t0=null; (function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1100);big.textContent=fmt(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(performance.now()); }
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run();io.disconnect()}})},{threshold:.35});io.observe(big)}else run();
+})();
+
+
+
+/* ---------- KRIYĀ quote rules ---------- */
+(function(){
+  var cm=document.getElementById('kq-cm'); if(!cm) return;
+  var pcs=1,mult=2,tricky=0,RATE=1000000;
+  var $=function(id){return document.getElementById(id)};
+  var fmt=function(n){return 'Rp'+String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};
+  var fmtShort=function(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};
+  var low=0;
+  function calc(){
+    var h=(+cm.value/9)*pcs*mult*(tricky?1.25:1);
+    var lo=Math.max(1,Math.floor(h*2)/2), hi=lo+1;
+    low=lo*RATE;
+    $('kq-cmv').textContent=cm.value+' cm'; $('kq-pc').textContent=pcs;
+    $('kq-hours').textContent='about '+(Math.round(h*10)/10)+' h of work';
+    $('kq-price').textContent=fmt(lo*RATE)+' to '+fmtShort(hi*RATE);
+    $('kq-chair').textContent=lo+' to '+hi+' h in the chair';
+    offer();
+  }
+  function offer(){
+    var o=+$('kq-off').value, v=$('kq-verdict');
+    $('kq-offv').textContent=fmt(o);
+    if(o<low){v.className='kq-verdict owner';v.textContent='Below the low end of '+fmt(low)+': only the owner can accept, and the team is emailed.'}
+    else{v.className='kq-verdict ok';v.textContent='Within the quote: the client can accept and pick a day.'}
+  }
+  cm.addEventListener('input',calc); $('kq-off').addEventListener('input',offer);
+  $('kq-minus').addEventListener('click',function(){pcs=Math.max(1,pcs-1);calc()});
+  $('kq-plus').addEventListener('click',function(){pcs=Math.min(6,pcs+1);calc()});
+  document.querySelectorAll('.kq-chips [data-m]').forEach(function(b){b.addEventListener('click',function(){mult=+b.getAttribute('data-m');document.querySelectorAll('.kq-chips [data-m]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});calc()})});
+  document.querySelectorAll('.kq-chips [data-t]').forEach(function(b){b.addEventListener('click',function(){tricky=+b.getAttribute('data-t');document.querySelectorAll('.kq-chips [data-t]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});calc()})});
+  calc();
+})();
+
+/* ---------- Ludwig: review schedule + who sees what ---------- */
+(function(){
+  var boxesEl=document.getElementById('lw-boxes'); if(!boxesEl) return;
+  var waits=['1 min','1 day','3 days','7 days','16 days','35 days'],box=0,started=false;
+  var due=document.getElementById('lw-due');
+  waits.forEach(function(w,i){var d=document.createElement('div');d.className='lw-box'+(i>=2?' known':'');d.innerHTML='<b>'+(i+1)+'</b>'+w;boxesEl.appendChild(d)});
+  function draw(){boxesEl.querySelectorAll('.lw-box').forEach(function(b,i){b.classList.toggle('on',started&&i===box)});
+    if(!started){due.textContent='New card';return}
+    var stage=box>=4?'Mastered':box>=2?'Known':'Learning';due.textContent='Box '+(box+1)+', '+stage.toLowerCase()+', back in '+waits[box]}
+  document.querySelectorAll('.lw-btns button').forEach(function(b){b.addEventListener('click',function(){
+    var g=b.getAttribute('data-g');
+    if(g==='r'){started=false;box=0}else{g=+g; box=g===0?0:(started?Math.min(5,box+g):g); started=true}
+    draw()})});
+  draw();
+
+  var T=[
+    ['Decks, words and stories','decks, words, stories',{pending:'no',student:'r',teacher:'rw'}],
+    ['Unpublished drafts','decks, stories (hidden)',{pending:'no',student:'no',teacher:'rw'}],
+    ['My own progress','card_progress, daily_activity, story_results',{pending:'no',student:'rw',teacher:'rw'}],
+    ['Words taught to me','student_words',{pending:'no',student:'r',teacher:'rw'}],
+    ['Other students\' progress','card_progress (others)',{pending:'no',student:'no',teacher:'r'}],
+    ['Teacher\'s private notes','student_notes',{pending:'no',student:'no',teacher:'rw'}],
+    ['Student accounts','profiles, approve / block',{pending:'no',student:'no',teacher:'rw'}]
+  ];
+  var LBL={no:'Hidden',r:'Read',rw:'Read and write'};
+  var NOTE={pending:'Signed up but not approved yet: every table stays closed until the teacher says yes.',
+    student:'An approved student practises with published content and sees only their own progress and the words taught to them.',
+    teacher:'The teacher sees every student\'s progress, writes content and notes, and approves or blocks accounts.'};
+  var grid=document.getElementById('lw-grid'),note=document.getElementById('lw-perm-note');
+  function show(role){
+    document.querySelectorAll('.lw-perm [data-role]').forEach(function(b){b.setAttribute('aria-selected',b.getAttribute('data-role')===role?'true':'false')});
+    grid.innerHTML=T.map(function(r){var v=r[2][role];return '<div class="lw-cell '+v+'"><span class="t">'+r[0]+'</span><span class="tb">'+r[1]+'</span><span class="st">'+LBL[v]+'</span></div>'}).join('');
+    note.textContent=NOTE[role];
+  }
+  document.querySelectorAll('.lw-perm [data-role]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-role'))})});
+  show('student');
+})();
+
+/* ---------- Under the hood: trace a request ---------- */
+(function(){
+  var LANES=['Device','Script','Data','Services'];
+  var P={
+    axiom:{
+      nodes:[
+        ['phone',0,'Site phone','Tasks, Protocol, Inbox'],
+        ['auth',1,'Team code check','auth_'],
+        ['api',1,'App requests','api_createTask, api_uploadFile, api_extract'],
+        ['num',1,'Numbering','nextCode_, assignNumber_'],
+        ['trig',1,'5-minute check','time trigger'],
+        ['tasks',2,'Tasks + Updates','Google Sheet'],
+        ['stages',2,'Stages + Projects','Google Sheet'],
+        ['files',2,'Files','Google Sheet'],
+        ['inbox',2,'Inbox','drafts to approve'],
+        ['drive',3,'Google Drive','folder per stage and side'],
+        ['gem',3,'Gemini','EN⇄RU, chat-to-task'],
+        ['backup',3,'Backup model','on busy errors']
+      ],
+      traces:[
+        ['Post a site photo',[
+          ['phone','Tap <b>Attach</b> on task 2.1.1 and take a photo.'],
+          ['auth','The team code is checked, along with the hidden task ID <code>T-0007</code>.'],
+          ['api','<code>api_uploadFile</code> receives the photo.'],
+          ['drive','Finds Сесех / 2 / 2.1 / 2.1.1 Подрядчик, creating it if it is missing.'],
+          ['files','Logs the file name, link, who and when.'],
+          ['phone','The task now shows a link to its folder.']]],
+        ['Paste a WhatsApp chat',[
+          ['phone','Paste the group chat into <b>Inbox</b>.'],
+          ['api','<code>api_extract</code> sends it off to be read.'],
+          ['gem','Gemini drafts tasks with owner, deadline, English and Russian.'],
+          ['backup','If Gemini is overloaded: retry, then switch to the backup model.'],
+          ['tasks','Drafts are checked against existing tasks; duplicates are flagged.'],
+          ['inbox','Drafts wait for a person to approve them.'],
+          ['api','<code>api_createTasks</code> saves the approved ones.']]],
+        ['Add a new stage',[
+          ['phone','Open <b>New stage</b> under section 2.'],
+          ['num','<code>nextCode_</code> suggests <b>2.14</b> before anything is saved.'],
+          ['stages','A row is added to Stages.'],
+          ['drive','Folder 2.14 is created with Подрядчик and Заказчик inside.'],
+          ['tasks','Tasks under it number themselves 2.14.1, 2.14.2.']]],
+        ['Edit in the sheet',[
+          ['tasks','Someone edits a task directly in the Google Sheet.'],
+          ['trig','Within five minutes the background check spots it.'],
+          ['gem','The missing language is filled in.'],
+          ['tasks','Text a person wrote is never overwritten.']]]
+      ]
+    },
+    petty:{
+      nodes:[
+        ['wa',0,'WhatsApp group','receipts forwarded here'],
+        ['laptop',0,'Ops laptop','WhatsApp desktop app'],
+        ['ai',1,'AI desktop automation','screenshots, clicks, menus'],
+        ['check',1,'Human checkpoint','unclear items go to a person'],
+        ['rules',1,'House rules','read from existing rows'],
+        ['ledger',2,'Ledger month tab','Google Sheet'],
+        ['person',2,'Person tabs','per villa / role'],
+        ['map',2,'Address map','nickname ⇄ street address'],
+        ['drive',3,'Google Drive','RECEIPTS / OCT 2026'],
+        ['preview',3,'Preview export','PDF saved locally'],
+        ['index',3,'Chat document index','used to re-check']
+      ],
+      traces:[
+        ['Backfill one receipt',[
+          ['wa','A ride receipt sits in the group, forwarded weeks ago and never logged.'],
+          ['ai','The automation finds it through the chat\'s document search on the desktop app.'],
+          ['preview','The PDF is opened and saved out through Preview.'],
+          ['map','Its street address is matched to the villa it belongs to.'],
+          ['rules','Category, payment type and a DD/MM/YYYY date are taken from rows already in the sheet.'],
+          ['drive','The file goes into the month\'s RECEIPTS folder.'],
+          ['ledger','A dated row is prepared, with the file linked as a chip.'],
+          ['person','The same spend shows on that person\'s tab.']]],
+        ['Rebuild the address map',[
+          ['wa','The team uses villa nicknames in chat; receipts only print a street address.'],
+          ['ai','The same address is spotted under a nickname in one message and bare in another.'],
+          ['map','After enough matches across receipts, the pairing is confirmed.'],
+          ['ledger','Every later receipt files itself by address alone.']]],
+        ['Re-check the first pass',[
+          ['index','Every cluster boundary is compared against the chat\'s document index.'],
+          ['ai','1 skipped receipt found; 2 "missing" ones were only scrolled past.'],
+          ['preview','2 routes misread from captions are corrected from the original PDFs.'],
+          ['map','Totals reconcile: 39 receipts, Rp1.043.000.']]],
+        ['Ask instead of guess',[
+          ['ai','Rides booked under an unfamiliar staff name turn up.'],
+          ['check','The question goes to a person: log these or not?'],
+          ['check','Two rides the app marked Profile: PERSONAL are flagged, not logged.'],
+          ['ledger','Only confirmed spend reaches the ledger.']]]
+      ]
+    },
+    ludwig:{
+      nodes:[
+        ['stu',0,'Student app','phone or laptop'],
+        ['tea',0,'Teacher page','approve, log, write'],
+        ['app',1,'Vite web app','static files on Netlify'],
+        ['rls',1,'Row-level rules','checked on every query'],
+        ['fn',1,'Backup function','Supabase edge function'],
+        ['prof',2,'profiles','role, status'],
+        ['content',2,'decks, words, stories','published or hidden'],
+        ['prog',2,'card_progress, custom_words','one row per word, per student'],
+        ['taught',2,'student_words, notes','teacher writes'],
+        ['auth',3,'Supabase Auth','email sign-in'],
+        ['gh',3,'GitHub repo','code + content backups'],
+        ['net',3,'Netlify','builds and hosts']
+      ],
+      traces:[
+        ['A student signs up',[
+          ['stu','A new student enters their name, email and password.'],
+          ['auth','Supabase Auth creates the account.'],
+          ['prof','A database trigger adds their profile as <b>pending</b>.'],
+          ['rls','The rules show a pending student nothing but "Waiting for approval".'],
+          ['tea','The teacher sees them under Students and taps Approve.'],
+          ['prof','Status flips to <b>active</b>; the decks open up on their next visit.']]],
+        ['Log a word after class',[
+          ['tea','The teacher types <b>makan</b> on the student\'s page; the meaning fills in.'],
+          ['rls','<code>is_admin()</code> confirms only the teacher can write here.'],
+          ['taught','A row lands in <code>student_words</code> with today\'s date.'],
+          ['stu','It appears in the student\'s <b>Dari guru</b> deck straight away.']]],
+        ['Review a card',[
+          ['stu','The student answers <b>Got it</b> on a flashcard.'],
+          ['app','The app works out the next box and review date.'],
+          ['rls','The rules only accept a row for the signed-in student.'],
+          ['prog','<code>card_progress</code> saves it, so progress follows them across devices.'],
+          ['tea','The teacher can read it on that student\'s page.']]],
+        ['Save a word while reading',[
+          ['stu','The student taps <b>warung</b> in a story.'],
+          ['app','The meaning shows underneath with <b>Save to my words</b>.'],
+          ['rls','The rules accept the row only for the signed-in student.'],
+          ['prog','It\'s saved to their personal word list and joins their reviews.'],
+          ['tea','The teacher can see it on that student\'s page.']]],
+        ['Back up content',[
+          ['tea','The teacher taps <b>Backup</b>.'],
+          ['fn','The edge function runs as the teacher and checks <code>is_admin()</code>.'],
+          ['content','It reads decks, words and stories. Student data is never included.'],
+          ['gh','It commits them as files to <code>content/</code> in the repo.'],
+          ['net','Netlify is told to skip rebuilding the site for backup commits.']]],
+        ['Ship an update',[
+          ['gh','New code is committed to the repo.'],
+          ['net','Netlify builds the Vite app automatically.'],
+          ['app','Fresh static files go live in about a minute.'],
+          ['stu','Students get the new version on their next visit; data stays in Supabase.']]]
+      ]
+    },
+
+    pawin:{
+      nodes:[
+        ['ig',0,'Instagram DM','auto-reply sends the link'],
+        ['client',0,'Client pages','book, pay, pet page'],
+        ['team',0,'Team pages','admins and sitters'],
+        ['gas',1,'Google Apps Script','uploads, logins, timers'],
+        ['key',1,'Secret key','server only'],
+        ['db',2,'Supabase','bookings, pets, staff, prices'],
+        ['rls',2,'Privacy rules','one set per role'],
+        ['drive',3,'Google Drive','pet photos, transfer screenshots'],
+        ['cal',3,'Google Calendar','one per city'],
+        ['sheet',3,'Google Sheet','hourly copy for admins']
+      ],
+      traces:[
+        ['Client books a sitter',[
+          ['ig','A client DMs on Instagram and the automatic reply sends the booking link.'],
+          ['client','They pick Bali or Surabaya, a service, nights and a sitter, and watch the total.'],
+          ['db','Full days and busy sitters come from the database, so they can\'t be picked.'],
+          ['client','The pay page shows the exact amount and that city\'s bank account.'],
+          ['gas','The transfer screenshot goes up through Apps Script, which checks who sent it.'],
+          ['drive','The screenshot is saved to Drive, visible to admins only.'],
+          ['db','The booking waits while the transfer is checked.']]],
+        ['Admin confirms a payment',[
+          ['team','An admin opens <b>Today</b>: the oldest transfer waiting, beside the amount expected.'],
+          ['rls','Only an admin login can read payments.'],
+          ['team','The amount matches the bank, so they press <b>Confirm and book</b>.'],
+          ['db','The booking is confirmed and the sitter can now see it.'],
+          ['cal','Within 5 minutes it appears on that city\'s calendar.'],
+          ['sheet','The hourly copy adds it to the bookings sheet.']]],
+        ['Sitter posts a photo',[
+          ['team','The sitter opens <b>My day</b> and taps the pet\'s card.'],
+          ['team','No photo, no update: they take one and tick Fed, Water and Walk.'],
+          ['gas','Apps Script receives the upload and checks the sitter\'s login.'],
+          ['drive','The photo, shrunk to about 300 KB, is saved to Drive.'],
+          ['client','It appears on the owner\'s pet page straight away and the ring starts again.']]],
+        ['A photo runs late',[
+          ['db','During a stay a photo is due at least every 6 hours.'],
+          ['team','Ten minutes past due, the row turns orange on the admin\'s Today page.'],
+          ['team','One tap on <b>Remind</b> and the sitter sees that the office reminded them.']]],
+        ['Block a day',[
+          ['cal','An admin adds an all-day <b>Full</b> or <b>Off: Ayu</b> event to the city\'s calendar.'],
+          ['gas','Every 30 minutes Apps Script reads the blocks.'],
+          ['key','It writes them with the secret key, which never reaches a phone.'],
+          ['db','Those days, or that sitter, can no longer be picked on the booking page.']]]
+      ]
+    },
+    kriya:{
+      nodes:[
+        ['studio',0,'Team app','checklist, tasks, quote, money'],
+        ['public',0,'Request page','public, rough price'],
+        ['qpage',0,'Quote page','private link with a secret key'],
+        ['auth',1,'Studio code','checked on every call'],
+        ['lock',1,'Lock + rate limit','LockService, CacheService'],
+        ['rules',1,'Studio rules','Rp1.000.000/hr, 20%, floor'],
+        ['bk',2,'Bookings_Master','Google Sheet'],
+        ['crm',2,'Client CRM','lifetime spend, last visit'],
+        ['req',2,'Requests, Quotes','Google Sheet'],
+        ['log',2,'Checklist, Tasks','daily log'],
+        ['drive',3,'Google Drive','folder per client'],
+        ['mail',3,'MailApp','emails the team']
+      ],
+      traces:[
+        ['Client asks for a price',[
+          ['public','A client describes the idea, size, style and ink.'],
+          ['rules','A rough range shows right away, priced by time.'],
+          ['lock','The public form is rate-limited against floods.'],
+          ['req','A new row lands in Requests.'],
+          ['drive','Reference images go into a folder for that client.'],
+          ['studio','It appears in the team\'s inbox.']]],
+        ['Send a quote, client accepts',[
+          ['studio','The team prices it with the quote calculator.'],
+          ['rules','Size, detail and placement give hours; hours give the range.'],
+          ['req','The quote is saved with a secret key.'],
+          ['qpage','The client opens their private link and taps <b>Accept</b>.'],
+          ['qpage','They pick a day and see the deposit details.'],
+          ['mail','The team gets an email.'],
+          ['bk','The booking is created; the dashboard picks it up.']]],
+        ['Client offers less',[
+          ['qpage','The client makes an offer instead.'],
+          ['rules','It is below the low end of the quote.'],
+          ['req','The offer is logged and flagged.'],
+          ['mail','The team is emailed.'],
+          ['studio','Only the owner can accept it; others can counter or decline.']]],
+        ['Tick off the daily checklist',[
+          ['studio','Manu ticks <b>Post today\'s story</b>.'],
+          ['auth','The studio code is checked.'],
+          ['log','The tick is logged with the time.'],
+          ['studio','The team view updates: 4 of 6 done.']]],
+        ['Book a walk-in',[
+          ['studio','Pick the client, time, hours, placement and style.'],
+          ['crm','The client is found in the CRM as you type.'],
+          ['lock','The save is locked, so two people can\'t book the same slot.'],
+          ['rules','Value and 20% commission are filled in; clashes are flagged.'],
+          ['bk','The booking is written to Bookings_Master.'],
+          ['crm','Lifetime spend and last visit update.']]]
+      ]
+    }
+  };
+  var reduce=false; try{reduce=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
+  var lanesEl=document.getElementById('lanes'),logEl=document.getElementById('log'),titleEl=document.getElementById('log-title'),tracesEl=document.getElementById('traces');
+  var proj='axiom',cur=0,timer=null;
+
+  function renderLanes(){
+    lanesEl.innerHTML='';
+    LANES.forEach(function(name,i){
+      var lane=document.createElement('div');lane.className='lane';
+      lane.innerHTML='<span class="lh">'+name+'</span>';
+      P[proj].nodes.filter(function(n){return n[1]===i}).forEach(function(n){
+        var d=document.createElement('div');d.className='node';d.id='n-'+n[0];
+        d.innerHTML=n[2]+'<small>'+n[3]+'</small>';lane.appendChild(d);
+      });
+      lanesEl.appendChild(lane);
+    });
+  }
+  function renderTraces(){
+    tracesEl.innerHTML='';
+    P[proj].traces.forEach(function(t,i){
+      var b=document.createElement('button');b.type='button';b.textContent=t[0];
+      b.setAttribute('aria-pressed',i===cur?'true':'false');
+      b.addEventListener('click',function(){play(i,true)});
+      tracesEl.appendChild(b);
+    });
+  }
+  function mark(steps,upto){
+    lanesEl.querySelectorAll('.node').forEach(function(n){n.classList.remove('seen','now');var d=n.querySelector('.dot');if(d)d.remove()});
+    for(var k=0;k<=upto;k++){
+      var n=document.getElementById('n-'+steps[k][0]);if(!n)continue;
+      n.classList.add('seen');if(k===upto)n.classList.add('now');
+      var d=n.querySelector('.dot');if(!d){d=document.createElement('span');d.className='dot';n.appendChild(d)}
+      d.textContent=k+1;
+    }
+  }
+  function addLog(steps,k){
+    var li=document.createElement('li');li.innerHTML='<b>'+String(k+1)+'</b><span>'+steps[k][1]+'</span>';logEl.appendChild(li);
+  }
+  function play(i,animate){
+    clearTimeout(timer);cur=i;
+    tracesEl.querySelectorAll('button').forEach(function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false')});
+    var t=P[proj].traces[i],steps=t[1];
+    titleEl.textContent='Trace: '+t[0];logEl.innerHTML='';
+    if(!animate||reduce){steps.forEach(function(_,k){addLog(steps,k)});mark(steps,steps.length-1);return}
+    var k=0;(function step(){addLog(steps,k);mark(steps,k);k++;if(k<steps.length)timer=setTimeout(step,750)})();
+  }
+  function setProj(p){
+    proj=p;cur=0;
+    document.querySelectorAll('#hood .seg-tabs button').forEach(function(b){b.setAttribute('aria-selected',b.getAttribute('data-proj')===p?'true':'false')});
+    renderLanes();renderTraces();play(0,true);
+  }
+  document.querySelectorAll('#hood .seg-tabs button').forEach(function(b){b.addEventListener('click',function(){setProj(b.getAttribute('data-proj'))})});
+  document.getElementById('replay').addEventListener('click',function(){play(cur,true)});
+  renderLanes();renderTraces();play(0,false);
+})();
+
+/* ---------- Contact: one switcher for every channel ---------- */
+(function(){
+  var tabs=document.querySelectorAll('.reach-tabs [role=tab]');if(!tabs.length)return;
+  function pick(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on})}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){pick(t)});t.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;var n=tabs[(i+k+tabs.length)%tabs.length];pick(n);n.focus()})});
+})();
+</script>
+<script>(function(){
+  var b=document.getElementById('bt-pawin');if(b)b.click();
+  var t=document.getElementById('tab-pawin');if(t)t.click();
+  document.querySelectorAll('.case-sec').forEach(function(sec){if(sec.id==='case'){sec.classList.remove('folded');var m=sec.querySelector('.m-more');if(m)m.remove()}});
+})();</script></body>
+</html>
