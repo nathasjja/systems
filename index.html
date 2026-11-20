@@ -81,6 +81,11 @@ button{font:inherit;color:inherit}
 .hero h1{font-size:clamp(46px,7vw,88px);line-height:.98;letter-spacing:-.04em;max-width:13ch}
 .hero .lead{font-size:clamp(17px,1.6vw,20px);color:var(--sub);max-width:34ch}
 .cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.btn.try{padding:0 18px 0 8px;border-color:var(--line);background:var(--deep);color:var(--text)}
+.btn.try:hover{border-color:var(--signal)}
+.try-tag{display:inline-flex;align-items:center;height:32px;padding:0 10px;border-radius:7px;background:color-mix(in oklab,var(--signal) 18%,transparent);color:var(--signal);font-family:var(--mono);font-weight:500;font-size:12px}
+.btn.try .arr{font-family:var(--mono);color:var(--signal);transition:transform .2s}
+.btn.try:hover .arr{transform:translateX(3px)}
 .cmd{display:inline-flex;align-items:center;gap:12px;min-height:50px;padding:0 8px 0 16px;border-radius:10px;background:var(--deep);border:1px solid var(--line);font-family:var(--mono);font-size:14px}
 .cmd span:first-child{color:var(--signal)}
 .cmd button{width:34px;height:34px;border-radius:8px;border:1px solid var(--line);background:transparent;display:grid;place-items:center;cursor:pointer}
@@ -327,7 +332,7 @@ button{font:inherit;color:inherit}
     <svg class="slab" width="36" height="12" viewBox="0 0 120 40" aria-hidden="true"><path d="M12 8 H48 V32 H12 A12 12 0 0 1 12 8 Z"/><path d="M64 8 H108 A12 12 0 0 1 108 32 H64 Z"/><circle cx="56" cy="20" r="3.4"/></svg>
     <b>KRIYĀ</b><span>Systems</span>
   </a>
-  <nav aria-label="Sections"><a href="#work">Work</a><a href="#gaps">Gaps</a><a href="#machines">Under the hood</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+  <nav aria-label="Sections"><a href="#work">Work</a><a href="concepts/">Concepts</a><a href="#gaps">Gaps</a><a href="#machines">Under the hood</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
   <a class="wa" href="https://wa.me/6281339021014?text=Hi%20Nathasjja%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20system%20for%20my%20team." target="_blank" rel="noopener">WhatsApp</a>
 </header>
 
@@ -339,8 +344,8 @@ button{font:inherit;color:inherit}
       <h1>Run like a tech company, even if you’re not</h1>
       <p class="lead">Apps, automations and websites built on what you already own.</p>
       <div class="cta">
+        <a class="btn try" href="concepts/"><span class="try-tag">Try it</span>See it with your name on it<span class="arr" aria-hidden="true">→</span></a>
         <a class="btn primary" href="https://wa.me/6281339021014?text=Hi%20Nathasjja%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20system%20for%20my%20team." target="_blank" rel="noopener">Ready to work better?</a>
-        <div class="cmd"><span>→</span><span id="wa-link">wa.me/6281339021014</span><button type="button" id="copy" aria-label="Copy the WhatsApp link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div>
       </div>
     </div>
     <div class="tabs-row" id="work"><div class="tabs" role="tablist" aria-label="Choose a build">
@@ -547,7 +552,7 @@ button{font:inherit;color:inherit}
     builds.forEach(function(x){var on=x.getAttribute('data-b')===b;x.hidden=!on;x.classList.toggle('on',on)});
   })});
   var cp=document.getElementById('copy');
-  cp.addEventListener('click',function(){
+  if(cp)cp.addEventListener('click',function(){
     var txt='https://wa.me/6281339021014';
     try{navigator.clipboard.writeText(txt).then(function(){cp.setAttribute('aria-label','Copied')},function(){sel()})}catch(e){sel()}
     function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('wa-link'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
